@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Dropdown } from "react-bootstrap";
 import Search from "./common/Search";
@@ -6,6 +6,9 @@ import Sidebar from "./common/Sidebar";
 import StickyMenu from "./common/StickyMenu";
 import MobileMenu from "./common/MobileMenu";
 import { Styles } from "./styles/header.js";
+import logo from "../assets/logo.jpeg";
+import { LuMapPin } from "react-icons/lu";
+import { IoMdCall } from "react-icons/io";
 
 const Header = () => {
   return (
@@ -18,7 +21,9 @@ const Header = () => {
               <div className="bar-left">
                 <ul className="list-unstyled list-inline">
                   <li className="list-inline-item">
-                    <i className="las la-map-marker"></i>Alert:
+                    <i className="las la-map-marker"></i>
+                    {/* <LuMapPin /> */}
+                    Alert:
                   </li>
                 </ul>
               </div>
@@ -73,6 +78,7 @@ const Header = () => {
                 <Link to={process.env.PUBLIC_URL + "/"}>
                   <img
                     src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
+                    // src={logo}
                     alt=""
                     width="171"
                     height="41"
@@ -85,6 +91,7 @@ const Header = () => {
                 <div className="emcontact-box d-flex">
                   <div className="box-icon">
                     <i className="flaticon-phone-call"></i>
+                    {/* <IoMdCall /> */}
                   </div>
                   <div className="box-content">
                     <p>Call Us Now</p>

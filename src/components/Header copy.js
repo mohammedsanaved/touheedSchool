@@ -6,6 +6,7 @@ import Sidebar from "./common/Sidebar";
 import StickyMenu from "./common/StickyMenu";
 import MobileMenu from "./common/MobileMenu";
 import { Styles } from "./styles/header.js";
+import logo from "../assets/logo.jpeg";
 
 const Header = () => {
   return (
@@ -78,7 +79,8 @@ const Header = () => {
               <div className="logo">
                 <Link to={process.env.PUBLIC_URL + "/"}>
                   <img
-                    src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
+                    // src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
+                    src={logo}
                     alt=""
                     width="171"
                     height="41"

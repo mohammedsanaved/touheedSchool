@@ -44,20 +44,20 @@ export default function HomeOne() {
       <AboutUs />
 
       {/* About Us 2 */}
-      <AboutUsTwo />
+      {/* <AboutUsTwo /> */}
 
       {/* Service Box */}
-      <ServiceBox />
+      {/* <ServiceBox /> */}
 
       {/* Course Filter */}
       {/* < CourseFilter /> */}
 
       {/* Testimonial Slider */}
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
 
       {/* Event / Blog Area */}
 
-      <HomeBlog eventListData={eventList} />
+      {/* <HomeBlog eventListData={eventList} /> */}
 
       {/* Faq & Event Area */}
       {/* < FaqEvent /> */}
@@ -75,7 +75,7 @@ export default function HomeOne() {
       {/* < NewsletterForm /> */}
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
