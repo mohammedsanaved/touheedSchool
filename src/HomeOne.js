@@ -14,11 +14,13 @@ import NewsletterForm from "./components/NewsletterForm";
 import Footer from "./components/Footer";
 import ServiceBox from "./components/ServiceBox";
 import AboutUsTwo from "./components/AboutUsTwo";
+import CardSection from "./components/cardSection/CardSection";
 
 import Spinner from "react-bootstrap/Spinner";
 
 import { useSelector, useDispatch } from "react-redux";
 import { listEvent } from "./actions/eventActions";
+// import Cards from "./components/Cards";
 
 export default function HomeOne() {
   const dispatch = useDispatch();
@@ -46,6 +48,9 @@ export default function HomeOne() {
       {/* About Us 2 */}
       {/* <AboutUsTwo /> */}
 
+      {/* CardSection */}
+      <CardSection />
+
       {/* Service Box */}
       {/* <ServiceBox /> */}
 
@@ -69,13 +74,13 @@ export default function HomeOne() {
       {/* < HelpArea /> */}
 
       {/* Campus Tour */}
-      <CampusTour />
+      {/* <CampusTour /> */}
 
       {/* Newsletter Form */}
       {/* < NewsletterForm /> */}
 
       {/* Footer */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

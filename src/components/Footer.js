@@ -22,11 +22,11 @@ const Footer = () => {
       {/* Footer Area */}
       <footer
         className="footer1"
-        style={{
-          backgroundImage: `url(assets/images/${
-            process.env.PUBLIC_URL + Datas.backgroundImage
-          })`,
-        }}
+        // style={{
+        //   backgroundImage: `url(assets/images/${
+        //     process.env.PUBLIC_URL + Datas.backgroundImage
+        //   })`,
+        // }}
       >
         <Container>
           <Row>
