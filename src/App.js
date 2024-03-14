@@ -25,6 +25,8 @@ import BlogDetails from "./pages/blog/BlogDetails";
 import Product from "./pages/shop/Products";
 import ProductDetails from "./pages/shop/ProductDetails";
 import Cart from "./pages/shop/Cart";
+import SchoolPage from "./pages/SchoolPage/SchoolPage.jsx";
+import "./fonts.css"
 
 function App() {
   return (
@@ -55,6 +57,7 @@ function App() {
         <Route path="/products" element={<Product />} />
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/school-page" element={<SchoolPage />} />
       </Routes>
     </Router>
   );
