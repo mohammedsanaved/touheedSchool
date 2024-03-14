@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import Datas from "../../data/event/events.json";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
@@ -20,6 +20,7 @@ import Message from "../../components/Message";
 function Events({ history }) {
   const dispatch = useDispatch();
   const eventList = useSelector((state) => state.eventList);
+  console.log(eventList, "changes in eventList");
   const { error, loading, event, page, pages } = eventList;
   console.log("eventList : ", eventList);
 
@@ -39,6 +40,7 @@ function Events({ history }) {
 
         {/* Breadcroumb */}
         {/* <BreadcrumbBox title="Events" /> */}
+        <div>Events</div>
 
         {/* Events Area */}
         <section className="event-page-area">
