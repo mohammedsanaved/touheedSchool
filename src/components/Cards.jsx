@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Datas from "../data/about-us/about-us.json";
 function Cards() {
   return (
-    <Card style={{ width: "24rem", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)" }}>
+    <Card style={{ width: "24rem", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}>
       <Card.Img
         variant="top"
         src={process.env.PUBLIC_URL + `/assets/images/${Datas.mainImage}`}

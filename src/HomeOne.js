@@ -62,7 +62,7 @@ export default function HomeOne() {
 
       {/* Event / Blog Area */}
 
-      {/* <HomeBlog eventListData={eventList} /> */}
+      <HomeBlog eventListData={eventList} />
 
       {/* Faq & Event Area */}
       {/* < FaqEvent /> */}
