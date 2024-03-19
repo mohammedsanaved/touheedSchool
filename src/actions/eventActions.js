@@ -18,6 +18,7 @@ export const listEvent =
       const { data } = await axios.get(
         `${process.env.REACT_APP_API_URL}/api/event-list${keyword}`
       );
+      console.log(data, "API response from events");
 
       dispatch({ type: EVENT_LIST_SUCCESS, payload: data });
     } catch (error) {
@@ -38,6 +39,7 @@ export const detailEvent = (id) => async (dispatch) => {
     const { data } = await axios.get(
       `${process.env.REACT_APP_API_URL}/api/event-detail/${id}/`
     );
+    console.log(data, "changes from detailsEvents");
 
     dispatch({ type: EVENT_DETAIL_SUCCESS, payload: data });
   } catch (error) {

@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createContact } from "../../actions/contactActions";
 
 import ReCAPTCHA from "react-google-recaptcha";
+import BannerSection from "../../components/BannerSection/BannerSection.jsx";
 
 function Contact() {
   const [disable, setDisable] = useState("");
@@ -112,6 +113,7 @@ function Contact() {
 
         {/* Breadcroumb */}
         {/* <BreadcrumbBox title="Contact Us" /> */}
+        <BannerSection />
 
         {/* Contact Area */}
         <section className="contact-area">

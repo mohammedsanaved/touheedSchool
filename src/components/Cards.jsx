@@ -15,11 +15,11 @@ function Cards() {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <div className="d-flex justify-content-start gap-2 mt-3">
-          <Button variant="primary" size="sm">
+        <div className="d-flex justify-content-evenly gap-2 mt-3">
+          <Button variant="success" size="md">
             Read More
           </Button>
-          <Button variant="success" size="sm">
+          <Button variant="success" size="md">
             Contacts Us
           </Button>
         </div>

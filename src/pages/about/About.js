@@ -9,8 +9,10 @@ import FaqEvent from "../../components/FaqEvent";
 import FooterTwo from "../../components/FooterTwo";
 import Footer from "../../components/Footer";
 import { Styles } from "./styles/about.js";
+import BannerSection from "../../components/BannerSection/BannerSection.jsx";
 
 const About = () => {
+  const value = "About US";
   return (
     <Styles>
       {/* Main Wrapper */}
@@ -20,7 +22,7 @@ const About = () => {
 
         {/* Breadcroumb */}
         {/* <BreadcrumbBox title="About Us" /> */}
-        <div>About Us</div>
+        <BannerSection />
 
         {/* About Area */}
         <AboutUs />
