@@ -5,11 +5,13 @@ import BannerSection from "../../components/BannerSection/BannerSection.jsx";
 import { Container, Row, Col } from "react-bootstrap";
 import DemoCarousel from "../../components/EventCarousel.jsx";
 import EventDetailsData from "../../components/EventDetailsData.jsx";
+import EventSpeakers from "../../components/EventSpeakers.jsx";
+import Footer from "../../components/Footer.js";
 
 const EventsDetails = () => {
   return (
     <Styles>
-      <div className="main-wrapper event-details-page">
+      <div className="main-wrapper event-details-page mb-5">
         <HeaderTwo />
         <BannerSection />
         <Container>
@@ -21,9 +23,12 @@ const EventsDetails = () => {
               <EventDetailsData />
             </Col>
           </Row>
-          <Row>Events Speakers</Row>
+          <Row>
+            <EventSpeakers />
+          </Row>
         </Container>
       </div>
+      <Footer />
     </Styles>
   );
 };
