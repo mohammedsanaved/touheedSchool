@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ContactInfoSection.css";
+import { ContactInfoSectionStyles } from "./ContactInfoSectionStyles.js";
 import { useState } from 'react';
 
 const ContactInfoSection = () => {
@@ -35,6 +35,12 @@ const ContactInfoSection = () => {
 
 
     return (
+
+        <ContactInfoSectionStyles>
+
+   
+
+
         <div className='contact-info-container'>
 
             <div className='contact-info-container-div d-flex mx-auto'>
@@ -52,7 +58,8 @@ const ContactInfoSection = () => {
                         <div className='icon-text-div d-flex'>
                             <img src={`${emailIconUrl}`} alt="" />
                             <div className='contact-info-text'><h3>Email Address</h3>
-                                <p>admin@touheed.education info@touheed.education</p>
+                                <p>admin@touheed.education
+                                    <br />info@touheed.education</p>
                             </div>
                                                         </div>
                         <div className='icon-text-div d-flex'>
@@ -117,7 +124,10 @@ const ContactInfoSection = () => {
 
             </div>
         </div>
+        
+        </ContactInfoSectionStyles>
+        
     )
 }
 
-export default ContactInfoSection
+export default ContactInfoSection;

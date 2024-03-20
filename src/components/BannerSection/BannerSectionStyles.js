@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+export const BannerSectionStyles = styled.div`
 .school-banner-section{
     min-height: 330px;
     height: 100%;
@@ -27,5 +30,14 @@ margin-left: 67px;
         margin: auto;
         padding-left: 20px;
         padding-right: 20px;
+        text-align: center;
     }
-  }
+    .school-banner-section{
+        min-height: 210px;
+        height: 100%;
+        display: flex;
+        padding-top: 0;
+    }
+}
+
+`;

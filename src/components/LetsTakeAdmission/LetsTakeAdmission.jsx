@@ -1,5 +1,5 @@
 import React from 'react';
-import "./LetsTakeAdmission.css"
+import { LetsTakeAdmissionStyles } from "./LetsTakeAdmissionStyles.js";
 
 const LetsTakeAdmission = () => {
 
@@ -7,6 +7,7 @@ const LetsTakeAdmission = () => {
   const staticImageUrl = '/assets/images/EnrollYourChild.png';
 
   return (
+    <LetsTakeAdmissionStyles>
     <div className='admission-section-container'>
       <div className='d-flex mx-auto admission-section'>
         <div className='admission-text-div'>
@@ -22,6 +23,7 @@ const LetsTakeAdmission = () => {
         <img src={`${staticImageUrl}`} alt="" className='enroll-img' />
       </div>
     </div>
+    </LetsTakeAdmissionStyles>
   )
 }
 

@@ -1,21 +1,24 @@
 import React from 'react';
-import "./BannerSection.css"
 
-const BannerSection = () => {
+import {BannerSectionStyles} from "./BannerSectionStyles.js"
+
+const BannerSection =  (props)  => {
+
+  const { title, bg_image } = props.data;
 
     
-
-    const staticImageUrl = '../assets/images/SchoolBgImage.png';
 
 
 
   return (
     <>
-    <div className='school-banner-section' style={{backgroundImage: `url(${staticImageUrl})`, backgroundSize: 'cover',}}>
+    <BannerSectionStyles>
+    <div className='school-banner-section' style={{backgroundImage: `url(${bg_image})`, backgroundSize: 'cover',}}>
 
-    <div className='school-name'>Touheed English Medium School</div>
+    <div className='school-name'>{title}</div>
 
     </div>
+    </BannerSectionStyles>
     </>
   )
 }

@@ -12,6 +12,12 @@ import ReadMoreSection from '../../components/ReadMoreSection';
 
 const SchoolPage = () => {
 
+  const data = {
+    title: 'Touheed English Medium School',
+    
+    bg_image:'../assets/images/SchoolBgImage.png',
+  };
+
   const eventList = useSelector( state => state.eventList )
   const {event, error, loading } = eventList
 
@@ -21,7 +27,7 @@ const SchoolPage = () => {
     <>
     <Header/>
    
-    <BannerSection/>
+    <BannerSection data={data} />
 
     <ReadMoreSection/>
 
