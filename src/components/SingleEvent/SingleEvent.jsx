@@ -4,7 +4,7 @@ import { SingleEventStyles } from "./SingleEventStyles.js";
 const SingleEvent = () => {
     return (
         <SingleEventStyles>
-        <div className='d-flex single-event-div-container justify-content-end'>
+        <div className='d-flex single-event-div-container justify-content-center'>
             <img src="../assets/images/SingleEventPlaceholder.png" alt="" />
             <div className='event-div-container d-flex'>
                 <div className='first-col'>
