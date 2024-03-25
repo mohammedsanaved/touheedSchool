@@ -12,6 +12,8 @@ import EventCarousel from "../../components/EventCarousel";
 import EventDetailsData from "../../components/EventDetailsData";
 import { Container, Row, Col } from "react-bootstrap";
 import bg from "../../assets/SchoolBgImage.png";
+import schoolVideo from "../../assets/schoolVideo.mp4";
+import Infrastructure from "./components/Infrastructure";
 
 const SchoolPage = () => {
   // const bg =
@@ -23,32 +25,59 @@ const SchoolPage = () => {
   return (
     <>
       <HeaderTwo />
+      <div className="">
+        <div>
+          <video
+            className="w-100"
+            // style={{  }}
+            autoPlay
+            muted
+            loop
+          >
+            <source src={schoolVideo} type="video/mp4" />
+          </video>
+        </div>
+        <div className="">
+          <div>School Name</div>
+          <div>School Description</div>
+          <div>
+            <button>Know More</button>
+            <button>Enquire</button>
+          </div>
+        </div>
 
-      <BannerSection bg_image={bg} title={"Home/SchoolPage"} />
+        {/* <BannerSection bg_image={bg} title={"Home/SchoolPage"} /> */}
 
-      {/* <ReadMoreSection /> */}
-      {/* <Container>
+        {/* <ReadMoreSection /> */}
+        {/* <Container>
         <div className="d-flex mt-4 gap-4">
           <EventCarousel />
           <EventDetailsData />
         </div>
       </Container> */}
-      <Container>
-        <Row className="mt-5 d-flex justify-content-around gap-4">
-          <Col>
-            <EventCarousel />
-          </Col>
-          <Col>
-            <EventDetailsData />
-          </Col>
-        </Row>
-      </Container>
+        <Container>
+          <div className="mt-5 d-flex justify-content-between gap-5">
+            <Col>{/* <EventCarousel /> */}</Col>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="school"
+                className="rounded-4 shadow-sm"
+              />
+            </div>
+            <div>
+              <EventDetailsData />
+            </div>
+          </div>
+          <Infrastructure />
+        </Container>
 
-      <LetsTakeAdmission />
+        {/* <LetsTakeAdmission /> */}
 
-      <HomeBlog eventListData={eventList} />
+        <HomeBlog eventListData={eventList} />
 
-      <ContactInfoSection />
+        <ContactInfoSection />
+      </div>
 
       <Footer />
     </>
