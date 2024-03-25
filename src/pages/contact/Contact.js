@@ -19,6 +19,8 @@ function Contact() {
   const [disable, setDisable] = useState("");
   const [messageThanksDone, setMessageThanksDone] = useState("");
   const [name, setName] = useState("");
+  const bg =
+    "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWR1Y3Rpb25hbCUyMGNvbnRhY3R8ZW58MHx8MHx8fDA%3D";
 
   const dispatch = useDispatch();
 
@@ -113,7 +115,7 @@ function Contact() {
 
         {/* Breadcroumb */}
         {/* <BreadcrumbBox title="Contact Us" /> */}
-        <BannerSection />
+        <BannerSection bg_image={bg} title={"Home/Contact"} />
 
         {/* Contact Area */}
         <section className="contact-area">
