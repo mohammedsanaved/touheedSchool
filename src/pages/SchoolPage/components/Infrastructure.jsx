@@ -1,4 +1,5 @@
 import React from "react";
+import { Styles } from "../styles/Infrastructure";
 
 const Infrastructure = () => {
   const dataStructure = [
@@ -11,8 +12,8 @@ const Infrastructure = () => {
       title: "Classroom",
     },
     {
-      src: "https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Library",
+      src: "https://images.pexels.com/photos/7942489/pexels-photo-7942489.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Assembly",
     },
     {
       src: "https://images.pexels.com/photos/908970/pexels-photo-908970.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -23,33 +24,37 @@ const Infrastructure = () => {
       title: "Science Lab",
     },
     {
-      src: "https://images.pexels.com/photos/8617514/pexels-photo-8617514.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "https://images.pexels.com/photos/8617542/pexels-photo-8617542.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "School Canteen",
     },
   ];
 
   return (
-    <div className="mt-4">
-      <div className="fs-1 fw-bold text-center mb-5">Infrastructure</div>
-      <div className="row row-cols-1 row-cols-md-3 g-4">
-        {dataStructure.map((item, index) => (
-          <div key={index} className="col">
-            <div className="h-100">
-              <img
-                src={item.src}
-                className="card-img-top rounded-3 shadow-lg"
-                alt={item.title}
-              />
-              <div className="">
-                <h5 className="mt-3 d-flex justify-content-center">
-                  {item.title}
-                </h5>
+    <Styles>
+      <div className="mt-4">
+        <div className="fs-1 fw-bold text-center mb-5 header">
+          Infrastructure
+        </div>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {dataStructure.map((item, index) => (
+            <div key={index} className="col">
+              <div className="h-100">
+                <img
+                  src={item.src}
+                  className="card-img-top rounded-3 shadow-lg img"
+                  alt={item.title}
+                />
+                <div className="">
+                  <h5 className="mt-3 d-flex justify-content-center">
+                    {item.title}
+                  </h5>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </Styles>
   );
 };
 

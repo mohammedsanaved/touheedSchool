@@ -14,6 +14,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import bg from "../../assets/SchoolBgImage.png";
 import schoolVideo from "../../assets/schoolVideo.mp4";
 import Infrastructure from "./components/Infrastructure";
+import Brouchers from "./components/Brouchers";
+import SingleEvent from "../../components/SingleEvent/SingleEvent";
+import Event from "./components/Event";
+import FAQs from "./components/FAQs";
 
 const SchoolPage = () => {
   // const bg =
@@ -57,7 +61,7 @@ const SchoolPage = () => {
       </Container> */}
         <Container>
           <div className="mt-5 d-flex justify-content-between gap-5">
-            <Col>{/* <EventCarousel /> */}</Col>
+            {/* <Col><EventCarousel /></Col> */}
             <div>
               <img
                 src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -70,11 +74,18 @@ const SchoolPage = () => {
             </div>
           </div>
           <Infrastructure />
+          <Brouchers />
+          <div className="d-flex gap-4 mb-4 ">
+            <Event />
+            <Event />
+            {/* <SingleEvent /> */}
+          </div>
+          <FAQs />
         </Container>
 
         {/* <LetsTakeAdmission /> */}
 
-        <HomeBlog eventListData={eventList} />
+        {/* <HomeBlog eventListData={eventList} /> */}
 
         <ContactInfoSection />
       </div>
