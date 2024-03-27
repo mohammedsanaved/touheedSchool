@@ -13,8 +13,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { createContact } from "../../actions/contactActions";
 
 import ReCAPTCHA from "react-google-recaptcha";
+import BannerSection from "../../components/BannerSection/BannerSection.jsx";
 
 function Contact() {
+
+  const data = {
+    title: 'Home/Event',
+    
+    bg_image:'../assets/images/HomeEvent.png',
+  };
+
+
+
+
   const [disable, setDisable] = useState("");
   const [messageThanksDone, setMessageThanksDone] = useState("");
   const [name, setName] = useState("");
@@ -112,6 +123,7 @@ function Contact() {
 
         {/* Breadcroumb */}
         {/* <BreadcrumbBox title="Contact Us" /> */}
+        <BannerSection data={data} />
 
         {/* Contact Area */}
         <section className="contact-area">

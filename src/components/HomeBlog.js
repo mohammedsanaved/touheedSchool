@@ -4,23 +4,25 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { Styles } from "./styles/homeBlog.js";
 import { useSelector, useDispatch } from "react-redux";
-// import { useState, useEffect } from 'react'
-// import { listEvent } from '../actions/eventActions'
+import { useState, useEffect } from "react";
+import { listEvent } from "../actions/eventActions";
 import ReactHtmlParser from "react-html-parser";
 
 import Loader from "./Loader";
 import Message from "./Message";
 
 function HomeBlog({ eventListData }) {
-  // const dispatch = useDispatch()
-  // const eventList = useSelector(state => state.eventList)
-  // const {error, loading, event, page, pages  } = eventList
-  // console.log('eventListData:' , eventListData)
-  // useEffect(()=>{
-  //     dispatch(listEvent())
-  // },[dispatch ])
-  const postLink = "/event-details/";
-  const { event, loading, error } = eventListData;
+  const dispatch = useDispatch();
+  const eventList = useSelector((state) => state.eventList);
+  console.log(eventList, "------------------->");
+  const { error, loading, event, page, pages } = eventList;
+  console.log(event, "events from eventList");
+  // console.log("eventListData:", eventListData);
+  useEffect(() => {
+    dispatch(listEvent());
+  }, [dispatch]);
+  const postLink = "/events/";
+  // const { event, loading, error } = eventListData;
 
   return (
     <Styles>
@@ -38,7 +40,7 @@ function HomeBlog({ eventListData }) {
             ) : error ? (
               <Message variant="danger">{error}</Message>
             ) : (
-              event.map((data, i) =>
+              event?.map((data, i) =>
                 i < 4 ? (
                   <Col md="6" key={i}>
                     <div className="blog-post">

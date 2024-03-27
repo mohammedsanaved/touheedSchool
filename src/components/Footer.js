@@ -120,7 +120,7 @@ const Footer = () => {
             <Col md="4">
               <div className="f-post">
                 <h5>Recent Post</h5>
-                {event.map((data, i) =>
+                {event?.map((data, i) =>
                   i < 3 ? (
                     <div className="post-box d-flex">
                       <div className="post-img">

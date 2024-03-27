@@ -13,32 +13,32 @@ import { Styles } from "./styles/eventDetails.js";
 
 import ReactHtmlParser from "react-html-parser";
 
-import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { detailEvent } from "../../actions/eventActions";
+// import { useState, useEffect } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import { detailEvent } from "../../actions/eventActions";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Datasimg from "../../data/shop/details.json";
+// import Datasimg from "../../data/shop/details.json";
 
 import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 
 function EventDetails({ match }) {
-  const settings = {
-    showArrows: false,
-    showStatus: false,
-    showIndicators: false,
-  };
+  // const settings = {
+  //   showArrows: false,
+  //   showStatus: false,
+  //   showIndicators: false,
+  // };
 
-  const dispatch = useDispatch();
-  const eventDetail = useSelector((state) => state.eventDetail);
-  const { loading, event, error } = eventDetail;
-  console.log(event, match);
-  useEffect(() => {
-    dispatch(detailEvent(match.params.id));
-  }, [dispatch, match]);
-  let str = "Hello world!";
+  // const dispatch = useDispatch();
+  // const eventDetail = useSelector((state) => state.eventDetail);
+  // const { loading, event, error } = eventDetail;
+  // console.log(event, match);
+  // useEffect(() => {
+  //   dispatch(detailEvent(match.params.id));
+  // }, [dispatch, match]);
+  // let str = "Hello world!";
   return (
     <Styles>
       {/* Main Wrapper */}

@@ -2,6 +2,7 @@ import React from 'react';
 import BannerSection from "../../components/BannerSection/BannerSection"
 import SingleEvent from '../../components/SingleEvent/SingleEvent';
 import {EventsStyles} from "./EventsStyles.js"
+import HeaderTwo from '../../components/HeaderTwo.js';
 
 
 const Events = () => {
@@ -22,6 +23,7 @@ const Events = () => {
     <>
 
     <EventsStyles>
+      <HeaderTwo/>
     <BannerSection data={data} />
 
     <div className='event-page-div mx-auto'>

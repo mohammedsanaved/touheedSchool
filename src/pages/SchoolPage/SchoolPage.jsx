@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import BannerSection from '../../components/BannerSection/BannerSection';
 import { useSelector } from 'react-redux';
@@ -8,6 +7,7 @@ import LetsTakeAdmission from '../../components/LetsTakeAdmission/LetsTakeAdmiss
 import HomeBlog from '../../components/HomeBlog';
 import ContactInfoSection from '../../components/ContactInfoSection/ContactInfoSection';
 import ReadMoreSection from '../../components/ReadMoreSection';
+import HeaderTwo from '../../components/HeaderTwo';
 
 
 const SchoolPage = () => {
@@ -25,7 +25,8 @@ const SchoolPage = () => {
 
   return (
     <>
-    <Header/>
+    <HeaderTwo/>
+    
    
     <BannerSection data={data} />
 
@@ -40,7 +41,7 @@ const SchoolPage = () => {
     <Footer/>
     
     </>
-  )
-}
+  );
+};
 
-export default SchoolPage
+export default SchoolPage;

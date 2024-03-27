@@ -1,10 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { Container, Row, Col } from "react-bootstrap";
 import Datas from "../data/about-us/about-us.json";
 function Cards() {
   return (
-    <Card style={{ width: "24rem", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}>
+    <Card style={{ width: "26rem", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}>
       <Card.Img
         variant="top"
         src={process.env.PUBLIC_URL + `/assets/images/${Datas.mainImage}`}
@@ -15,11 +14,11 @@ function Cards() {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <div className="d-flex justify-content-start gap-2 mt-3">
-          <Button variant="primary" size="sm">
+        <div className="d-flex justify-content-evenly gap-2 mt-3">
+          <Button variant="success" size="md">
             Read More
           </Button>
-          <Button variant="success" size="sm">
+          <Button variant="success" size="md">
             Contacts Us
           </Button>
         </div>

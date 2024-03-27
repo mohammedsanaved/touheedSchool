@@ -20,7 +20,7 @@ const BannerSection =  (props)  => {
     </div>
     </BannerSectionStyles>
     </>
-  )
-}
+  );
+};
 
 export default BannerSection;
