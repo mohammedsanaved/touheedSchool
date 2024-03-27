@@ -18,6 +18,7 @@ import Brouchers from "./components/Brouchers";
 import SingleEvent from "../../components/SingleEvent/SingleEvent";
 import Event from "./components/Event";
 import FAQs from "./components/FAQs";
+import NoticeBoard from "./components/NoticeBoard";
 
 const SchoolPage = () => {
   // const bg =
@@ -49,16 +50,6 @@ const SchoolPage = () => {
             <button>Enquire</button>
           </div>
         </div>
-
-        {/* <BannerSection bg_image={bg} title={"Home/SchoolPage"} /> */}
-
-        {/* <ReadMoreSection /> */}
-        {/* <Container>
-        <div className="d-flex mt-4 gap-4">
-          <EventCarousel />
-          <EventDetailsData />
-        </div>
-      </Container> */}
         <Container>
           <div className="mt-5 d-flex justify-content-between gap-5">
             {/* <Col><EventCarousel /></Col> */}
@@ -75,12 +66,15 @@ const SchoolPage = () => {
           </div>
           <Infrastructure />
           <Brouchers />
+          <div className="d-flex justify-content-center fs-1 fw-bold mt-4 text-dark">
+            Latest Events
+          </div>
           <div className="d-flex gap-4 mb-4 ">
             <Event />
             <Event />
-            {/* <SingleEvent /> */}
           </div>
           <FAQs />
+          <NoticeBoard />
         </Container>
 
         {/* <LetsTakeAdmission /> */}
