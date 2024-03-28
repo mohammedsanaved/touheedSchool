@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Datas from "../data/testimonial/testimonial-slider.json";
 import { Container, Row, Col } from "react-bootstrap";
 import Swiper from "react-id-swiper";
@@ -6,7 +6,7 @@ import { Styles } from "./styles/testimonialSlider.js";
 
 const TestimonialSlider = () => {
   const settings = {
-    slidesPerView: 2,
+    slidesPerView: 1,
     loop: true,
     speed: 1000,
     autoplay: {
@@ -40,15 +40,15 @@ const TestimonialSlider = () => {
       {/* Testimonial Slider */}
       <section
         className="testimonial-area"
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${Datas.backgroundImage})`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${Datas.backgroundImage})`,
+        // }}
       >
         <Container>
           <Row>
             <Col md="12">
               <div className="sec-title text-center">
-                <h4>{Datas.secTitle}</h4>
+                <h4 className="title">{Datas.secTitle}</h4>
               </div>
             </Col>
             <Col md="12" className="testimonial-slider">

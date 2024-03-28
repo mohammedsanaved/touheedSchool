@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ModalVideo from "react-modal-video";
 import CountUp from "react-countup";
 import { Styles } from "./styles/aboutUs.js";
+import video from "../assets/schoolVideo.mp4";
 
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,19 +22,30 @@ const AboutUs = () => {
           <Row>
             <Col md="6">
               <div className="about-image">
-                <img
+                {/* <img
                   src={
                     process.env.PUBLIC_URL + `/assets/images/${Datas.mainImage}`
                   }
                   className="main-img"
                   alt=""
-                />
-                <img
+                /> */}
+                <div>
+                  <video
+                    className="h-75 w-100"
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                    playsInline={true}
+                  >
+                    <source type="video/mp4" src={video} />
+                  </video>
+                </div>
+                {/* <img
                   src={process.env.PUBLIC_URL + "/assets/images/pattern.png"}
                   className="pattern-img"
                   alt=""
-                />
-                <div
+                /> */}
+                {/* <div
                   className="video-player"
                   style={{
                     backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${Datas.videoBackground})`,
@@ -48,7 +60,7 @@ const AboutUs = () => {
                   <button onClick={openModal} className="play-button">
                     <i className="las la-play"></i>
                   </button>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col md="6">
@@ -58,7 +70,7 @@ const AboutUs = () => {
                   {Datas.desc1}
                   <span>{Datas.desc2}</span>
                 </p>
-                <Row>
+                {/* <Row>
                   <Col sm="4">
                     <div className="counter-box box1 text-center">
                       <h3>
@@ -86,7 +98,7 @@ const AboutUs = () => {
                       <p>Courses</p>
                     </div>
                   </Col>
-                </Row>
+                </Row> */}
                 <Link
                   className="readmore-btn"
                   to={process.env.PUBLIC_URL + "/about"}

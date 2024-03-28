@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Datas from "../data/blog/home-blog.json";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
@@ -31,7 +31,7 @@ function HomeBlog({ eventListData }) {
         <Container>
           <Row>
             <Col md="12">
-              <div className="sec-title text-center">
+              <div className="fs-1 fw-bold mb-4 text-center">
                 <h4>Latest Event</h4>
               </div>
             </Col>
