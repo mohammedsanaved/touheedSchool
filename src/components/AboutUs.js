@@ -6,6 +6,8 @@ import ModalVideo from "react-modal-video";
 import CountUp from "react-countup";
 import { Styles } from "./styles/aboutUs.js";
 import video from "../assets/schoolVideo.mp4";
+import { motion } from "framer-motion";
+import { slideIn } from "../utils/motion.js";
 
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,32 +22,29 @@ const AboutUs = () => {
       <section className="about-us">
         <Container>
           <Row>
-            <Col md="6">
-              <div className="about-image">
-                {/* <img
-                  src={
-                    process.env.PUBLIC_URL + `/assets/images/${Datas.mainImage}`
-                  }
-                  className="main-img"
-                  alt=""
-                /> */}
-                <div>
-                  <video
-                    className="h-75 w-100"
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                    playsInline={true}
-                  >
-                    <source type="video/mp4" src={video} />
-                  </video>
-                </div>
-                {/* <img
+            <Col>
+              <motion.div
+                variants={slideIn("left", "tween", 0.2, 1)}
+                className=""
+              >
+                <div className="about-image">
+                  <div>
+                    <video
+                      className="h-75 w-100"
+                      autoPlay={true}
+                      loop={true}
+                      muted={true}
+                      playsInline={true}
+                    >
+                      <source type="video/mp4" src={video} />
+                    </video>
+                  </div>
+                  {/* <img
                   src={process.env.PUBLIC_URL + "/assets/images/pattern.png"}
                   className="pattern-img"
                   alt=""
                 /> */}
-                {/* <div
+                  {/* <div
                   className="video-player"
                   style={{
                     backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${Datas.videoBackground})`,
@@ -61,51 +60,29 @@ const AboutUs = () => {
                     <i className="las la-play"></i>
                   </button>
                 </div> */}
-              </div>
+                </div>
+              </motion.div>
             </Col>
-            <Col md="6">
-              <div className="about-content">
-                <h4 className="about-title">{Datas.title}</h4>
-                <p className="about-para">
-                  {Datas.desc1}
-                  <span>{Datas.desc2}</span>
-                </p>
-                {/* <Row>
-                  <Col sm="4">
-                    <div className="counter-box box1 text-center">
-                      <h3>
-                        <CountUp end={970} duration={5} delay={1.5} />
-                        <i className="las la-plus"></i>
-                      </h3>
-                      <p>Happy Students</p>
-                    </div>
-                  </Col>
-                  <Col sm="4">
-                    <div className="counter-box box2 text-center">
-                      <h3>
-                        <CountUp end={130} duration={5} delay={1.5} />
-                        <i className="las la-plus"></i>
-                      </h3>
-                      <p>Teachers</p>
-                    </div>
-                  </Col>
-                  <Col sm="4">
-                    <div className="counter-box box3 text-center">
-                      <h3>
-                        <CountUp end={340} duration={5} delay={1.5} />
-                        <i className="las la-plus"></i>
-                      </h3>
-                      <p>Courses</p>
-                    </div>
-                  </Col>
-                </Row> */}
-                <Link
-                  className="readmore-btn"
-                  to={process.env.PUBLIC_URL + "/about"}
-                >
-                  Read More
-                </Link>
-              </div>
+
+            <Col>
+              <motion.div
+                variants={slideIn("right", "tween", 0.2, 1)}
+                className=""
+              >
+                <div className="about-content">
+                  <h4 className="about-title">{Datas.title}</h4>
+                  <p className="about-para">
+                    {Datas.desc1}
+                    <span>{Datas.desc2}</span>
+                  </p>
+                  <Link
+                    className="readmore-btn"
+                    to={process.env.PUBLIC_URL + "/about"}
+                  >
+                    Read More
+                  </Link>
+                </div>
+              </motion.div>
             </Col>
           </Row>
         </Container>

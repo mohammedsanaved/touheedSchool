@@ -59,7 +59,7 @@ export default function HomeOne() {
       {/* < CourseFilter /> */}
 
       {/* Testimonial Slider */}
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
 
       {/* Event / Blog Area */}
 
