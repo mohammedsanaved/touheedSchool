@@ -22,7 +22,7 @@ const AboutUs = () => {
       <section className="about-us">
         <Container>
           <Row>
-            <Col>
+            <Col md={6}>
               <motion.div
                 variants={slideIn("left", "tween", 0.2, 1)}
                 className=""

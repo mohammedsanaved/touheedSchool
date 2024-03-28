@@ -1,7 +1,7 @@
 import React from "react";
 import { Styles } from "./styles/cardSection";
 import { Container, Row, Col } from "react-bootstrap";
-import Cards from "../Cards";
+// import Cards from "../Cards";
 import CardFlip from "../CardFlip";
 
 const CardSection = () => {
@@ -9,7 +9,7 @@ const CardSection = () => {
     <Styles>
       <section className="cards">
         <Container>
-          <div>Our Schools</div>
+          <div className="CardHeader">Our Schools</div>
           <Row className="cardsRow">
             <Col className="mb-4 mx-5 flex-grow-0 flex-shrink-0 mt-4">
               {/* <Cards /> */}

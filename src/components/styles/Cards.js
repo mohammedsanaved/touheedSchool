@@ -18,6 +18,22 @@ export const Styles = styled.div`
     justify-content: center;
     align-items: center;
   }
+  .ReadMore {
+    background: #11b67a;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    color: #eee;
+    font-weight: 600;
+  }
+  .ContactUs {
+    padding: 5px 15px;
+    border: 2px solid #11b67a;
+    background: none;
+    border-radius: 10px;
+    color: #11b67a;
+    font-weight: 600;
+  }
 
   .Card {
     width: 100%;
@@ -31,6 +47,17 @@ export const Styles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .Back {
+    display: flex;
+    flex-direction: column;
+    margin-top: -58px;
+    gap: 189px;
+  }
+  .schoolLocation {
+    padding: 0px 10px 10px 10px;
+    font-size: 22px;
+    // background: #11b67a;
   }
 
   .front,

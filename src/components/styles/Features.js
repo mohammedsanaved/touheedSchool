@@ -11,8 +11,8 @@ export const Styles = styled.div`
   }
   .feature_main {
     display: flex;
+
     justify-content: space-around; /* Adjust as needed */
-    flex-wrap: wrap; /* Allow items to wrap */
   }
 
   .feature_card {
