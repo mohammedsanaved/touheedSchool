@@ -20,6 +20,7 @@ import Spinner from "react-bootstrap/Spinner";
 
 import { useSelector, useDispatch } from "react-redux";
 import { listEvent } from "./actions/eventActions";
+import Features from "./components/Features";
 // import Cards from "./components/Cards";
 
 export default function HomeOne() {
@@ -64,20 +65,22 @@ export default function HomeOne() {
 
       <HomeBlog eventListData={eventList} />
 
+      <Features />
+
       {/* Faq & Event Area */}
-      {/* < FaqEvent /> */}
+      {/* <FaqEvent /> */}
 
       {/* Team Slider */}
-      {/* < TeamSlider /> */}
+      {/* <TeamSlider /> */}
 
       {/* Help Area */}
-      {/* < HelpArea /> */}
+      {/* <HelpArea /> */}
 
       {/* Campus Tour */}
       {/* <CampusTour /> */}
 
       {/* Newsletter Form */}
-      {/* < NewsletterForm /> */}
+      {/* <NewsletterForm /> */}
 
       {/* Footer */}
       <Footer />

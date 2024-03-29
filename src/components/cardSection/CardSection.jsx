@@ -1,35 +1,32 @@
 import React from "react";
 import { Styles } from "./styles/cardSection";
 import { Container, Row, Col } from "react-bootstrap";
-import Cards from "../Cards";
+// import Cards from "../Cards";
+import CardFlip from "../CardFlip";
 
 const CardSection = () => {
   return (
     <Styles>
       <section className="cards">
         <Container>
+          <div className="CardHeader">Our Schools</div>
           <Row className="cardsRow">
             <Col className="mb-4 mx-5 flex-grow-0 flex-shrink-0 mt-4">
-              <Cards />
+              {/* <Cards /> */}
+              <CardFlip />
             </Col>
             <Col className="mb-4 mx-5 flex-grow-0 flex-shrink-0 mt-4">
-              <Cards />
+              <CardFlip />
             </Col>
             <Col className="mb-4 mx-5 flex-grow-0 flex-shrink-0 mt-4">
-              <Cards />
+              <CardFlip />
             </Col>
             <Col className="mb-4 mx-5 flex-grow-0 flex-shrink-0 mt-4">
-              <Cards />
+              <CardFlip />
             </Col>
             <Col className="mb-4 mx-5 flex-grow-0 flex-shrink-0 mt-4">
-              <Cards />
+              <CardFlip />
             </Col>
-            {/* <Col lg={4} md={6} sm={12} className="mb-4">
-              <Cards />
-            </Col>
-            <Col lg={4} md={6} sm={12} className="mb-4">
-              <Cards />
-            </Col> */}
           </Row>
         </Container>
       </section>

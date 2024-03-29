@@ -20,6 +20,7 @@ import Brouchers from "./components/Brouchers";
 import SingleEvent from "../../components/SingleEvent/SingleEvent";
 import Event from "./components/Event";
 import FAQs from "./components/FAQs";
+import NoticeBoard from "./components/NoticeBoard";
 
 import "./SchoolPage.css";
 import GreenButton from "../../components/GreenButton/GreenButton";
@@ -73,9 +74,9 @@ const SchoolPage = () => {
           <div className="event-container d-flex mx-auto">
             <Event />
             <Event />
-            {/* <SingleEvent /> */}
           </div>
           <FAQs />
+          <NoticeBoard />
         
 
        
