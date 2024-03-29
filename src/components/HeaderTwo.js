@@ -12,7 +12,7 @@ const HeaderTwo = () => {
   return (
     <Styles>
       {/* Topbar 2 */}
-      <section className="top-bar2">
+      {/* <section className="top-bar2">
         <Container>
           <Row>
             <Col lg="7" md="9">
@@ -33,20 +33,66 @@ const HeaderTwo = () => {
             </Col>
             <Col lg="5" md="3">
               <div className="bar-right d-flex justify-content-end">
-                {/* <ul className="list-unstyled list-inline bar-lang">
-                                        <li className="list-inline-item">
-                                            <Dropdown>
-                                                <Dropdown.Toggle><img src={process.env.PUBLIC_URL + "/assets/images/us.png"} alt="" />English<i className="las la-angle-down"></i></Dropdown.Toggle>
-                                                <Dropdown.Menu as="ul">
-                                                    <Dropdown.Item as="li"><img src={process.env.PUBLIC_URL + "/assets/images/us.png"} alt="" /> English</Dropdown.Item>
-                                                    <Dropdown.Item as="li"><img src={process.env.PUBLIC_URL + "/assets/images/fra.png"} alt="" /> French</Dropdown.Item>
-                                                    <Dropdown.Item as="li"><img src={process.env.PUBLIC_URL + "/assets/images/ger.png"} alt="" /> German</Dropdown.Item>
-                                                    <Dropdown.Item as="li"><img src={process.env.PUBLIC_URL + "/assets/images/spa.png"} alt="" /> Spanish</Dropdown.Item>
-                                                    <Dropdown.Item as="li"><img src={process.env.PUBLIC_URL + "/assets/images/bra.png"} alt="" /> Brazilian</Dropdown.Item>
-                                                </Dropdown.Menu>
-                                            </Dropdown>
-                                        </li>
-                                    </ul> */}
+                <ul className="list-unstyled list-inline bar-lang">
+                  <li className="list-inline-item">
+                    <Dropdown>
+                      <Dropdown.Toggle>
+                        <img
+                          src={process.env.PUBLIC_URL + "/assets/images/us.png"}
+                          alt=""
+                        />
+                        English<i className="las la-angle-down"></i>
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu as="ul">
+                        <Dropdown.Item as="li">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL + "/assets/images/us.png"
+                            }
+                            alt=""
+                          />{" "}
+                          English
+                        </Dropdown.Item>
+                        <Dropdown.Item as="li">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL + "/assets/images/fra.png"
+                            }
+                            alt=""
+                          />{" "}
+                          French
+                        </Dropdown.Item>
+                        <Dropdown.Item as="li">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL + "/assets/images/ger.png"
+                            }
+                            alt=""
+                          />{" "}
+                          German
+                        </Dropdown.Item>
+                        <Dropdown.Item as="li">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL + "/assets/images/spa.png"
+                            }
+                            alt=""
+                          />{" "}
+                          Spanish
+                        </Dropdown.Item>
+                        <Dropdown.Item as="li">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL + "/assets/images/bra.png"
+                            }
+                            alt=""
+                          />{" "}
+                          Brazilian
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </li>
+                </ul>
                 <ul className="list-unstyled list-inline bar-social">
                   <li className="list-inline-item">
                     <a href={process.env.PUBLIC_URL + "/"}>
@@ -79,7 +125,7 @@ const HeaderTwo = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       {/* Logo Area 2 */}
       <section className="logo-area2">
@@ -101,13 +147,6 @@ const HeaderTwo = () => {
             <Col md="9">
               <div className="menu-box d-flex justify-content-end">
                 <ul className="nav menu-nav">
-                  {/* <li className="nav-item dropdown active">
-                                            <Link className="nav-link dropdown-toggle" to={process.env.PUBLIC_URL + "/"} data-toggle="dropdown">Home <i className="las la-angle-down"></i></Link>
-                                            <ul className="dropdown list-unstyled">
-                                                <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/"}>Home Style 1x</Link></li>
-                                                <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/home-two"}>Home Style 2</Link></li>
-                                            </ul>
-                                        </li> */}
                   <li className="nav-item">
                     <Link
                       className="nav-link dropdown-toggle"
