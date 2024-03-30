@@ -29,8 +29,8 @@ const Brouchers = () => {
             doloremque! Molestiae quas maxime voluptatibus.
           </div>
           <div className="school-buttons d-flex justify-content-center mx-auto">
-            <GreenButton  text="Know More" />
-            <GreenButton  text="Enquire Now" />
+            <GreenButton  text="Know More" class_Name="know-more-btn" />
+            <GreenButton  text="Enquire Now" class_Name="enquire-now-btn" />
           </div>
         </div>
       </div>

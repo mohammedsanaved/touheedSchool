@@ -42,5 +42,37 @@ margin-bottom:50px;
 color:rgba(58, 58, 58, 1);
 }
 
+@media screen and (max-width: 600px) {
+
+.brochure-text{
+  font-size: 16px;
+  line-height: 23.05px;
+}
+
+.brochure-bg{
+  padding-left:15px;
+  padding-right:15px;
+}
+.brochure-header{
+  font-size:25px;
+}
+
+.brochure-bg{
+  padding-top:40px;
+}
+
+
+.brochure-img{
+  margin-bottom:20px;
+}
+
+.know-more-btn , .enquire-now-btn{
+  font-size: 18px !important;
+  width: auto !important;
+}
+
+
+}
+
 
 `;

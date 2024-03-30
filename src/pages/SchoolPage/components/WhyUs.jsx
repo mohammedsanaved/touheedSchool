@@ -27,7 +27,7 @@ const EventDetailsData = () => {
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis error ut provident vel repellendus nihil atque possimus aliquam, mollitia tempora neque voluptate debitis illum veniam.Numquam blanditiis dignissimos laboriosam illum ut officia.
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis error ut provident vel repellendus nihil atque possimus aliquam, mollitia tempora neque voluptate debitis illum 
       </p>
-      <GreenButton text="Read More" />
+      <GreenButton text="Read More" class_Name="readmore-btn" />
     </div>
     </div>
   );

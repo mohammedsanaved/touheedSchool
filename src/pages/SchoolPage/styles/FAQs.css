@@ -26,7 +26,7 @@ margin-bottom: 70px;
 }
 
 
-.faq-ques , .accordion-content{
+.faq-ques {
     font-family: Inter;
 font-size: 20px;
 font-weight: 600;
@@ -34,6 +34,19 @@ line-height: 24.2px;
 text-align: left;
 color: black;
 }
+
+.accordion-content{
+
+
+    font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 19.36px;
+text-align: left;
+
+
+}
+
 
 .accordion-open , .accordion-content{
     background-color: rgba(246, 249, 255, 1);
@@ -45,4 +58,20 @@ color: black;
 
 .accordion-item.accordion-open{
     border:1px solid black !important;
+}
+
+@media screen and (max-width: 900px) {
+.accordion{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.faq-title{
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+
+
 }

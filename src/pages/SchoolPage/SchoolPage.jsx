@@ -79,7 +79,7 @@ const SchoolPage = () => {
           <NoticeBoard />
         
 
-       
+       <h3 className="contact-us-title">Contact Us</h3>
 
         <ContactInfoSection />
       </div>

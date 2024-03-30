@@ -35,21 +35,21 @@ const Infrastructure = () => {
         <div className="infrastucture-title">
           Infrastructure
         </div>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="infrastructure-row">
           {dataStructure.map((item, index) => (
-            <div key={index} className="col">
-              <div>
+            <div key={index} className="infrastructure-item">
+              
                 <img
                   src={item.src}
                   className="card-img-top rounded-3 shadow-lg img"
                   alt={item.title}
                 />
-                <div>
+                
                   <h5 className="mt-4 mb-5 text-center img-text">
                     {item.title}
                   </h5>
-                </div>
-              </div>
+                
+             
             </div>
           ))}
         </div>

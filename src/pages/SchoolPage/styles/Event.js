@@ -92,4 +92,25 @@ export const Styles = styled.div`
     width:179px;
     height:252px;
   }
+
+
+  @media screen and (max-width: 600px) {
+
+    .single-event-div-container{
+      padding-left:15px;
+      padding-right:15px;
+
+    }
+
+    .event-div-container{
+      margin-left:auto;
+      margin-right:auto;
+     
+    }
+
+    .event-img{
+      display:none;
+    }
+
+  }
 `;

@@ -27,6 +27,7 @@ import ProductDetails from "./pages/shop/ProductDetails";
 import Cart from "./pages/shop/Cart";
 import SchoolPage from "./pages/SchoolPage/SchoolPage.jsx";
 import "./fonts.css"
+import AdmissionPage from "./pages/AdmissionPage/AdmissionPage.jsx";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/school-page" element={<SchoolPage />} />
+        <Route path="/admission-page" element={<AdmissionPage/>} />
       </Routes>
     </Router>
   );

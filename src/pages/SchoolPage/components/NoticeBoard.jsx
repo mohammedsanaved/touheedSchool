@@ -47,24 +47,31 @@ const NoticeBoard = () => {
   ];
   return (
     <Styles>
-      <div className="fs-1 fw-bold d-flex justify-content-center text-dark">
+      <div className="notice-board-title">
         Notice Board
       </div>
-      <div className="background">
+      <div className="notice-background mx-auto">
+        
+        <div className="inner_background mx-auto">
+
+
         <div className="PinIcon">
           <TiPin />
         </div>
-        <div className="inner_background">
+
+    <div className="notice-scroll mx-auto">
+
           {noticeData.map((values) => (
             <>
               <div key={values.id} className="noticeContent">
                 <span>
                   <GoDotFill />
                 </span>
-                <div className="mb-3">{values.content}</div>
+                <div className="mb-3 notice-content">{values.content}</div>
               </div>
             </>
           ))}
+          </div>
         </div>
       </div>
     </Styles>

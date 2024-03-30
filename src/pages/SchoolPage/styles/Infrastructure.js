@@ -41,4 +41,44 @@ text-align: center;
 color:black;
 }
 
+
+.infrastructure-item{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infrastructure-row{
+  display:grid;
+  grid-template-columns:auto auto auto;
+  
+}
+
+
+@media screen and (max-width: 900px) {
+
+.infrastructure-row{
+  display:grid;
+  grid-template-columns:auto auto;
+  
+}
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .infrastructure-row{
+   
+    grid-template-columns:auto;
+    
+  }
+  .infrastucture-title{
+    font-size:25px;
+  }
+
+  .infrastructure-div{
+    margin-top:50px;
+  }
+
+}
 `;

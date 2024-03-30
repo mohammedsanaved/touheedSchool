@@ -97,3 +97,53 @@ max-width: 1207px;
 column-gap: 40px;
 
 }
+
+.contact-us-title{
+    font-family: Inter;
+font-size: 36px;
+font-weight: 700;
+line-height: 43.57px;
+text-align: center;
+color: black;
+margin-top: 80px;
+margin-bottom: 80px;
+}
+
+.contact-info-container{
+    background-color: white !important;
+}
+
+@media screen and (max-width: 900px) {
+
+
+    .school-description{
+        font-size: 16px;
+    }
+
+    .video-banner-text{
+        top: 10%;
+        
+    
+    }
+    .breadcrumbs-div p{
+        text-align: center;
+    }
+
+
+    .video-banner-text,.breadcrumbs-div{
+        padding: 15px;
+        
+    }
+
+
+.school-buttons{
+ flex-direction: column;
+ align-items: center;
+}
+
+.event-container{
+    flex-direction: column;
+}
+
+
+}
