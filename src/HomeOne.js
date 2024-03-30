@@ -21,6 +21,12 @@ import Spinner from "react-bootstrap/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { listEvent } from "./actions/eventActions";
 import Features from "./components/Features";
+import HeaderTwo from "./components/HeaderTwo";
+import Testimonial from "./components/Testimonial";
+import EventCarousel from "./components/EventCarousel";
+import EventsSections from "./components/EventsSection/EventsSections";
+import EventSectionCarousel from "./components/EventSectionCarousel";
+import Gallery from "./components/Gallery";
 // import Cards from "./components/Cards";
 
 export default function HomeOne() {
@@ -35,7 +41,8 @@ export default function HomeOne() {
   return (
     <div className="main-wrapper">
       {/* Header */}
-      <Header />
+      {/* <Header /> */}
+      <HeaderTwo />
 
       {/* Hero Slider */}
       <HeroSlider />
@@ -51,6 +58,9 @@ export default function HomeOne() {
 
       {/* CardSection */}
       <CardSection />
+      {/* <EventCarousel /> */}
+      {/* <EventsSections /> */}
+      <EventSectionCarousel />
 
       {/* Service Box */}
       {/* <ServiceBox /> */}
@@ -60,12 +70,14 @@ export default function HomeOne() {
 
       {/* Testimonial Slider */}
       {/* <TestimonialSlider /> */}
+      <Testimonial />
 
       {/* Event / Blog Area */}
 
       <HomeBlog eventListData={eventList} />
 
       <Features />
+      <Gallery />
 
       {/* Faq & Event Area */}
       {/* <FaqEvent /> */}

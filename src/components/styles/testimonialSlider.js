@@ -21,21 +21,21 @@ export const Styles = styled.div`
       left: 0;
     }
 
-    // .sec-title {
-    //   h4 {
-    //     color: #000;
-    //     line-height: 35px;
-    //     font-weight: 600;
-    //     max-width: 550px;
-    //     margin: auto;
-    //     margin-bottom: 43px;
+    .sec-title {
+      h4 {
+        color: #000;
+        line-height: 35px;
+        font-weight: 600;
+        max-width: 550px;
+        margin: auto;
+        margin-bottom: 43px;
 
-    //     @media (max-width: 575px) {
-    //       margin-bottom: 15px;
-    //       font-size: 20px;
-    //     }
-    //   }
-    // }
+        @media (max-width: 575px) {
+          margin-bottom: 15px;
+          font-size: 20px;
+        }
+      }
+    }
     .title {
       color: #000;
     }
