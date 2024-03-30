@@ -3,6 +3,7 @@ import Datas from "../data/testimonial/testimonial-slider.json";
 import { Container, Row, Col } from "react-bootstrap";
 import Swiper from "react-id-swiper";
 import { Styles } from "./styles/testimonialSlider.js";
+import { Navigation } from "swiper/modules";
 
 const TestimonialSlider = () => {
   const settings = {
@@ -18,6 +19,11 @@ const TestimonialSlider = () => {
     pagination: {
       el: ".slider-dot.text-center",
       clickable: true,
+    },
+    navigation: {
+      // Add navigation buttons
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       0: {
@@ -38,12 +44,7 @@ const TestimonialSlider = () => {
   return (
     <Styles>
       {/* Testimonial Slider */}
-      <section
-        className="testimonial-area"
-        // style={{
-        //   backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${Datas.backgroundImage})`,
-        // }}
-      >
+      <section className="testimonial-area">
         <Container>
           <Row>
             <Col md="12">
@@ -52,7 +53,7 @@ const TestimonialSlider = () => {
               </div>
             </Col>
             <Col md="12" className="testimonial-slider">
-              <Swiper {...settings}>
+              <Swiper {...settings} modules={[Navigation]}>
                 {Datas.dataList.map((data, i) => (
                   <div className="slider-item" key={i}>
                     <div className="desc">
@@ -74,6 +75,8 @@ const TestimonialSlider = () => {
                   </div>
                 ))}
               </Swiper>
+              {/* <div className="swiper-button-prev"></div> */}
+              {/* <div className="swiper-button-next"></div> */}
             </Col>
           </Row>
         </Container>
