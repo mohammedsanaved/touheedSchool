@@ -4,6 +4,16 @@ export const Styles = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+  }
+  .galleryHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+    margin-top: 40px;
   }
   .oneofOne_sub {
     gap: 10px;
@@ -11,6 +21,15 @@ export const Styles = styled.div`
   .oneofOne {
     width: 359px;
     height: 254px;
+  }
+  .oneofOne01 {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    @media (max-width: 375px) {
+      height: 359px;
+      width: 225px;
+    }
   }
 
   .oneofOne1 {
@@ -22,8 +41,8 @@ export const Styles = styled.div`
     height: 144px;
   }
   .oneofTwo {
-    width: 427px;
-    heigth: 412px;
+    width: 590px;
+    heigth: auto;
   }
   .oneofThree1 {
     width: 315px;

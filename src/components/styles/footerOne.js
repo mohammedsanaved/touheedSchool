@@ -9,6 +9,7 @@ export const Styles = styled.div`
     position: relative;
     padding: 235px 0 55px;
     background: ${colors.bg1};
+    margin-top: 20px;
 
     &:before {
       position: absolute;

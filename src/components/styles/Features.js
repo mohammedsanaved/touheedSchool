@@ -8,6 +8,7 @@ export const Styles = styled.div`
     font-weight: 700;
     color: #000;
     margin-bottom: 16px;
+    margin-top: 40px;
   }
   .feature_main {
     display: flex;

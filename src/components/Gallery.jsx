@@ -4,6 +4,9 @@ import { Styles } from "./styles/Gallery";
 const Gallery = () => {
   return (
     <Styles>
+      <div className="galleryHeader">
+        We Have Best Campus In The Region. Let's Explore The Campus.
+      </div>
       <div className="gallery_main">
         <div className="d-flex flex-column">
           <div>
@@ -15,8 +18,8 @@ const Gallery = () => {
               alt=""
             />
           </div>
-          <div className="d-flex gap-3 mt-3">
-            <div className="">
+          <div className="oneofOne01">
+            <div>
               <img
                 src="https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt=""

@@ -94,3 +94,32 @@ const HeroSlider = () => {
 };
 
 export default HeroSlider;
+{
+  /* <SwiperSlide>
+          <img
+          src="https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+          className=""
+          />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img
+          src="https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+          />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img
+          src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+          />
+        </SwiperSlide> */
+}
+{
+  /* 
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+    <SwiperSlide>Slide 9</SwiperSlide> */
+}

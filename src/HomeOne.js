@@ -27,6 +27,7 @@ import EventCarousel from "./components/EventCarousel";
 import EventsSections from "./components/EventsSection/EventsSections";
 import EventSectionCarousel from "./components/EventSectionCarousel";
 import Gallery from "./components/Gallery";
+import HeroSlide from "./components/HeroSlide";
 // import Cards from "./components/Cards";
 
 export default function HomeOne() {
@@ -45,7 +46,8 @@ export default function HomeOne() {
       <HeaderTwo />
 
       {/* Hero Slider */}
-      <HeroSlider />
+      {/* <HeroSlider /> */}
+      <HeroSlide />
 
       {/* Icon Box */}
       <IconBox />
@@ -74,7 +76,7 @@ export default function HomeOne() {
 
       {/* Event / Blog Area */}
 
-      <HomeBlog eventListData={eventList} />
+      {/* <HomeBlog eventListData={eventList} /> */}
 
       <Features />
       <Gallery />
