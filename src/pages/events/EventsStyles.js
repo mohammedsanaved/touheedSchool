@@ -11,4 +11,12 @@ export const EventsStyles = styled.div`
   .filter-event-div {
     column-gap: 50px;
   }
+
+
+  .event-page-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 `;

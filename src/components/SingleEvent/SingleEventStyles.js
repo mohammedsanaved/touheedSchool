@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const SingleEventStyles = styled.div`
-  
+
+
+
 .single-event-div-container{
     margin-top: 100px;
 }
@@ -23,6 +25,9 @@ export const SingleEventStyles = styled.div`
     
 
 }
+
+
+
 
 .single-event-event-title{
     font-family: Inter;
@@ -99,4 +104,68 @@ border: none;
 border-radius: 6px;
 margin-top: 28px;
 
-}`;
+}
+
+
+
+
+
+
+@media screen and (max-width:900px) {
+
+
+
+    
+    .single-event-div-container{
+        padding-left:20px;
+        padding-right:20px;
+    
+    }
+}
+
+@media screen and (max-width:600px) {
+
+
+
+    
+    .single-event-div-container{
+       
+        flex-direction:column;
+    
+    }
+
+    .event-img{
+        max-width:400px;
+        width:100%;
+        height: 200px;
+        border-radius:0px;
+    }
+
+    .event-div-container{
+        flex-direction:column;
+        margin:auto;
+        height:100%;
+        min-height: 200px;
+
+    }
+    .event-div-container .first-col{
+        border:none;
+        padding-right:0px;
+        margin-bottom:30px;
+    }
+
+    .event-div-container .second-col{
+        padding-left:0px;
+    }
+
+    .second-col.d-flex.flex-column{
+        flex-direction:row !important;
+        align-items:center;
+        gap:20px;
+    }
+    .event-details-btn{
+        margin-top:0px;
+    }
+}
+
+`;

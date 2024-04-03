@@ -27,6 +27,7 @@ const SortByEvents = () => {
     background-color: #f6f9ff;
     font-weight: 400;
     box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2);
+    width: 90%;
 
     &:focus {
       outline: none;

@@ -5,7 +5,7 @@ const SingleEvent = () => {
     return (
         <SingleEventStyles>
         <div className='d-flex single-event-div-container justify-content-center'>
-            <img src="../assets/images/SingleEventPlaceholder.png" alt="" />
+            <img src="../assets/images/SingleEventPlaceholder.png" alt="" className='event-img' />
             <div className='event-div-container d-flex'>
                 <div className='first-col'>
                     <h2 className='single-event-event-title'>A session on Career Guidance.</h2>

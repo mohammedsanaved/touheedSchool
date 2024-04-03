@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { AdmissionPageStyles } from './AdmissionPageStyles';
 import { Formik, Form, Field, ErrorMessage, useFormik } from 'formik';
 import * as Yup from 'yup';
-import StudentSection from './components/StudentSection';
-import ParentSection from './components/ParentSection';
+
 
 
 const AdmissionPage = () => {
