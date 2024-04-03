@@ -1,10 +1,11 @@
-import React from 'react';
-import BannerSection from "../../components/BannerSection/BannerSection"
-import SingleEvent from '../../components/SingleEvent/SingleEvent';
-import {EventsStyles} from "./EventsStyles.js"
+import React from "react";
+import BannerSection from "../../components/BannerSection/BannerSection";
+import SingleEvent from "../../components/SingleEvent/SingleEvent";
+import { EventsStyles } from "./EventsStyles.js";
 import HeaderTwo from "../../components/HeaderTwo.js";
 import Footer from "../../components/Footer.js";
 import SortByEvents from "../../components/SortByEvents.jsx";
+import { useDispatch, useSelector } from "react-redux";
 
 const Events = () => {
   const bg =
@@ -19,11 +20,11 @@ const Events = () => {
         <div className="event-page-div mx-auto">
           <SortByEvents />
           <SingleEvent />
-          <SingleEvent />
+          {/* <SingleEvent /> */}
 
-          <SingleEvent />
+          {/* <SingleEvent /> */}
 
-          <SingleEvent />
+          {/* <SingleEvent /> */}
         </div>
       </EventsStyles>
       <Footer />
@@ -31,4 +32,4 @@ const Events = () => {
   );
 };
 
-export default Events
+export default Events;
