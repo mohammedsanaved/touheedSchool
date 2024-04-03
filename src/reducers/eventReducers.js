@@ -1,43 +1,47 @@
 import {
-    EVENT_LIST_REQUEST,
-    EVENT_LIST_SUCCESS,
-    EVENT_LIST_FAIL,
+  EVENT_LIST_REQUEST,
+  EVENT_LIST_SUCCESS,
+  EVENT_LIST_FAIL,
+  EVENT_DETAIL_REQUEST,
+  EVENT_DETAIL_SUCCESS,
+  EVENT_DETAIL_FAIL,
+} from "../constants/eventConstants";
 
-    EVENT_DETAIL_REQUEST,
-    EVENT_DETAIL_SUCCESS,
-    EVENT_DETAIL_FAIL,
+export const eventListReducer = (
+  state = { events: [], loading: false, error: null },
+  action
+) => {
+  switch (action.type) {
+    case EVENT_LIST_REQUEST:
+      return { ...state, loading: true, error: null };
 
-} from '../constants/eventConstants'
+    case EVENT_LIST_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        events: action.payload,
+      };
 
-export const eventListReducer = (state = { event : []}, action ) => {
-    switch (action.type){
-        case EVENT_LIST_REQUEST:
-            return { loading:true , event : []}
-        
-        case EVENT_LIST_SUCCESS:
-            return { loading:false , event: action.payload.event, page : action.payload.page, pages:action.payload.pages  }
+    case EVENT_LIST_FAIL:
+      return { ...state, loading: false, error: action.payload };
 
-        case EVENT_LIST_FAIL:
-            return { loading: false, error: action.payload , event : []} 
-        
-        default:
-            return state
+    default:
+      return state;
+  }
+};
 
-    }
-}
+export const eventDetailReducer = (state = { event: {} }, action) => {
+  switch (action.type) {
+    case EVENT_DETAIL_REQUEST:
+      return { loading: true, ...state };
 
-export const eventDetailReducer = (state = {event : {} }, action)=>{
-    switch(action.type){
-        case EVENT_DETAIL_REQUEST:
-            return {loading: true, ...state}
+    case EVENT_DETAIL_SUCCESS:
+      return { loading: false, event: action.payload };
 
-        case EVENT_DETAIL_SUCCESS:
-            return {loading : false, event : action.payload }
+    case EVENT_DETAIL_FAIL:
+      return { loading: false, error: action.payload, event: [] };
 
-        case EVENT_DETAIL_FAIL:
-            return {loading: false, error : action.payload , event : []}
-        
-        default:
-            return state
-    }
-}
+    default:
+      return state;
+  }
+};
