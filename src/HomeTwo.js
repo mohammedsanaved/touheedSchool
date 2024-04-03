@@ -17,6 +17,8 @@ const HomeTwo = () => {
     <div className="main-wrapper">
       {/* Header 2 */}
       <HeaderTwo />
+      
+      <p>LALALA</p>
 
       {/* Hero Image */}
       <HeroImage />

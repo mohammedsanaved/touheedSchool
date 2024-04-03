@@ -1,6 +1,15 @@
 import { styled } from "styled-components";
 
 export const HeroSlideStyle = styled.div`
+
+span.swiper-pagination-bullet{
+  width: 50px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+
+
   .image-container {
     width: 100%;
     display: block;

@@ -45,12 +45,13 @@ export default function HomeOne() {
       {/* <Header /> */}
       <HeaderTwo />
 
+      
+
       {/* Hero Slider */}
       {/* <HeroSlider /> */}
       <HeroSlide />
 
-      {/* Icon Box */}
-      <IconBox />
+    
 
       {/* About Area */}
       <AboutUs />
