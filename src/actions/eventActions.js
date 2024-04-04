@@ -14,7 +14,7 @@ export const listEvent = () => async (dispatch) => {
     dispatch({ type: EVENT_LIST_REQUEST });
 
     const { data } = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/events/events-np/`
+      `${process.env.REACT_APP_API_URL}/api/events/events-np/list`
     );
 
     dispatch({ type: EVENT_LIST_SUCCESS, payload: data });
