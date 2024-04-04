@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 
-const EventCarousel = () => {
+const EventCarousel = ({ images }) => {
   const onChange = (index) => {
     console.log(`Carousel slide changed to index ${index}`);
   };
@@ -49,9 +49,12 @@ const EventCarousel = () => {
       interval={3000}
       infiniteLoop={true}
     >
-      {imgLinks.map((img) => (
+      {images?.map((img) => (
         <div key={img.id}>
-          <img src={img.src} alt={img.alt} />
+          <img
+            src={`${process.env.REACT_APP_API_URL}/${img.image}`}
+            alt={img.alt}
+          />
         </div>
       ))}
     </Carousel>

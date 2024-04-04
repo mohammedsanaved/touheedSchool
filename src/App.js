@@ -45,7 +45,7 @@ function App() {
         <Route path="/instructor-details" element={<InstructorDetails />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/event-details" element={<EventDetails />} />
+        <Route path="/event-details/:id" element={<EventDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Register />} />
         <Route path="/contact" element={<Contact />} />
@@ -59,7 +59,7 @@ function App() {
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/school-page" element={<SchoolPage />} />
-        <Route path="/admission-page" element={<AdmissionPage/>} />
+        <Route path="/admission-page" element={<AdmissionPage />} />
       </Routes>
     </Router>
   );

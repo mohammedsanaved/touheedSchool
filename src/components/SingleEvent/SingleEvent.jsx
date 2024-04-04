@@ -17,7 +17,12 @@ const SingleEvent = ({ event }) => {
           <div className="first-col">
             <h2 className="single-event-event-title">{event.title}</h2>
             <div className="d-flex event-icons-div align-items-center">
-              <img src="./assets/images/ion_time-outline.png" alt="" className="event-time-icon" />{event.time}
+              <img
+                src="./assets/images/ion_time-outline.png"
+                alt=""
+                className="event-time-icon"
+              />
+              {event.time}
               <img
                 src="./assets/images/carbon_location.png"
                 alt=""
@@ -30,7 +35,7 @@ const SingleEvent = ({ event }) => {
 
           <div className="second-col d-flex flex-column">
             <h2 className="single-event-event-date">{event.date}</h2>
-            <Link to={`/event-details`}>
+            <Link to={`/event-details/${event.id}`}>
               <button className="event-details-btn">DETAILS</button>
             </Link>
           </div>
