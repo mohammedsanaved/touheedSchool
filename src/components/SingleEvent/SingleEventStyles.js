@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 export const SingleEventStyles = styled.div`
+  .thumbnail_img {
+    max-width: 298px;
+    border-radius: 6px;
+    height: 290px;
+    object-fit: cover;
+  }
+
   .single-event-div-container {
     margin-top: 100px;
   }
@@ -28,7 +35,7 @@ export const SingleEventStyles = styled.div`
   }
 
   .event-div-container .first-col {
-    border-right: 1px solid grey;
+    border-right: 1px solid #c3d6c8;
     padding-right: 25px;
     max-width: 498px;
     width: 100%;
@@ -47,6 +54,10 @@ export const SingleEventStyles = styled.div`
   .event-location-icon {
     margin-left: 15px;
   }
+  .event-time-icon{
+    margin-right:5px;
+  }
+  
 
   .single-event-text {
     font-family: Inter;
@@ -85,7 +96,12 @@ export const SingleEventStyles = styled.div`
     border-radius: 6px;
     margin-top: 28px;
   }
-
+  .single-event-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines you want */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   @media screen and (max-width: 900px) {
     .single-event-div-container {
       padding-left: 20px;
@@ -96,46 +112,46 @@ export const SingleEventStyles = styled.div`
   @media screen and (max-width: 600px) {
     .single-event-div-container {
       flex-direction: column;
+      max-width: 350px;
+      margin-top: 50px;
     }
-
-    .event-img {
-      max-width: 400px;
-      width: 100%;
-      height: 200px;
-      border-radius: 0px;
-    }
-
+    
     .event-div-container {
       flex-direction: column;
-      margin: auto;
+      margin-top: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      padding: 10px;
       height: 100%;
-      min-height: 200px;
-    }
-    .event-div-container .first-col {
-      border: none;
-      padding-right: 0px;
-      margin-bottom: 30px;
-    }
-    .thumbnail_img {
-      max-width: 481px;
-    }
-    @media screen and (max-width: 1440px) {
-      .thumbnail_img {
-        max-width: 381px;
-      }
+      gap: 20px;
+      padding:30px 15px;
     }
 
+    .event-div-container .first-col {
+      border-right: none;
+      padding-right: 0px;
+    }
     .event-div-container .second-col {
       padding-left: 0px;
+      border-top: 1px solid #c3d6c8;
+      padding-top: 20px;
     }
 
-    .second-col.d-flex.flex-column {
-      flex-direction: row !important;
-      align-items: center;
-      gap: 20px;
+    .single-event-event-title {
+      font-size: 16px;
     }
-    .event-details-btn {
-      margin-top: 0px;
+    .thumbnail_img {
+      max-width: 100%;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+   
+
+    .thumbnail_img {
+      height: 200px;
+      object-fit: cover;
     }
   }
 `;

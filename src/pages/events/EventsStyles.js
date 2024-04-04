@@ -19,4 +19,6 @@ export const EventsStyles = styled.div`
     align-items: center;
 }
 
+
+
 `;
