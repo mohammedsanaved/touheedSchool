@@ -31,15 +31,16 @@ export const listEvent = () => async (dispatch) => {
 };
 
 export const detailEvent = (id) => async (dispatch) => {
+  console.log(id, "Id from DetailsEvents");
   try {
     dispatch({ type: EVENT_DETAIL_REQUEST });
 
     const { data } = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/events/event-detail/${id}/`
+      `${process.env.REACT_APP_API_URL}/api/events/events-list/${id}`
     );
-    console.log(data, "changes from detailsEvents");
 
     dispatch({ type: EVENT_DETAIL_SUCCESS, payload: data });
+    console.log(data, "changes from detailsEvents");
   } catch (error) {
     dispatch({
       type: EVENT_DETAIL_FAIL,
