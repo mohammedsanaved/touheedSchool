@@ -4,36 +4,54 @@ export const HeroSlideStyle = styled.div`
 
 span.swiper-pagination-bullet{
   width: 50px;
-    background-color: grey;
+    background-color: white;
     border-radius: 20px;
+    border: 1px solid white;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  border:none;
 }
 
+.img-title{
+  font-family: Inter;
+font-size: 36px;
+font-weight: 700;
+line-height: 43.2px;
+text-align: center;
+color:white;
+margin-bottom:20px;
+}
 
+.img-text{
+  font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+text-align: center;
+color:white;
+max-width:410px;
+margin-bottom:40px;
+}
 
   .image-container {
     width: 100%;
-    display: block;
-    overflow: hidden;
-    position: relative;
-    height: 700px;
+  
+    height: 670px;
+    background-size:cover;
 
-    // img.slider-image {
-    //   // width: auto;
-    //   margin-top: 0;
-    //   // transition: all 6000ms linear;
-    // }
+    
 
-    @media (max-width: 767px) {
-      height: 450px;
-    }
-
-    @media (max-width: 575px) {
-      height: 360px;
-    }
   }
+
+   
   img {
     height: 700px;
     width: 100vw;
     transform: scale(1);
   }
+
+
+
+
+
 `;
