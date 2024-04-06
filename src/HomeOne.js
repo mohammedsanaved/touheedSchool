@@ -28,6 +28,7 @@ import EventsSections from "./components/EventsSection/EventsSections";
 import EventSectionCarousel from "./components/EventSectionCarousel";
 import Gallery from "./components/Gallery";
 import HeroSlide from "./components/HeroSlide";
+import LatestEventCarousel from "./components/LatestEventCarousel/LatestEventCarousel.jsx";
 // import Cards from "./components/Cards";
 
 export default function HomeOne() {
@@ -64,6 +65,9 @@ export default function HomeOne() {
       {/* <EventCarousel /> */}
       {/* <EventsSections /> */}
       <EventSectionCarousel />
+
+   
+      <LatestEventCarousel/>
 
       {/* Service Box */}
       {/* <ServiceBox /> */}

@@ -8,6 +8,7 @@ import { Styles } from "./styles/aboutUs.js";
 import video from "../assets/schoolVideo.mp4";
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion.js";
+import GreenButton from "./GreenButton/GreenButton.jsx";
 
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +20,11 @@ const AboutUs = () => {
   return (
     <Styles>
       {/* About Us */}
-      <section className="about-us">
-        <Container>
-          <Row>
-            <Col md={6}>
-              <motion.div
-                variants={slideIn("left", "tween", 0.2, 1)}
-                className=""
-              >
-                <div className="about-image">
+      <section className="about-us-section d-flex mx-auto">
+       
+
+             
+                <div className="about-video">
                   <div>
                     <video
                       className="h-75 w-100"
@@ -39,36 +36,13 @@ const AboutUs = () => {
                       <source type="video/mp4" src={video} />
                     </video>
                   </div>
-                  {/* <img
-                  src={process.env.PUBLIC_URL + "/assets/images/pattern.png"}
-                  className="pattern-img"
-                  alt=""
-                /> */}
-                  {/* <div
-                  className="video-player"
-                  style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${Datas.videoBackground})`,
-                  }}
-                >
-                  <ModalVideo
-                    channel="youtube"
-                    isOpen={isOpen}
-                    videoId="uXFUl0KcIkA"
-                    onClose={() => setIsOpen(false)}
-                  />
-                  <button onClick={openModal} className="play-button">
-                    <i className="las la-play"></i>
-                  </button>
-                </div> */}
+                 
                 </div>
-              </motion.div>
-            </Col>
+             
+           
 
-            <Col>
-              <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
-                className=""
-              >
+           
+             
                 <div className="about-content">
                   <h4 className="about-title">{Datas.title}</h4>
                   <p className="about-para">
@@ -79,13 +53,13 @@ const AboutUs = () => {
                     className="readmore-btn"
                     to={process.env.PUBLIC_URL + "/about"}
                   >
-                    Read More
+                    
+                    <GreenButton text="Read More" />
                   </Link>
                 </div>
-              </motion.div>
-            </Col>
-          </Row>
-        </Container>
+             
+         
+       
       </section>
     </Styles>
   );
