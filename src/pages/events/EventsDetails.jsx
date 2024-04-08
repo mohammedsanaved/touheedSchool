@@ -28,7 +28,7 @@ const EventsDetails = () => {
     "https://images.unsplash.com/photo-1558008258-3256797b43f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHNjaG9vbCUyMGV2ZW50fGVufDB8fDB8fHww";
   return (
     <Styles>
-      <div className="main-wrapper event-details-page mb-5">
+      <div className="main-wrapper event-details-page mb-5 sm">
         <HeaderTwo />
         <BannerSection bg_image={bg} title={"Home/EventsDetails"} />
         <Container>

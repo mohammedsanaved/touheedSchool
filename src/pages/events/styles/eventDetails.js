@@ -359,4 +359,9 @@ export const Styles = styled.div`
       }
     }
   }
+  @media (max-width: 767px) {
+    .sm {
+      flex-direction: column;
+    }
+  }
 `;

@@ -4,12 +4,14 @@ import { composeWithDevTools } from "@redux-devtools/extension";
 import { contactCreateReducer } from "./reducers/contactReducers";
 import { eventListReducer, eventDetailReducer } from "./reducers/eventReducers";
 import { staffListReducer } from "./reducers/staffReducers";
+import { schoolListReducer } from "./reducers/schoolReducers";
 
 const reducer = combineReducers({
   contactCreate: contactCreateReducer,
   eventList: eventListReducer,
   eventDetail: eventDetailReducer,
   staffList: staffListReducer,
+  schoolList: schoolListReducer,
 });
 
 const initialState = {};

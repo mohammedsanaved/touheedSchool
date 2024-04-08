@@ -35,6 +35,11 @@ export default function HomeOne() {
   const dispatch = useDispatch();
   const eventList = useSelector((state) => state.eventList);
   const { event, error, loading } = eventList;
+  const {
+    schools,
+    loading: schoolLoading,
+    error: schoolError,
+  } = useSelector((state) => state.schoolList);
 
   useEffect(() => {
     dispatch(listEvent());
@@ -46,13 +51,9 @@ export default function HomeOne() {
       {/* <Header /> */}
       <HeaderTwo />
 
-      
-
       {/* Hero Slider */}
       {/* <HeroSlider /> */}
       <HeroSlide />
-
-    
 
       {/* About Area */}
       <AboutUs />
@@ -64,10 +65,9 @@ export default function HomeOne() {
       <CardSection />
       {/* <EventCarousel /> */}
       {/* <EventsSections /> */}
-      <EventSectionCarousel />
+      {/* <EventSectionCarousel /> */}
 
-   
-      <LatestEventCarousel/>
+      <LatestEventCarousel />
 
       {/* Service Box */}
       {/* <ServiceBox /> */}
@@ -76,7 +76,6 @@ export default function HomeOne() {
       {/* < CourseFilter /> */}
 
       {/* Testimonial Slider */}
-      {/* <TestimonialSlider /> */}
       <Testimonial />
 
       {/* Event / Blog Area */}

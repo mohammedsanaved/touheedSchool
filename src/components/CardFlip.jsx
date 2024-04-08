@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Styles } from "./styles/Cards";
 
-const CardFlip = () => {
+const CardFlip = ({ school }) => {
   const [flip, setFlip] = useState(true);
+  const cardImage = `${process.env.REACT_APP_API_URL}`;
   return (
     <Styles>
       <div className="App" onClick={() => setFlip((prevState) => !prevState)}>
@@ -25,7 +26,7 @@ const CardFlip = () => {
               className="front"
             >
               <img
-                src="https://images.unsplash.com/photo-1584750153892-38414eb8e76a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2Nob29sJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D"
+                src={`${cardImage}/${school.image}`}
                 alt="Alt"
                 className="image"
               />
