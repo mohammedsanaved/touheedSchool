@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,7 +13,21 @@ import { HeroSlideStyle } from "./styles/HeroSlideStyle";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import GreenButton from "./GreenButton/GreenButton";
+import { useDispatch, useSelector } from "react-redux";
+import { allSchoolsListAction } from "../actions/LandingPageActions";
+import { Link } from "react-router-dom";
 const HeroSlide = () => {
+  const dispatch = useDispatch();
+  const {
+    allschools,
+    loading: schoolLoading,
+    error: errorMsg,
+  } = useSelector((state) => state.allSchoolsList);
+
+  useEffect(() => {
+    dispatch(allSchoolsListAction());
+  }, [dispatch]);
+
   const imgData = [
     {
       id: "1",
@@ -65,39 +79,46 @@ const HeroSlide = () => {
   return (
     <>
       <HeroSlideStyle>
-        <Swiper
-          pagination={{ clickable: true }}
-          loop={true}
-          autoplay={{
-            delay: 10000,
-            disableOnInteraction: false,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation, Autoplay]}
-          className="mySwiper"
-        >
-          {imgData.map((img) => (
-            <SwiperSlide>
-              <div
-                className="image-container d-flex align-items-center"
-                key={img.id}
-                style={{ backgroundImage: `url(${img.backgroundImage})` }}
-              >
-                <div className="mx-auto">
-                  <h1 className="img-title">{img.title}</h1>
-                  <p className="img-text mx-auto">
-                    Touheed English medium School founded in the year 1990 is
-                    managed by Touheed Educational Trust (Regd.) Ganguli.
-                  </p>
-                  <div className="school-buttons d-flex justify-content-center mx-auto">
-                    <GreenButton text="Know More" />
-                    <GreenButton text="Enquire" />
+        {schoolLoading ? (
+          <p>Loading......</p>
+        ) : errorMsg ? (
+          <p>Error: {errorMsg}</p>
+        ) : (
+          <Swiper
+            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{
+              delay: 10000,
+              disableOnInteraction: false,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation, Autoplay]}
+            className="mySwiper"
+          >
+            {allschools?.rows?.map((img) => (
+              <SwiperSlide>
+                <div
+                  className="image-container d-flex align-items-center"
+                  key={img.id}
+                  style={{
+                    backgroundImage: `url(${process.env.REACT_APP_API_URL}/${img.image})`,
+                  }}
+                >
+                  <div className="mx-auto">
+                    <h1 className="img-title">{img.name}</h1>
+                    <p className="img-text mx-auto">{img.description}</p>
+                    <div className="school-buttons d-flex justify-content-center mx-auto">
+                      <Link to={"/schooldetail"}>
+                        <GreenButton text="Know More" />
+                      </Link>
+                      <GreenButton text="Enquire" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </HeroSlideStyle>
     </>
   );

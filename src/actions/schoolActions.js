@@ -14,7 +14,7 @@ export const schoolList = () => async (dispatch) => {
       `${process.env.REACT_APP_API_URL}/api/schools/school-getpost/list`
     );
     dispatch({ type: SCHOOL_LIST_SUCCESS, payload: data });
-    console.log(data, "school List data");
+    console.log(data, "schoolListData");
   } catch (error) {
     dispatch({
       type: SCHOOL_LIST_FAIL,

@@ -1,5 +1,5 @@
-import React from 'react';
-import { LatestEventsStyle } from './LatestEventCarousel';
+import React, { useEffect } from "react";
+import { LatestEventsStyle } from "./LatestEventCarousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import "swiper/css/effect-fade";
@@ -7,9 +7,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import EventCarousel from "../EventCarousel";
+import { useDispatch, useSelector } from "react-redux";
+import { latestEventAction } from "../../actions/LandingPageActions";
 
 const LatestEventCarousel = () => {
   const locationIconUrl = "/assets/images/LatestEventsImg.png";
+  const dispatch = useDispatch();
+  const { latestevent, loading, error } = useSelector(
+    (state) => state.latestEvent
+  );
+
+  useEffect(() => {
+    dispatch(latestEventAction());
+  }, [dispatch]);
+  console.log(latestevent, "LatestEvent for LandingPage");
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <LatestEventsStyle>
@@ -26,66 +39,21 @@ const LatestEventCarousel = () => {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="event-carousel-container d-flex mx-auto">
-            <img
-              src={`${locationIconUrl}`}
-              alt=""
-              className="latest-event-img"
-            />
-            {/* <EventCarousel /> */}
-            <div className="event-text-sec">
-              <h3 className="event-title">
-                72nd Independence Day Celebrations at Touheed English Medium
-                School
-              </h3>
-              <p className="event-text">
-                Independence Day is a momentous occasion that commemorates the
-                triumph of a nation's struggle for freedom and sovereignty. It
-                serves as a poignant reminder of the sacrifices made by
-                countless individuals who valiantly fought for the right to
-                self-governance and the pursuit of liberty. On this day, nations
-                come together to celebrate their hard-won independence,
-                reflecting upon the arduous journey undertaken to break the
-                shackles of colonial rule and assert their own identity.
-                <br />
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis error ut provident vel repellendus nihil atque possimus
-                aliquam, mollitia tempora neque voluptate debitis illum
-                veniam.Numquam blanditiis dignissimos laboriosam illum ut
-                officia
-              </p>
+        {latestevent?.rows?.map((event) => (
+          <SwiperSlide key={event.id}>
+            <div className="event-carousel-container d-flex mx-auto">
+              <img
+                src={`${process.env.REACT_APP_API_URL}/${event.thumbnail}`}
+                alt={event.title}
+                className="latest-event-img"
+              />
+              <div className="event-text-sec">
+                <h3 className="event-title">{event.title}</h3>
+                <p className="event-text">{event.desc}</p>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="event-carousel-container d-flex mx-auto">
-            <img
-              src={`${locationIconUrl}`}
-              alt=""
-              className="latest-event-img"
-            />
-            {/* <EventCarousel /> */}
-            <div className="event-text-sec">
-              <h3 className="event-title">
-                Independence Day is a momentous occasion that commemorates the
-                triumph of
-              </h3>
-              <p className="event-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis error ut provident vel repellendus nihil atque possimus
-                aliquam, mollitia tempora neque voluptate debitis illum
-                veniam.Numquam blanditiis dignissimos laboriosam illum ut
-                officia <br />
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis error ut provident vel repellendus nihil atque possimus
-                aliquam, mollitia tempora neque voluptate debitis illum
-                veniam.Numquam blanditiis dignissimos laboriosam illum ut
-                officia.
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </LatestEventsStyle>
   );

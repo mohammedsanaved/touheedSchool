@@ -5,6 +5,10 @@ import { contactCreateReducer } from "./reducers/contactReducers";
 import { eventListReducer, eventDetailReducer } from "./reducers/eventReducers";
 import { staffListReducer } from "./reducers/staffReducers";
 import { schoolListReducer } from "./reducers/schoolReducers";
+import {
+  allSchoolsListReducer,
+  latestEventReducer,
+} from "./reducers/LandingPageReducers";
 
 const reducer = combineReducers({
   contactCreate: contactCreateReducer,
@@ -12,6 +16,8 @@ const reducer = combineReducers({
   eventDetail: eventDetailReducer,
   staffList: staffListReducer,
   schoolList: schoolListReducer,
+  latestEvent: latestEventReducer,
+  allSchoolsList: allSchoolsListReducer,
 });
 
 const initialState = {};

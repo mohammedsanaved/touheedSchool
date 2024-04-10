@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Styles } from "./styles/Cards";
+import { Link } from "react-router-dom";
 
 const CardFlip = ({ school }) => {
   const [flip, setFlip] = useState(true);
@@ -25,11 +26,13 @@ const CardFlip = ({ school }) => {
               animate={{ rotateY: flip ? 0 : 180 }}
               className="front"
             >
-              <img
-                src={`${cardImage}/${school.image}`}
-                alt="Alt"
-                className="image"
-              />
+              <div style={{ backgroundImage: `${cardImage}/${school.image}` }}>
+                <img
+                  src={`${cardImage}/${school.image}`}
+                  alt="Alt"
+                  className="image"
+                />
+              </div>
             </motion.div>
             <motion.div
               initial={{ rotateY: 180 }}
@@ -39,16 +42,15 @@ const CardFlip = ({ school }) => {
               className="back"
             >
               <span className="Back">
-                <span className="schoolLocation">Location</span>
+                <span className="schoolLocation">{school.location}</span>
                 <div>
-                  <div className="fs-2">School Title</div>
+                  <div className="fs-2">{school.name}</div>
                   <div>
-                    <p className="fs-5">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
+                    <p className="fs-5">{school.description}</p>
                     <div className="d-flex justify-content-evenly gap-2 mt-3">
-                      <button className="ReadMore">Read More</button>
+                      <Link to={"/schooldetail"}>
+                        <button className="ReadMore">Read More</button>
+                      </Link>
                       <button className="ContactUs">Contacts Us</button>
                     </div>
                   </div>
