@@ -10,6 +10,7 @@ import Footer from "../../components/Footer.js";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailEvent } from "../../actions/eventActions.js";
+import EventCarousel from "../../components/EventCarousel.jsx";
 
 const EventsDetails = () => {
   const { id } = useParams();
@@ -34,7 +35,7 @@ const EventsDetails = () => {
         <Container>
           <Row className="mt-5 d-flex justify-content-around gap-4">
             <Col>
-              <DemoCarousel images={images} />
+              <EventCarousel images={images} />
             </Col>
             <Col>
               <EventDetailsData

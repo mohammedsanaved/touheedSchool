@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import { Styles } from "./styles/EventCarousel";
 
 const EventCarousel = ({ images }) => {
   const onChange = (index) => {
@@ -39,25 +40,28 @@ const EventCarousel = ({ images }) => {
   ];
 
   return (
-    <Carousel
-      showArrows={true}
-      onChange={onChange}
-      onClickItem={onClickItem}
-      onClickThumb={onClickThumb}
-      showThumbs={false}
-      showStatus={false}
-      interval={3000}
-      infiniteLoop={true}
-    >
-      {images?.map((img) => (
-        <div key={img.id}>
-          <img
-            src={`${process.env.REACT_APP_API_URL}/${img.image}`}
-            alt={img.alt}
-          />
-        </div>
-      ))}
-    </Carousel>
+    <Styles>
+      <Carousel
+        showArrows={true}
+        onChange={onChange}
+        onClickItem={onClickItem}
+        onClickThumb={onClickThumb}
+        showThumbs={false}
+        showStatus={false}
+        interval={3000}
+        infiniteLoop={true}
+      >
+        {images?.map((img) => (
+          <div key={img.id}>
+            <img
+              src={`${process.env.REACT_APP_API_URL}/${img.image}`}
+              alt={img.alt}
+              className="CarouselImage"
+            />
+          </div>
+        ))}
+      </Carousel>
+    </Styles>
   );
 };
 

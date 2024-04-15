@@ -21,45 +21,29 @@ const AboutUs = () => {
     <Styles>
       {/* About Us */}
       <section className="about-us-section d-flex mx-auto">
-       
-
-             
-                <div className="about-video">
-                  <div>
-                    <video
-                      className="h-75 w-100"
-                      autoPlay={true}
-                      loop={true}
-                      muted={true}
-                      playsInline={true}
-                    >
-                      <source type="video/mp4" src={video} />
-                    </video>
-                  </div>
-                 
-                </div>
-             
-           
-
-           
-             
-                <div className="about-content">
-                  <h4 className="about-title">{Datas.title}</h4>
-                  <p className="about-para">
-                    {Datas.desc1}
-                    <span>{Datas.desc2}</span>
-                  </p>
-                  <Link
-                    className="readmore-btn"
-                    to={process.env.PUBLIC_URL + "/about"}
-                  >
-                    
-                    <GreenButton text="Read More" />
-                  </Link>
-                </div>
-             
-         
-       
+        <div className="about-video">
+          <div>
+            <video
+              className="h-75 w-100"
+              autoPlay={true}
+              loop={true}
+              muted={true}
+              playsInline={true}
+            >
+              <source type="video/mp4" src={video} />
+            </video>
+          </div>
+        </div>
+        <div className="about-content">
+          <h4 className="about-title">{Datas.title}</h4>
+          <p className="about-para">
+            {Datas.desc1}
+            <span>{Datas.desc2}</span>
+          </p>
+          <Link className="readmore-btn" to={process.env.PUBLIC_URL + "/about"}>
+            <GreenButton text="Read More" />
+          </Link>
+        </div>
       </section>
     </Styles>
   );
