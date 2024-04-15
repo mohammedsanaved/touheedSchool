@@ -368,10 +368,77 @@ export const Styles = styled.div`
 
 
 
-  .slide , .slide div img{
+ .event-details-page .slide ,.event-details-page .slide div img{
     height:389px;
     object-fit:contain;
   }
   
 
+  .event-details-page .event-detail-title{
+    font-family: Inter;
+font-size: 32px;
+font-weight: 700;
+line-height: 45px;
+text-align: left;
+color:black;
+margin-bottom:30px;
+  }
+
+
+.event-details-page .event-detail-desc{
+  font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 24.2px;
+text-align: left;
+color:rgba(98, 95, 95, 1);
+margin-top:30px;
+}
+
+
+
+.event-details-page .bread-crumbs{
+  font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+line-height: 19.2px;
+text-align: left;
+color:black;
+margin-bottom:30px;
+margin-top:30px;
+}
+
+.event-details-page .event-details-text{
+  color:rgba(4, 156, 80, 1);
+}
+
+.event-details-page .event-speaker-title{
+  font-family: Inter;
+font-size: 32px;
+font-weight: 700;
+line-height: 38.73px;
+text-align: left;
+color:black;
+}
+
+.event-details-page .card-main-div{
+  margin:auto;
+}
+
+@media screen and (max-width: 700px) {
+.event-details-page .event-speakers-guests{
+  flex-direction:column;
+  row-gap:40px;
+}
+}
+@media screen and (max-width: 900px){
+.carousel-details-container{
+  flex-direction:column;
+}
+
+.event-details-page .slide ,  .event-details-page .slide div img {
+  height:auto;
+  object-fit: contain;
+}
+}
 `;

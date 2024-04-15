@@ -6,8 +6,8 @@ import { LuMapPin } from "react-icons/lu";
 const EventDetailsData = ({ location, time, date, desc, name }) => {
   return (
     <div>
-      <h1 className="fs-1 fw-bold">{name}</h1>
-      <div className="d-flex gap-4 justify-content-md-start mt-2">
+      <h1 className="event-detail-title">{name}</h1>
+      <div className="d-flex gap-4 justify-content-md-start mt-2 flex-wrap">
         <div className="d-flex gap-2">
           {" "}
           {/* Apply text-success class for success color */}
@@ -24,7 +24,7 @@ const EventDetailsData = ({ location, time, date, desc, name }) => {
           <p className="fs-5">{location}</p>
         </div>
       </div>
-      <p className="mt-4 fs-4">{desc}</p>
+      <p className="event-detail-desc">{desc}</p>
     </div>
   );
 };

@@ -31,10 +31,15 @@ const EventsDetails = () => {
     <Styles>
       <div className="main-wrapper event-details-page mb-5 sm">
         <HeaderTwo />
-        <BannerSection bg_image={bg} title={"Home/EventsDetails"} />
+        <BannerSection bg_image={bg}  />
+
+        
         <Container>
-          <Row className="mt-5 d-flex justify-content-around gap-4">
+        <div className="bread-crumbs">Home/<span className="event-details-text">Event Details</span></div>
+          <Row className="mt-5 d-flex justify-content-around gap-4 carousel-details-container">
             <Col>
+           
+
               <EventCarousel images={images} />
             </Col>
             <Col>

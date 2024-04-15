@@ -49,6 +49,7 @@ const EventCarousel = ({ images }) => {
       showStatus={false}
       interval={3000}
       infiniteLoop={true}
+      showIndicators={false}
     >
       {images?.map((img) => (
         <div key={img.id}>

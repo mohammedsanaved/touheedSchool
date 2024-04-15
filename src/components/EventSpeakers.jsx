@@ -6,11 +6,11 @@ const EventSpeakers = ({ speakers }) => {
   return (
     <Styles>
       <div className="eventDetail_main">
-        <h2 className="fw-bold d-flex align-content-center justify-content-center">
+        <h2 className="fw-bold d-flex align-content-center justify-content-center event-speaker-title">
           Event Speakers / Guests
         </h2>
 
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between event-speakers-guests">
           {speakers?.map((guest) => (
             <div className="card-main-div" key={guest.id}>
               <div className="img-div">
