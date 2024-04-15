@@ -52,12 +52,17 @@ export const Styles = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: -58px;
-    gap: 189px;
+    gap: 125px;
   }
   .schoolLocation {
-    padding: 0px 10px 10px 10px;
+    padding: 5px 10px 10px 10px;
     font-size: 22px;
-    // background: #11b67a;
+    background: #11b67a;
+    // width: 30vw;
+    margin: auto;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
   }
 
   .front,
@@ -66,11 +71,10 @@ export const Styles = styled.div`
     backface-visibility: hidden;
   }
   .image {
-    /* width: auto,  */
-    /* height: auto; */
     max-width: 354px;
     max-height: 446px;
     object-fit: cover;
+    aspect-ratio: 3/4;
     border-radius: 8px;
     object-position: center;
   }

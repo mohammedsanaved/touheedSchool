@@ -21,6 +21,13 @@ const LatestEventCarousel = () => {
     dispatch(latestEventAction());
   }, [dispatch]);
   console.log(latestevent, "LatestEvent for LandingPage");
+  const truncateText = (text, limit) => {
+    const words = text.split(" ");
+    if (words.length > limit) {
+      return words.slice(0, limit).join(" ") + "...";
+    }
+    return text;
+  };
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
@@ -31,7 +38,7 @@ const LatestEventCarousel = () => {
         pagination={{ clickable: true }}
         loop={true}
         autoplay={{
-          delay: 10000,
+          delay: 9000,
           disableOnInteraction: false,
         }}
         effect={"fade"}
@@ -49,7 +56,9 @@ const LatestEventCarousel = () => {
               />
               <div className="event-text-sec">
                 <h3 className="event-title">{event.title}</h3>
-                <p className="event-text">{event.desc}</p>
+                <p className="event-text">
+                  {truncateText(`${event.desc}`, 50)}
+                </p>
               </div>
             </div>
           </SwiperSlide>

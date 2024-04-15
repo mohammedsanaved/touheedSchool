@@ -88,7 +88,7 @@ const HeroSlide = () => {
             pagination={{ clickable: true }}
             loop={true}
             autoplay={{
-              delay: 10000,
+              delay: 8000,
               disableOnInteraction: false,
             }}
             navigation={true}

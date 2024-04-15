@@ -7,6 +7,13 @@ import { Link } from "react-router-dom";
 const CardFlip = ({ school }) => {
   const [flip, setFlip] = useState(true);
   const cardImage = `${process.env.REACT_APP_API_URL}`;
+  const truncateText = (text, limit) => {
+    const words = text.split(" ");
+    if (words.length > limit) {
+      return words.slice(0, limit).join(" ") + "...";
+    }
+    return text;
+  };
   return (
     <Styles>
       <div className="App" onClick={() => setFlip((prevState) => !prevState)}>
@@ -37,7 +44,6 @@ const CardFlip = ({ school }) => {
             <motion.div
               initial={{ rotateY: 180 }}
               animate={{ rotateY: flip ? 180 : 0 }}
-              // style={{ display: flip ? "none" : "block" }}
               transition={{ duration: 0.7 }}
               className="back"
             >
@@ -46,7 +52,9 @@ const CardFlip = ({ school }) => {
                 <div>
                   <div className="fs-2">{school.name}</div>
                   <div>
-                    <p className="fs-5">{school.description}</p>
+                    <p className="fs-5">
+                      {truncateText(`${school.description}`, 20)}
+                    </p>
                     <div className="d-flex justify-content-evenly gap-2 mt-3">
                       <Link to={"/schooldetail"}>
                         <button className="ReadMore">Read More</button>
@@ -57,9 +65,6 @@ const CardFlip = ({ school }) => {
                 </div>
               </span>
             </motion.div>
-            {/* <button onMouseEnter={() => setFlip((prevState) => !prevState)}>
-            Click me
-        </button> */}
           </motion.div>
         </motion.div>
       </div>
