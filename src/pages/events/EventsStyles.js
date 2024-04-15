@@ -20,5 +20,4 @@ export const EventsStyles = styled.div`
 }
 
 
-
 `;

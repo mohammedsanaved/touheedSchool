@@ -44,7 +44,7 @@ const EventCarousel = ({ images }) => {
       onChange={onChange}
       onClickItem={onClickItem}
       onClickThumb={onClickThumb}
-      showThumbs={false}
+      showThumbs={true}
       showStatus={false}
       interval={3000}
       infiniteLoop={true}

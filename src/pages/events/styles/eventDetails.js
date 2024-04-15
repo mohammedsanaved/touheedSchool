@@ -364,4 +364,14 @@ export const Styles = styled.div`
       flex-direction: column;
     }
   }
+
+
+
+
+  .slide , .slide div img{
+    height:389px;
+    object-fit:contain;
+  }
+  
+
 `;
