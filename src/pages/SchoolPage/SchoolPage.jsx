@@ -24,6 +24,7 @@ import NoticeBoard from "./components/NoticeBoard";
 
 import "./SchoolPage.css";
 import GreenButton from "../../components/GreenButton/GreenButton";
+import FooterNew from "../../components/FooterNew/FooterNew";
 
 const SchoolPage = () => {
   // const bg =
@@ -84,7 +85,7 @@ const SchoolPage = () => {
         <ContactInfoSection />
       </div>
 
-      <Footer />
+      <FooterNew />
     </>
   );
 };
