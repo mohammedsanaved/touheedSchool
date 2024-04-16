@@ -17,8 +17,14 @@ export const LatestEventsStyle = styled.div`
   }
 
   .event-carousel-container {
+    display: flex;
     max-width: 1128px;
     column-gap: 50px;
+  }
+  @media only screen and (max-width: 768px) {
+    .event-carousel-container {
+      flex-direction: column;
+    }
   }
 
   .event-title {

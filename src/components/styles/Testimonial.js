@@ -66,9 +66,8 @@ export const Styles = styled.div`
   }
 
   .swipper_wrapper {
-    background-color: #f8f9fa;
+    background-color: #fff;
     border-radius: 10px;
-
     padding: 20px;
   }
   .swipper_details {
@@ -84,10 +83,15 @@ export const Styles = styled.div`
     margin-top: 12px;
     padding: 34px;
     width: 80%;
+    height: 250px;
     margin: auto;
-    background: #eee;
+    background: #fff;
     border-radius: 10px;
-    font-size: 28px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .swipper_msg p {
+    font-size: 16px;
+    font-weight: 500;
   }
 
   .swipper_img {
@@ -116,14 +120,9 @@ export const Styles = styled.div`
   /* Customize navigation buttons */
   .swiper-button-prev,
   .swiper-button-next {
-    background-color: #007bff;
+    // background-color: #007bff;
     border-radius: 50%;
     padding: 10px;
-    color: #eee;
+    // color: #007bff;
   }
-
-  // .swiper-button-prev:hover,
-  // .swiper-button-next:hover {
-  //   // background-color: #0056b3;
-  // }
 `;

@@ -189,39 +189,39 @@ const HeaderTwo = () => {
                       to={process.env.PUBLIC_URL + "/"}
                       data-toggle="dropdown"
                     >
-                      Admissions<i className="las la-angle-down"></i>
+                      Schools<i className="las la-angle-down"></i>
                     </Link>
                     <ul className="dropdown list-unstyled">
                       <li className="nav-item">
                         <Link
                           className="nav-link"
-                          to={process.env.PUBLIC_URL + "/course-grid"}
+                          to={process.env.PUBLIC_URL + "/schooldetail"}
                         >
-                          Programs Offered
+                          School 01
                         </Link>
                       </li>
                       <li className="nav-item">
                         <Link
                           className="nav-link"
-                          to={process.env.PUBLIC_URL + "/course-list"}
+                          to={process.env.PUBLIC_URL + "/schooldetail"}
                         >
-                          Contact Details
+                          School 02
                         </Link>
                       </li>
                       <li className="nav-item">
                         <Link
                           className="nav-link"
-                          to={process.env.PUBLIC_URL + "/course-details"}
+                          to={process.env.PUBLIC_URL + "/schooldetail"}
                         >
-                          Brochure
+                          School 03
                         </Link>
                       </li>
                       <li className="nav-item">
                         <Link
                           className="nav-link"
-                          to={process.env.PUBLIC_URL + "/course-details"}
+                          to={process.env.PUBLIC_URL + "/schooldetail"}
                         >
-                          Scholarship Details
+                          School 04
                         </Link>
                       </li>
                     </ul>

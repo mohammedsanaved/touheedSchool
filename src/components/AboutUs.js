@@ -20,7 +20,7 @@ const AboutUs = () => {
   return (
     <Styles>
       {/* About Us */}
-      <section className="about-us-section d-flex mx-auto">
+      <section className="about-us-section mx-auto">
         <div className="about-video">
           <div>
             <video

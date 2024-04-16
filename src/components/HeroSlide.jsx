@@ -108,10 +108,10 @@ const HeroSlide = () => {
                     <h1 className="img-title">{img.name}</h1>
                     <p className="img-text mx-auto">{img.description}</p>
                     <div className="school-buttons d-flex justify-content-center mx-auto">
-                      <Link to={"/schooldetail"}>
+                      <Link to={`/schooldetail/${img.id}`}>
                         <GreenButton text="Know More" />
                       </Link>
-                      <GreenButton text="Enquire" />
+                      <GreenButton text="EnquirePage" />
                     </div>
                   </div>
                 </div>

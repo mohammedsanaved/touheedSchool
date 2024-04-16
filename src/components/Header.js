@@ -176,7 +176,7 @@ const Header = () => {
                         to={process.env.PUBLIC_URL + "/"}
                         data-toggle="dropdown"
                       >
-                        Admissions<i className="las la-angle-down"></i>
+                        Schools<i className="las la-angle-down"></i>
                       </Link>
                       <ul className="dropdown list-unstyled">
                         <li className="nav-item">
