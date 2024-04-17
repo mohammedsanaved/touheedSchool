@@ -7,6 +7,7 @@ import Footer from "../../components/Footer.js";
 import SortByEvents from "../../components/SortByEvents.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { listEvent } from "../../actions/eventActions.js";
+import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 
 const Events = () => {
   const bg =
@@ -40,7 +41,7 @@ const Events = () => {
           )}
         </div>
       </EventsStyles>
-      <Footer />
+     <FooterNew/>
     </>
   );
 };

@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailEvent } from "../../actions/eventActions.js";
 import EventCarousel from "../../components/EventCarousel.jsx";
+import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 
 const EventsDetails = () => {
   const { id } = useParams();
@@ -57,7 +58,8 @@ const EventsDetails = () => {
           </Row>
         </Container>
       </div>
-      <Footer />
+      
+      <FooterNew/>
     </Styles>
   );
 };
