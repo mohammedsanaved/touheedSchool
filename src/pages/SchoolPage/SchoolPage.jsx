@@ -24,12 +24,9 @@ import NoticeBoard from "./components/NoticeBoard";
 
 import "./SchoolPage.css";
 import GreenButton from "../../components/GreenButton/GreenButton";
-<<<<<<< HEAD
 import FooterNew from "../../components/FooterNew/FooterNew";
-=======
 import { useParams } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
->>>>>>> 1728be52a84cfba75c1dcdb52a3db6398d781412
 
 const SchoolPage = () => {
   // const bg =
