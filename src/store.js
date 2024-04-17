@@ -4,10 +4,15 @@ import { composeWithDevTools } from "@redux-devtools/extension";
 import { contactCreateReducer } from "./reducers/contactReducers";
 import { eventListReducer, eventDetailReducer } from "./reducers/eventReducers";
 import { staffListReducer } from "./reducers/staffReducers";
-import { schoolListReducer } from "./reducers/schoolReducers";
+import {
+  schoolDetailsReducer,
+  schoolIndividualDetailReducer,
+  schoolListReducer,
+} from "./reducers/schoolReducers";
 import {
   allSchoolsListReducer,
   latestEventReducer,
+  testimonialsReducer,
 } from "./reducers/LandingPageReducers";
 
 const reducer = combineReducers({
@@ -18,6 +23,8 @@ const reducer = combineReducers({
   schoolList: schoolListReducer,
   latestEvent: latestEventReducer,
   allSchoolsList: allSchoolsListReducer,
+  testimonialList: testimonialsReducer,
+  schoolDetails: schoolIndividualDetailReducer,
 });
 
 const initialState = {};

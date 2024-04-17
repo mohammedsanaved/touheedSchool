@@ -5,6 +5,9 @@ import {
   LANDING_PAGE_LATEST_EVENT_FAIL,
   LANDING_PAGE_LATEST_EVENT_REQUEST,
   LANDING_PAGE_LATEST_EVENT_SUCCESS,
+  LANDING_PAGE_TESTIMONIAL_FAIL,
+  LANDING_PAGE_TESTIMONIAL_REQUEST,
+  LANDING_PAGE_TESTIMONIAL_SUCCESS,
 } from "../constants/LandingPageContants";
 export const latestEventReducer = (
   state = { latestevent: [], loading: false, error: null },
@@ -32,6 +35,21 @@ export const allSchoolsListReducer = (
     case LANDING_PAGE_ALL_SCHOOL_SUCCESS:
       return { ...state, loading: false, allschools: action.payload };
     case LANDING_PAGE_ALL_SCHOOL_FAIL:
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+export const testimonialsReducer = (
+  state = { testimonials: [], loading: false, error: null },
+  action
+) => {
+  switch (action.type) {
+    case LANDING_PAGE_TESTIMONIAL_REQUEST:
+      return { ...state, loading: true, error: null };
+    case LANDING_PAGE_TESTIMONIAL_SUCCESS:
+      return { ...state, loading: false, testimonials: action.payload };
+    case LANDING_PAGE_TESTIMONIAL_FAIL:
       return { ...state, loading: false, error: action.payload };
     default:
       return state;

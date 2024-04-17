@@ -12,7 +12,6 @@ export const Styles = styled.div`
 
   .feature_main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }

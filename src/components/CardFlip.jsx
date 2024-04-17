@@ -56,7 +56,7 @@ const CardFlip = ({ school }) => {
                       {truncateText(`${school.description}`, 20)}
                     </p>
                     <div className="d-flex justify-content-evenly gap-2 mt-3">
-                      <Link to={"/schooldetail"}>
+                      <Link to={`/schooldetail/${school.id}`}>
                         <button className="ReadMore">Read More</button>
                       </Link>
                       <button className="ContactUs">Contacts Us</button>

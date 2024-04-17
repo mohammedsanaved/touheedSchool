@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import EventCarousel from "../EventCarousel";
 import { useDispatch, useSelector } from "react-redux";
 import { latestEventAction } from "../../actions/LandingPageActions";
+import { Container } from "react-bootstrap";
 
 const LatestEventCarousel = () => {
   const locationIconUrl = "/assets/images/LatestEventsImg.png";
@@ -34,36 +35,38 @@ const LatestEventCarousel = () => {
   return (
     <LatestEventsStyle>
       <div className="latest-events-title">Latest Events</div>
-      <Swiper
-        pagination={{ clickable: true }}
-        loop={true}
-        autoplay={{
-          delay: 9000,
-          disableOnInteraction: false,
-        }}
-        effect={"fade"}
-        navigation={true}
-        modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper"
-      >
-        {latestevent?.rows?.map((event) => (
-          <SwiperSlide key={event.id}>
-            <div className="event-carousel-container d-flex mx-auto">
-              <img
-                src={`${process.env.REACT_APP_API_URL}/${event.thumbnail}`}
-                alt={event.title}
-                className="latest-event-img"
-              />
-              <div className="event-text-sec">
-                <h3 className="event-title">{event.title}</h3>
-                <p className="event-text">
-                  {truncateText(`${event.desc}`, 50)}
-                </p>
+      <Container>
+        <Swiper
+          pagination={{ clickable: true }}
+          // loop={true}
+          // autoplay={{
+          //   delay: 9000,
+          //   disableOnInteraction: false,
+          // }}
+          effect={"fade"}
+          navigation={true}
+          modules={[Pagination, Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {latestevent?.rows?.map((event) => (
+            <SwiperSlide key={event.id}>
+              <div className="event-carousel-container mx-auto">
+                <img
+                  src={`${process.env.REACT_APP_API_URL}/${event.thumbnail}`}
+                  alt={event.title}
+                  className="latest-event-img"
+                />
+                <div className="event-text-sec">
+                  <h3 className="event-title">{event.title}</h3>
+                  <p className="event-text">
+                    {truncateText(`${event.desc}`, 50)}
+                  </p>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
     </LatestEventsStyle>
   );
 };
