@@ -1,7 +1,7 @@
 import React from "react";
 import { Styles } from "../styles/Infrastructure";
 
-const Infrastructure = () => {
+const Infrastructure = ({ infrastructure }) => {
   const dataStructure = [
     {
       src: "https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -32,24 +32,17 @@ const Infrastructure = () => {
   return (
     <Styles>
       <div className="infrastructure-div mx-auto">
-        <div className="infrastucture-title">
-          Infrastructure
-        </div>
+        <div className="infrastucture-title">Infrastructure</div>
         <div className="infrastructure-row">
-          {dataStructure.map((item, index) => (
+          {infrastructure?.map((item, index) => (
             <div key={index} className="infrastructure-item">
-              
-                <img
-                  src={item.src}
-                  className="card-img-top rounded-3 shadow-lg img"
-                  alt={item.title}
-                />
-                
-                  <h5 className="mt-4 mb-5 text-center img-text">
-                    {item.title}
-                  </h5>
-                
-             
+              <img
+                src={`${process.env.REACT_APP_API_URL}/${item.image}`}
+                className="card-img-top rounded-3 shadow-lg img"
+                alt={item.title}
+              />
+
+              <h5 className="mt-4 mb-5 text-center img-text">{item.title}</h5>
             </div>
           ))}
         </div>
