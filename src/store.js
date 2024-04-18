@@ -10,7 +10,9 @@ import {
   schoolListReducer,
 } from "./reducers/schoolReducers";
 import {
+  aboutUsReducer,
   allSchoolsListReducer,
+  featureReducer,
   latestEventReducer,
   testimonialsReducer,
 } from "./reducers/LandingPageReducers";
@@ -25,6 +27,8 @@ const reducer = combineReducers({
   allSchoolsList: allSchoolsListReducer,
   testimonialList: testimonialsReducer,
   schoolDetails: schoolIndividualDetailReducer,
+  aboutUs: aboutUsReducer,
+  featureList: featureReducer,
 });
 
 const initialState = {};

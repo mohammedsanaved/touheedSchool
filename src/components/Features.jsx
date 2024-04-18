@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Styles } from "./styles/Features";
+import { useDispatch, useSelector } from "react-redux";
+import { featureAction } from "../actions/LandingPageActions";
 
 const Features = () => {
+  const dispatch = useDispatch();
+  const featureList = useSelector((state) => state.featureList);
+  const { feature, error, loading } = featureList;
+  console.log(featureList, "from featureList");
+
+  useEffect(() => {
+    dispatch(featureAction());
+  }, [dispatch]);
   const imageData = [
     {
       imageUrl:
@@ -38,9 +48,13 @@ const Features = () => {
       <Container>
         <div className="feature_header">Our Best Features</div>
         <div className="feature_main">
-          {imageData.map((img, index) => (
+          {feature?.rows?.map((img, index) => (
             <div key={index} className="feature_card">
-              <img src={img.imageUrl} className="Featureimg" alt="alt" />
+              <img
+                src={`${process.env.REACT_APP_API_URL}/${img.image}`}
+                className="Featureimg"
+                alt="alt"
+              />
               <h4 className="Featuretitle">{img.title}</h4>
             </div>
           ))}
