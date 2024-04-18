@@ -7,6 +7,14 @@ import '../styles/WhyUs.css';
 
 
 const EventDetailsData = ({ image, description }) => {
+  const truncateText = (text, limit) => {
+    const words = text.split(" ");
+    if (words.length > limit) {
+      return words.slice(0, limit).join(" ") + "...";
+    }
+    return text;
+  };
+
   return (
     <div className="d-flex justify-content-between why-us-container mx-auto">
       <div>
@@ -19,7 +27,7 @@ const EventDetailsData = ({ image, description }) => {
       <div>
         <h1 className="why-us-h1">Why Us</h1>
 
-        <p className="why-us-text">{description}</p>
+        <p className="why-us-text">{truncateText(`${description}`, 80)}</p>
         <GreenButton text="Read More" class_Name="readmore-btn" />
       </div>
     </div>

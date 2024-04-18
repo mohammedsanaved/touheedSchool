@@ -2,7 +2,7 @@ import React from "react";
 import FAQItem from "./FAQs/FAQItem";
 import "../styles/FAQs.css";
 
-const FAQs = () => {
+const FAQs = ({ faqs }) => {
   const items = [
     {
       title: "What is the admission procedure?",
@@ -27,12 +27,10 @@ const FAQs = () => {
   ];
   return (
     <div>
-      <div className="faq-title">
-        FAQs
-      </div>
+      <div className="faq-title">FAQs</div>
       <div className="accordion mt-3 mb-4 mx-auto">
-        {items.map((item, index) => (
-          <FAQItem key={index} title={item.title} content={item.content} />
+        {faqs?.map((item, index) => (
+          <FAQItem key={index} title={item.question} content={item.answer} />
         ))}
       </div>
     </div>

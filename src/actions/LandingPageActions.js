@@ -33,7 +33,7 @@ export const allSchoolsListAction = () => async (dispatch) => {
   try {
     dispatch({ type: LANDING_PAGE_ALL_SCHOOL_REQUEST });
     const { data } = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/landing_page/landing-pg-school/list`
+      `${process.env.REACT_APP_API_URL}/api/landing_page/school/list`
     );
     dispatch({ type: LANDING_PAGE_ALL_SCHOOL_SUCCESS, payload: data });
   } catch (error) {

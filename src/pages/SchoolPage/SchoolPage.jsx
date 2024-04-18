@@ -62,7 +62,7 @@ const SchoolPage = () => {
           <div className="video-banner-text mx-auto position-absolute">
             <div className="text-center school-title">{school.name}</div>
             <div className="text-center school-description">
-              {school.summary}
+              {school.description}
             </div>
             <div className="school-buttons d-flex justify-content-center mx-auto">
               <GreenButton text="Know More" />
@@ -77,16 +77,16 @@ const SchoolPage = () => {
           </p>
         </div>
 
-        <WhyUs image={school.image} description={school.description} />
+        <WhyUs image={school.image} description={school.summary} />
 
-        <Infrastructure />
+        <Infrastructure infrastructure={school.infrastructure} />
         <Brouchers />
 
         <div className="event-container d-flex mx-auto">
           <Event />
           <Event />
         </div>
-        <FAQs />
+        <FAQs faqs={school.faq} />
         <NoticeBoard />
 
         <h3 className="contact-us-title">Contact Us</h3>
