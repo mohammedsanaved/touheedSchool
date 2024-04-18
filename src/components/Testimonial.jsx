@@ -27,45 +27,92 @@ const Testimonial = () => {
     return <div>Error: {error.message}</div>;
   }
 
+  const placeholdernUrl = '/assets/images/placeholder-person.jpg';
+
+
+
+
+
+
+
   return (
     <Styles>
-      <Container>
-        <div className="testimonialHeader">
-          Let's See What Our Valuable Students Think About Us. Their
-          Testimonials.
-        </div>
-        {loading ? (
-          <div>Loading</div>
-        ) : error ? (
-          <div>Error: {error}</div>
-        ) : (
-          <Swiper
-            navigation={true}
-            autoplay={{
-              delay: 7000,
-              disableOnInteraction: false,
-            }}
-            pagination={true}
-            className="mySwiper"
-            modules={[Pagination, Navigation, Autoplay]}
-          >
-            {testimonials?.rows?.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <div className="swipper_wrapper">
-                  <div className="swipper_msg">
-                    <p>{testimonial.description}</p>
-                  </div>
-                  <div className="swipper_details">
-                    <div className="swipper_user">
-                      <p className="swipper_name">{testimonial.username}</p>
+
+      <div className="testimonialHeader">
+        Testimonials
+
+
+      </div>
+      <div className="testimonials-main-div">
+        <div className="testimonial-div-for-arrows">
+
+          <div className="what-our-students-say">What our students say about our website</div>
+
+
+          <div className="testimonial-slider-div">
+
+
+
+            {loading ? (
+              <div>Loading</div>
+            ) : error ? (
+              <div>Error: {error}</div>
+            ) : (
+              <Swiper
+
+
+                // autoplay={{
+                //   delay: 7000,
+                //   disableOnInteraction: false,
+                // }}
+
+                className="mySwiper"
+                modules={[Pagination, Navigation, Autoplay]}
+                slidesPerView={1}
+                slidesPerGroup={1}
+                pagination={{ clickable: true }}
+                navigation={{
+                  prevEl: '.testimonial-custom-prev',
+                  nextEl: '.testimonial-custom-next'
+                }}
+
+                breakpoints={{
+                  900: {
+                    slidesPerView: 2, // When screen width is below 900px, show only one slide per view
+                    slidesPerGroup: 2
+                  }
+                }}
+
+
+
+              >
+
+
+
+                {testimonials?.rows?.map((testimonial, index) => (
+                  <SwiperSlide key={index}>
+
+
+                    <div className="testimonial-div">
+                      <div className="testimonial-pic-name-div d-flex align-items-center">
+                        <img className="testimonial-profile-pic" src={`${placeholdernUrl}`} alt="" />
+                        <div className="testimonial-username">{testimonial.username}</div>
+                      </div>
+                      <p className="testimonial-desc">{testimonial.description}</p>
                     </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
-      </Container>
+                  </SwiperSlide>
+                ))}
+
+
+              </Swiper>
+            )}
+
+          </div>
+          <div className="testimonial-custom-prev"></div>
+          <div className="testimonial-custom-next"></div>
+        </div>
+      </div>
+
     </Styles>
   );
 };
