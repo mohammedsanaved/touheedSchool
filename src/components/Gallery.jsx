@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Styles } from "./styles/Gallery";
+import { useDispatch, useSelector } from "react-redux";
+import { galleryAction } from "../actions/LandingPageActions";
 
 const Gallery = () => {
+  const dispatch = useDispatch();
+  const galleryList = useSelector((state) => state.galleryList);
+  const { gallery, loading, error } = galleryList;
+
+  useEffect(() => {
+    dispatch(galleryAction());
+  }, [dispatch]);
+
+  const data = gallery?.data?.map((item, i) => item.image);
+  console.log(data, "images from Gallery");
+  const image01 = data?.[0];
+  const image02 = data?.[1];
+  const image03 = data?.[2];
+  const image04 = data?.[3];
+  const image05 = data?.[4];
+  const image06 = data?.[5];
+  if (loading) {
+    <div>Loading....</div>;
+  }
+  if (error) {
+    <div>Error: {error}</div>;
+  }
   return (
     <Styles>
       <div className="galleryHeader">
@@ -11,9 +35,7 @@ const Gallery = () => {
         <div className="d-flex flex-column">
           <div>
             <img
-              src={
-                "https://images.pexels.com/photos/20578401/pexels-photo-20578401/free-photo-of-a-yellow-building-with-windows-and-a-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-              }
+              src={`${process.env.REACT_APP_API_URL}/${image01}`}
               className="oneofOne"
               alt=""
             />
@@ -21,14 +43,14 @@ const Gallery = () => {
           <div className="oneofOne01">
             <div>
               <img
-                src="https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src={`${process.env.REACT_APP_API_URL}/${image02}`}
                 alt=""
                 className="oneofOne1"
               />
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1584750153892-38414eb8e76a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2Nob29sJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D"
+                src={`${process.env.REACT_APP_API_URL}/${image03}`}
                 alt=""
                 className="oneofOne2"
               />
@@ -37,7 +59,7 @@ const Gallery = () => {
         </div>
         <div className="oneofTwo gap-3">
           <img
-            src="https://images.pexels.com/photos/16293663/pexels-photo-16293663/free-photo-of-easter-decor-with-eggs.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            src={`${process.env.REACT_APP_API_URL}/${image04}`}
             alt=""
             className=""
           />
@@ -45,14 +67,14 @@ const Gallery = () => {
         <div className="gap-3">
           <div>
             <img
-              src="https://images.pexels.com/photos/15625357/pexels-photo-15625357/free-photo-of-white-flower-against-purple-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              src={`${process.env.REACT_APP_API_URL}/${image05}`}
               className="oneofThree1"
               alt=""
             />
           </div>
           <div className="mt-2">
             <img
-              src="https://images.pexels.com/photos/4200287/pexels-photo-4200287.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              src={`${process.env.REACT_APP_API_URL}/${image06}`}
               alt=""
               className="oneofThree2"
             />

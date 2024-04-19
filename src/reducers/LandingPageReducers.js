@@ -8,6 +8,9 @@ import {
   LANDING_PAGE_FEATURE_FAIL,
   LANDING_PAGE_FEATURE_REQUEST,
   LANDING_PAGE_FEATURE_SUCCESS,
+  LANDING_PAGE_GALLERY_FAIL,
+  LANDING_PAGE_GALLERY_REQUEST,
+  LANDING_PAGE_GALLERY_SUCCESS,
   LANDING_PAGE_LATEST_EVENT_FAIL,
   LANDING_PAGE_LATEST_EVENT_REQUEST,
   LANDING_PAGE_LATEST_EVENT_SUCCESS,
@@ -40,6 +43,21 @@ export const featureReducer = (
     case LANDING_PAGE_FEATURE_SUCCESS:
       return { ...state, loading: false, feature: action.payload };
     case LANDING_PAGE_FEATURE_FAIL:
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+export const galleryReducer = (
+  state = { gallery: [], loading: false, error: null },
+  action
+) => {
+  switch (action.type) {
+    case LANDING_PAGE_GALLERY_REQUEST:
+      return { ...state, loading: true, error: null };
+    case LANDING_PAGE_GALLERY_SUCCESS:
+      return { ...state, loading: false, gallery: action.payload };
+    case LANDING_PAGE_GALLERY_FAIL:
       return { ...state, loading: false, error: action.payload };
     default:
       return state;
