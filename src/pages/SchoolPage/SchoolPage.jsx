@@ -81,10 +81,10 @@ const SchoolPage = () => {
 
         <Infrastructure infrastructure={school.infrastructure} />
         <Brouchers />
-
         <div className="event-container d-flex mx-auto">
-          <Event />
-          <Event />
+          {school?.events?.map((event) => (
+            <Event key={event.id} item={event} />
+          ))}
         </div>
         <FAQs faqs={school.faq} />
         <NoticeBoard />
