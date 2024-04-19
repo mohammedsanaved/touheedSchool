@@ -91,9 +91,14 @@ const HeroSlide = () => {
               delay: 8000,
               disableOnInteraction: false,
             }}
-            navigation={true}
+            navigation={false}
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper"
+
+            
+
+
+
           >
             {allschools?.rows?.map((img) => (
               <SwiperSlide>
@@ -104,7 +109,7 @@ const HeroSlide = () => {
                     backgroundImage: `url(${process.env.REACT_APP_API_URL}/${img.image})`,
                   }}
                 >
-                  <div className="mx-auto">
+                  <div className="mx-auto banner-text-container">
                     <h1 className="img-title">{img.name}</h1>
                     <p className="img-text mx-auto">{img.description}</p>
                     <div className="school-buttons d-flex justify-content-center mx-auto">

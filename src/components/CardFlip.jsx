@@ -47,23 +47,23 @@ const CardFlip = ({ school }) => {
               transition={{ duration: 0.7 }}
               className="back"
             >
-              <span className="Back">
+              <div className="Back">
                 <span className="schoolLocation">{school.location}</span>
-                <div>
-                  <div className="fs-2">{school.name}</div>
-                  <div>
-                    <p className="fs-5">
+                
+                  <div className="cards-school-name">{school.name}</div>
+                  
+                    <p className="cards-description">
                       {truncateText(`${school.description}`, 20)}
                     </p>
-                    <div className="d-flex justify-content-evenly gap-2 mt-3">
+                    <div className="d-flex justify-content-evenly gap-2 mb-5">
                       <Link to={`/schooldetail/${school.id}`}>
                         <button className="ReadMore">Read More</button>
                       </Link>
                       <button className="ContactUs">Contacts Us</button>
                     </div>
-                  </div>
-                </div>
-              </span>
+                  
+                
+              </div>
             </motion.div>
           </motion.div>
         </motion.div>

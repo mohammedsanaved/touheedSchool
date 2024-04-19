@@ -35,7 +35,8 @@ const LatestEventCarousel = () => {
   return (
     <LatestEventsStyle>
       <div className="latest-events-title">Latest Events</div>
-      <Container>
+      <div className="latest-event-container">
+      
         <Swiper
           pagination={{ clickable: true }}
           // loop={true}
@@ -44,7 +45,10 @@ const LatestEventCarousel = () => {
           //   disableOnInteraction: false,
           // }}
           effect={"fade"}
-          navigation={true}
+          navigation={{
+            prevEl: '.latest-event-custom-prev',
+            nextEl: '.latest-event-custom-next'
+          }}
           modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
         >
@@ -66,7 +70,10 @@ const LatestEventCarousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Container>
+
+        <div className="latest-event-custom-prev"></div>
+          <div className="latest-event-custom-next"></div>
+          </div>
     </LatestEventsStyle>
   );
 };

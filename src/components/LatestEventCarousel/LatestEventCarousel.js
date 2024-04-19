@@ -49,4 +49,35 @@ export const LatestEventsStyle = styled.div`
   .event-text-sec {
     max-width: 463px;
   }
+
+
+  .latest-event-custom-prev,
+  .latest-event-custom-next {
+    width: 35px;
+    height: 35px;
+    background-image:url("/assets/images/right-arrow.png");
+    background-size: contain;
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    background-color:white;
+    border:5px solid white;
+    border-radius:50%;
+  }
+  
+  .latest-event-custom-prev {
+    transform: scaleX(-1);
+  }
+  .latest-event-custom-prev{
+    left:50px;
+  }
+  
+  .latest-event-custom-next {
+    right:50px;
+  }
+
+  .latest-event-container{
+    position:relative;
+  }
+
 `;

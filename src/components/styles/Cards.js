@@ -20,11 +20,12 @@ export const Styles = styled.div`
   }
   .ReadMore {
     background: #11b67a;
-    padding: 5px 15px;
+    padding: 7px 15px;
     border: none;
     border-radius: 10px;
     color: #eee;
     font-weight: 600;
+    font-size: 20px;
   }
   .ContactUs {
     padding: 5px 15px;
@@ -33,6 +34,7 @@ export const Styles = styled.div`
     border-radius: 10px;
     color: #11b67a;
     font-weight: 600;
+    font-size: 20px;
   }
 
   .Card {
@@ -48,14 +50,30 @@ export const Styles = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+
+  .back{
+    position:relative !important;
+    max-width: 348px;
+    width:100%;
+    height: 100%;    
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+
   .Back {
     display: flex;
     flex-direction: column;
-    margin-top: -58px;
-    gap: 125px;
+    height: 100%;  
+    justify-content: space-between;
+   
+    
+    
   }
   .schoolLocation {
-    padding: 5px 10px 10px 10px;
+    padding: 5px 20px 10px 20px;
     font-size: 22px;
     background: #11b67a;
     // width: 30vw;
@@ -63,6 +81,10 @@ export const Styles = styled.div`
     font-weight: 600;
     color: white;
     border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: 0;
+    // margin-bottom:35px;
   }
 
   .front,
@@ -78,4 +100,31 @@ export const Styles = styled.div`
     border-radius: 8px;
     object-position: center;
   }
+
+  .cards-school-name{
+    font-family: Inter;
+font-size: 32px;
+font-weight: 500;
+line-height: 35px;
+text-align: center;
+color:rgba(0, 0, 0, 1);
+// margin-bottom:35px;
+  }
+  
+  .cards-description{
+    font-family: Inter;
+font-size: 20px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color:rgba(0, 0, 0, 1);
+max-width:290px;
+margin:auto;
+// margin-bottom:69px;
+
+  }
+
+
+
+
 `;

@@ -44,7 +44,7 @@ const SchoolPage = () => {
     <>
       <HeaderTwo />
       <div className="">
-        <div className="position-relative">
+        <div className="position-relative school-details-video">
           <video
             className="w-100 video-element"
             // style={{  }}
