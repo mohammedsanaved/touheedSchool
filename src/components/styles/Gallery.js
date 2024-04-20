@@ -59,6 +59,7 @@ export const Styles = styled.div`
 
   .oneofTwo {
     width: 590px;
+
     height: auto;
   }
 
@@ -81,6 +82,7 @@ export const Styles = styled.div`
   img {
     height: auto;
     border-radius: 10px;
-    max-width: 100%; /* Ensure images don't exceed their container */
+    max-width: 100%;
+    aspect-ratio: 3/2;
   }
 `;
