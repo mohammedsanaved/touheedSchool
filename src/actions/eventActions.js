@@ -36,7 +36,7 @@ export const detailEvent = (id) => async (dispatch) => {
     dispatch({ type: EVENT_DETAIL_REQUEST });
 
     const { data } = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/events/events-list/${id}`
+      `${process.env.REACT_APP_API_URL}/api/events/single-event/${id}`
     );
 
     dispatch({ type: EVENT_DETAIL_SUCCESS, payload: data });
