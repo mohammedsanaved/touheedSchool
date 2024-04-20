@@ -74,7 +74,10 @@ const SchoolPage = () => {
         <WhyUs image={school.image} description={school.summary} />
 
         <Infrastructure infrastructure={school.infrastructure} />
-        <Brouchers />
+        {school?.brochure?.map((doc) => (
+          <Brouchers doc={doc} key={doc.id} />
+        ))}
+
         <div className="event-container d-flex mx-auto">
           {school?.events?.map((event) => (
             <Event key={event.id} item={event} />

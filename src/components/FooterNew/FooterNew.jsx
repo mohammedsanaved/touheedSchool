@@ -57,7 +57,7 @@ const FooterNew = () => {
           </div>
           <div className="ourschools-column">
             <div className="footer-subheading">OUR SCHOOLS</div>
-            {allschools.rows.map((item, i) => (
+            {allschools?.rows?.map((item, i) => (
               <div className="footer-links">
                 <Link to={`/schooldetail/${item.id}`}>{item.name}</Link>
               </div>
