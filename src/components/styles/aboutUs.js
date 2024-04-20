@@ -24,8 +24,14 @@ export const Styles = styled.div`
     font-size: 20px;
     font-weight: 500;
     line-height: 28px;
-    text-align: justified;
+    
     color: rgba(98, 95, 95, 1);
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 18;
+  margin-bottom: 11px;
+
   }
 
   .about-content {
@@ -59,11 +65,44 @@ export const Styles = styled.div`
     .about-para {
       font-size: 16px;
       line-height: 22px;
+      
     }
   }
   .about-us-vid{
     width:660px;
     height:660px;
    background-color:black;
+   object-fit: cover;
+   border-radius:10px;
+  }
+  @media screen and (max-width: 1100px){
+    .about-us-vid{
+
+      width:100%;
+      height:100%;
+     
+    }
+
+    .about-us-section{
+      display:flex;
+      flex-direction:column;
+    }
+
+
+    .about-video{
+      margin-bottom:20px;
+    }
+    .about-content{
+      max-width:100%;
+      width:100%;
+    }
+
+    .about-para {
+      
+    -webkit-line-clamp: 5;
+    
+  
+    }
+
   }
 `;

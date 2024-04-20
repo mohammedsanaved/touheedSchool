@@ -49,7 +49,7 @@ const Features = () => {
         <div className="feature_header">Our Best Features</div>
         <div className="feature_main">
           {feature?.rows?.map((img, index) => (
-            <div key={index} className="feature_card">
+            <div key={index} className="feature_card" style={{ backgroundImage: `url(${process.env.REACT_APP_API_URL}/${img.image})` }}>
               <img
                 src={`${process.env.REACT_APP_API_URL}/${img.image}`}
                 className="Featureimg"

@@ -19,14 +19,14 @@ const CardSection = () => {
       <section className="cards">
         <Container>
           <div className="CardHeader">Our Schools</div>
-          <Row className="cardsRow">
+          <Row className="cardsRow d-flex ">
             {loading ? (
               <p>Loading....</p>
             ) : error ? (
               <p>Error: {error}</p>
             ) : (
               schools?.rows?.map((school) => (
-                <Col className="mb-4 mx-5 flex-grow-0 flex-shrink-0 mt-4">
+                <Col className="flex-grow-0 flex-shrink-0">
                   <CardFlip key={school.id} school={school} />
                 </Col>
               ))

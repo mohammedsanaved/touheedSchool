@@ -8,6 +8,7 @@ line-height: 43.57px;
 text-align:center;
 color:black;
 margin-bottom:75px;
+margin-top:75px;
 
   }
   .what-our-students-say{
@@ -26,6 +27,7 @@ margin-bottom:60px;
     padding-top:50px;
     padding-bottom:50px;
     max-width:100%;
+    
     
   }
 

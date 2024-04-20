@@ -2,29 +2,41 @@ import { styled } from "styled-components";
 
 export const Styles = styled.div`
   .feature_header {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
+    font-family: Inter;
+font-size: 36px;
+font-weight: 700;
+line-height: 43.57px;
+text-align: center;
+
     color: #000;
     margin-bottom: 16px;
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
   }
 
   .feature_main {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
   }
 
   .feature_card {
-    width: calc(25% - 20px);
+    height:242px;
+
+    max-width:201px;
+
+    width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    border-radius:10px;
+    
   }
 
   .Featureimg {
     width: 100%;
     max-width: 100%;
+    height:242px;
     aspect-ratio: 2/3;
     object-fit: cover;
     border-radius: 10px;
@@ -34,10 +46,15 @@ export const Styles = styled.div`
   }
 
   .Featuretitle {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 20px;
+    
+    font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+line-height: 19.36px;
+text-align: center;
+color:black;
+text-transform: uppercase;
+
   }
 
   @media (max-width: 768px) {
@@ -58,4 +75,9 @@ export const Styles = styled.div`
       width: calc(100% - 20px); /* Make cards take full width */
     }
   }
+
+
+
+
+
 `;

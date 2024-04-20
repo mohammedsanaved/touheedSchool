@@ -6,7 +6,7 @@ export const Styles = styled.div`
     font-size: 36px;
     font-weight: 700;
     color: #000;
-    margin-bottom: 16px;
+    margin-bottom:73px;
   }
   .cards {
     padding: 78px 0 85px;
@@ -17,5 +17,15 @@ export const Styles = styled.div`
 
   .cardsRow {
     justify-content: center;
+    row-gap:70px;
   }
+
+  @media screen and (min-width: 800px) {
+    .cardsRow{
+      gap:70px;
+    }
+
+  }
+
+
 `;
