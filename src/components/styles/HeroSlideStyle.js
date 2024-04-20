@@ -31,6 +31,11 @@ text-align: center;
 color:white;
 max-width:410px;
 margin-bottom:40px;
+
+display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
 }
 
   .image-container {
@@ -61,9 +66,44 @@ margin-bottom:40px;
   
 }
 
+
+.banner-container{
+  position:relative;
+}
+
+
 .banner-text-container{
   z-index:0;
 }
+
+
+
+.banner-custom-prev,
+.banner-custom-next {
+  width: 35px;
+  height: 35px;
+  background-image:url("/assets/images/right-arrow.png");
+  background-size: contain;
+  cursor:pointer;
+  position:absolute;
+  top:45%;
+  background-color:white;
+  border:5px solid white;
+  border-radius:50%;
+  z-index: 1;
+  opacity:0.3;
+}
+
+
+.banner-custom-prev{
+  transform: scaleX(-1);
+  left:10px;
+}
+
+.banner-custom-next {
+  right:10px;
+}
+
 
 
 `;

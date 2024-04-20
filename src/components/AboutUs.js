@@ -24,11 +24,12 @@ const AboutUs = () => {
         <div className="about-video">
           <div>
             <video
-              className="h-75 w-100"
+              className="about-us-vid"
               autoPlay={true}
               loop={true}
               muted={true}
               playsInline={true}
+              
             >
               <source type="video/mp4" src={video} />
             </video>

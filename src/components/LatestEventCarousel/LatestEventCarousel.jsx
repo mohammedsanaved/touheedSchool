@@ -36,14 +36,15 @@ const LatestEventCarousel = () => {
     <LatestEventsStyle>
       <div className="latest-events-title">Latest Events</div>
       <div className="latest-event-container">
+      <div className="event-container">
       
         <Swiper
-          pagination={{ clickable: true }}
-          // loop={true}
-          // autoplay={{
-          //   delay: 9000,
-          //   disableOnInteraction: false,
-          // }}
+         // pagination={{ clickable: true }}
+          loop={true}
+          autoplay={{
+            delay: 9000,
+            disableOnInteraction: false,
+          }}
           effect={"fade"}
           navigation={{
             prevEl: '.latest-event-custom-prev',
@@ -52,6 +53,7 @@ const LatestEventCarousel = () => {
           modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
         >
+         
           {latestevent?.rows?.map((event) => (
             <SwiperSlide key={event.id}>
               <div className="event-carousel-container mx-auto">
@@ -60,17 +62,18 @@ const LatestEventCarousel = () => {
                   alt={event.title}
                   className="latest-event-img"
                 />
-                <div className="event-text-sec">
+                <div className="event-text-sec d-flex flex-column justify-content-center">
                   <h3 className="event-title">{event.title}</h3>
                   <p className="event-text">
-                    {truncateText(`${event.desc}`, 50)}
+                    {truncateText(`${event.desc}`, 80)}
                   </p>
                 </div>
               </div>
             </SwiperSlide>
           ))}
+          
         </Swiper>
-
+        </div>
         <div className="latest-event-custom-prev"></div>
           <div className="latest-event-custom-next"></div>
           </div>

@@ -8,12 +8,13 @@ export const LatestEventsStyle = styled.div`
     line-height: 43.57px;
     text-align: center;
     color: black;
-    margin-bottom: 18px;
+    margin-bottom: 70px;
   }
 
   .latest-event-img {
     width: 463px;
-    height: 463px;
+    height: 439px;
+    border-radius:10px;
   }
 
   .event-carousel-container {
@@ -21,11 +22,7 @@ export const LatestEventsStyle = styled.div`
     max-width: 1128px;
     column-gap: 50px;
   }
-  @media only screen and (max-width: 768px) {
-    .event-carousel-container {
-      flex-direction: column;
-    }
-  }
+ 
 
   .event-title {
     font-family: Inter;
@@ -59,25 +56,87 @@ export const LatestEventsStyle = styled.div`
     background-size: contain;
     cursor:pointer;
     position:absolute;
-    top:50%;
+    top:45%;
     background-color:white;
     border:5px solid white;
     border-radius:50%;
+    z-index: 1;
   }
   
-  .latest-event-custom-prev {
-    transform: scaleX(-1);
-  }
+
   .latest-event-custom-prev{
-    left:50px;
+    transform: scaleX(-1);
+    left:10px;
   }
   
   .latest-event-custom-next {
-    right:50px;
+    right:10px;
   }
 
   .latest-event-container{
     position:relative;
+    max-width:1128px;
+    margin:auto;
+    border:1px solid black;
+    border-radius:10px;
+  }
+.event-container{
+  max-width:979px;
+  margin:auto;
+}
+
+.swiper.swiper-initialized.swiper-horizontal.mySwiper{
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+
+@media screen and (max-width: 900px) {
+.event-carousel-container{
+ padding-left:30px;
+ padding-right:30px;
+    align-items: center;
+}
+
+.swiper-wrapper{
+  align-items: center;
+}
+
+ .latest-event-img {
+  width: 300px;
+    height: 300px;
+
+}
+}
+
+@media screen and (max-width: 600px) {
+  .event-carousel-container{
+   flex-direction:column;
+      align-items: center;
+  }
+  
+  .swiper-wrapper{
+    align-items: flex-start;
+  }
+  
+   .latest-event-img {
+    width: 300px;
+      height: 300px;
+  
+  }
+  .latest-event-custom-prev,
+  .latest-event-custom-next {
+    display:none;
+  }
+  img.latest-event-img{
+    margin-bottom:30px;
+    width: 100%;
   }
 
+  .latest-event-container{
+    border:none;
+  }
+
+
+  }
 `;

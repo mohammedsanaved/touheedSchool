@@ -79,51 +79,58 @@ const HeroSlide = () => {
   return (
     <>
       <HeroSlideStyle>
-        {schoolLoading ? (
-          <p>Loading......</p>
-        ) : errorMsg ? (
-          <p>Error: {errorMsg}</p>
-        ) : (
-          <Swiper
-            pagination={{ clickable: true }}
-            loop={true}
-            autoplay={{
-              delay: 8000,
-              disableOnInteraction: false,
-            }}
-            navigation={false}
-            modules={[Pagination, Navigation, Autoplay]}
-            className="mySwiper"
+        <div className="banner-container">
+          {schoolLoading ? (
+            <p>Loading......</p>
+          ) : errorMsg ? (
+            <p>Error: {errorMsg}</p>
+          ) : (
+            <Swiper
+              pagination={{ clickable: true }}
+              loop={true}
+              autoplay={{
+                delay: 8000,
+                disableOnInteraction: false,
+              }}
+              navigation={{
+                prevEl: '.banner-custom-prev',
+                nextEl: '.banner-custom-next'
+              }}
+              modules={[Pagination, Navigation, Autoplay]}
+              className="mySwiper"
 
-            
 
 
 
-          >
-            {allschools?.rows?.map((img) => (
-              <SwiperSlide>
-                <div
-                  className="image-container d-flex align-items-center"
-                  key={img.id}
-                  style={{
-                    backgroundImage: `url(${process.env.REACT_APP_API_URL}/${img.image})`,
-                  }}
-                >
-                  <div className="mx-auto banner-text-container">
-                    <h1 className="img-title">{img.name}</h1>
-                    <p className="img-text mx-auto">{img.description}</p>
-                    <div className="school-buttons d-flex justify-content-center mx-auto">
-                      <Link to={`/schooldetail/${img.id}`}>
-                        <GreenButton text="Know More" />
-                      </Link>
-                      <GreenButton text="EnquirePage" />
+
+            >
+              {allschools?.rows?.map((img) => (
+                <SwiperSlide>
+                  <div
+                    className="image-container d-flex align-items-center"
+                    key={img.id}
+                    style={{
+                      backgroundImage: `url(${process.env.REACT_APP_API_URL}/${img.image})`,
+                    }}
+                  >
+                    <div className="mx-auto banner-text-container">
+                      <h1 className="img-title">{img.name}</h1>
+                      <p className="img-text mx-auto">{img.description}</p>
+                      <div className="school-buttons d-flex justify-content-center mx-auto">
+                        <Link to={`/schooldetail/${img.id}`}>
+                          <GreenButton text="Know More" />
+                        </Link>
+                        <GreenButton text="EnquirePage" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+          <div className="banner-custom-prev"></div>
+          <div className="banner-custom-next"></div>
+        </div>
       </HeroSlideStyle>
     </>
   );

@@ -61,4 +61,9 @@ export const Styles = styled.div`
       line-height: 22px;
     }
   }
+  .about-us-vid{
+    width:660px;
+    height:660px;
+   background-color:black;
+  }
 `;
