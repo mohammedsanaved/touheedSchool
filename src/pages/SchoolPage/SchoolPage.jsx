@@ -44,7 +44,6 @@ const SchoolPage = () => {
     <>
       <HeaderTwo />
       <div className="">
-<<<<<<< HEAD
         <div className="position-relative school-details-video">
           <video
             className="w-100 video-element"
@@ -53,10 +52,6 @@ const SchoolPage = () => {
             muted
             loop
           >
-=======
-        <div className="position-relative">
-          <video className="w-100 video-element" autoPlay muted loop>
->>>>>>> 52faed37528d959a4465afd3bbdcf09caf8d0d3e
             {/* <source src={schoolVideo} type="video/mp4" /> */}
             <source
               src={`${process.env.REACT_APP_API_URL}/${school.video}`}

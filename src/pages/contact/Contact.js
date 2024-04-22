@@ -14,17 +14,14 @@ import { createContact } from "../../actions/contactActions";
 
 import ReCAPTCHA from "react-google-recaptcha";
 import BannerSection from "../../components/BannerSection/BannerSection.jsx";
+import SortByEvents from "../../components/SortByEvents.jsx";
 
 function Contact() {
-
   const data = {
-    title: 'Home/Event',
-    
-    bg_image:'../assets/images/HomeEvent.png',
+    title: "Home/Event",
+
+    bg_image: "../assets/images/HomeEvent.png",
   };
-
-
-
 
   const [disable, setDisable] = useState("");
   const [messageThanksDone, setMessageThanksDone] = useState("");
@@ -220,6 +217,17 @@ function Contact() {
                               id="contact_subject"
                             />
                             <span className="contact_input-msg"></span>
+                          </p>
+                        </Col>
+                        <Col md="12">
+                          <p className="form-control">
+                            {/* <input
+                              type="text"
+                              placeholder="Subject"
+                              id="contact_subject"
+                            /> */}
+                            {/* <span className="contact_input-msg"></span> */}
+                            <SortByEvents />
                           </p>
                         </Col>
                         <Col md="12">
