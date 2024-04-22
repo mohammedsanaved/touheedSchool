@@ -51,26 +51,20 @@ export const Styles = styled.div`
     align-items: center;
   }
 
-
-  .back{
-    position:relative !important;
+  .back {
+    position: relative !important;
     max-width: 348px;
-    width:100%;
-    height: 100%;    
+    width: 100%;
+    height: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-
-
   .Back {
     display: flex;
     flex-direction: column;
-    height: 100%;  
+    height: 100%;
     justify-content: space-between;
-   
-    
-    
   }
   .schoolLocation {
     padding: 5px 20px 10px 20px;
@@ -101,30 +95,25 @@ export const Styles = styled.div`
     object-position: center;
   }
 
-  .cards-school-name{
+  .cards-school-name {
     font-family: Inter;
-font-size: 32px;
-font-weight: 500;
-line-height: 35px;
-text-align: center;
-color:rgba(0, 0, 0, 1);
-// margin-bottom:35px;
-  }
-  
-  .cards-description{
-    font-family: Inter;
-font-size: 20px;
-font-weight: 500;
-line-height: 20px;
-text-align: left;
-color:rgba(0, 0, 0, 1);
-max-width:290px;
-margin:auto;
-// margin-bottom:69px;
-
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    // margin-bottom:35px;
   }
 
-
-
-
+  .cards-description {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    max-width: 290px;
+    margin: auto;
+    // margin-bottom:69px;
+  }
 `;

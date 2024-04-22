@@ -1,8 +1,7 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { Styles } from "../styles/Brouchers";
 import GreenButton from "../../../components/GreenButton/GreenButton";
-
-
 
 const Brouchers = ({ doc }) => {
   const brochurelogo = "/assets/images/BrochureLogo.png";
@@ -29,6 +28,7 @@ const Brouchers = ({ doc }) => {
               href={`${process.env.REACT_APP_API_URL}/${doc.pdf}`}
               download={`${process.env.REACT_APP_API_URL}/${doc.pdf}`}
               title={"Download the Brochure"}
+              target={"_blank"}
             >
               <button className="know-more-btn">Download</button>
             </a>
