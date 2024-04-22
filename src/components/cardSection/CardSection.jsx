@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import CardFlip from "../CardFlip";
 import { useDispatch, useSelector } from "react-redux";
 import { schoolList } from "../../actions/schoolActions";
+import CardsNew from "../CardsNew/CardsNew";
 
 const CardSection = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,9 @@ const CardSection = () => {
             ) : (
               schools?.rows?.map((school) => (
                 <Col className="flex-grow-0 flex-shrink-0">
-                  <CardFlip key={school.id} school={school} />
+                  
+                  <CardsNew  key={school.id} school={school} />
+
                 </Col>
               ))
             )}

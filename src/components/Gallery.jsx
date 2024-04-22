@@ -61,10 +61,10 @@ const Gallery = () => {
           <img
             src={`${process.env.REACT_APP_API_URL}/${image04}`}
             alt=""
-            className=""
+            className="oneofTwo-img"
           />
         </div>
-        <div className="gap-3">
+        <div className="gap-3 third-column">
           <div>
             <img
               src={`${process.env.REACT_APP_API_URL}/${image05}`}

@@ -4,18 +4,21 @@ export const Styles = styled.div`
   .gallery_main {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
+   
   }
 
   .galleryHeader {
-    display: flex;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: 700;
-    color: #000;
-    margin: auto; /* Center horizontally */
-    margin-bottom: 16px;
+    font-family: Inter;
+font-size: 36px;
+font-weight: 700;
+line-height: 43.57px;
+text-align: center;
+color:black;
+
+    margin-top:70px;
+    margin-bottom:70px;
   }
 
   .oneofOne_sub {
@@ -23,51 +26,39 @@ export const Styles = styled.div`
   }
 
   .oneofOne {
-    width: 359px;
-    height: 254px;
+    max-width:359px;
+    width: 100%;
+    height:249px;
   }
 
   .oneofOne01 {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    
+    width:100%;
   }
 
-  .oneofOne01 > div {
-    width: 50%;
-  }
+  
 
-  @media (max-width: 375px) {
-    .oneofOne01 {
-      flex-direction: column;
-      align-items: center;
-    }
-    .oneofOne01 > div {
-      width: auto;
-    }
-    .galleryHeader {
-      font-size: 24px;
-      margin-top: 0;
-    }
-  }
+ 
 
   .oneofOne1,
   .oneofOne2 {
-    width: 173px;
+    max-width: 173px;
+    width:100%;
     height: 144px;
+    object-fit: cover;
   }
 
-  .oneofTwo {
-    width: 590px;
-
-    height: auto;
+  .oneofTwo-img {
+    max-width: 427px;
+    width:100%;
+    height: 403px;
+    object-fit: cover;
   }
 
-  @media (max-width: 600px) {
-    .oneofTwo {
-      width: 90%;
-    }
-  }
+ 
 
   .oneofThree1 {
     width: 315px;
@@ -85,4 +76,35 @@ export const Styles = styled.div`
     max-width: 100%;
     aspect-ratio: 3/2;
   }
+
+
+
+  @media screen and (max-width: 1200px) {
+    .gallery_main {
+      
+    flex-direction: column;
+    padding-left:20px;
+    padding-right:20px;
+    
+    }
+    .galleryHeader{
+      padding-left:20px;
+    padding-right:20px;
+
+    }
+
+
+     .oneofOne , .oneofOne1 , .oneofOne2 , .oneofTwo-img , .oneofThree1 , .oneofThree2{
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+     }
+
+     .third-column{
+      display:flex;
+      
+     }
+  }
+
+
 `;
