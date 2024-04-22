@@ -41,7 +41,7 @@ display: -webkit-box;
   .image-container {
     width: 100%;
   
-    height: 670px;
+    height: 750px;
     background-size:cover;
 
     

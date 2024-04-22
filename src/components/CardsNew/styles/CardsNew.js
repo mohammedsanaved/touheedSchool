@@ -56,7 +56,7 @@ export const CardsNewStyles = styled.div`
   .cards-schoolName {
     font-family: Inter;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 35px;
     text-align: center;
     color: rgba(0, 0, 0, 1);
@@ -65,7 +65,7 @@ export const CardsNewStyles = styled.div`
   .cards-schooldescription {
     font-family: Inter;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 200;
     line-height: 20px;
     text-align: left;
     color: rgba(0, 0, 0, 1);

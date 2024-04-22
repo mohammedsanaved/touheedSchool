@@ -120,7 +120,7 @@ const HeroSlide = () => {
                         <Link to={`/schooldetail/${img.id}`}>
                           <GreenButton text="Know More" />
                         </Link>
-                        <GreenButton text="EnquirePage" />
+                        <GreenButton text="Enquire Page" />
                       </div>
                     </div>
                   </div>

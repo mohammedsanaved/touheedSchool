@@ -4,6 +4,7 @@ import { colors } from "../element/elements.js";
 export const Styles = styled.div`
 .mobile-menu-area {
     background : ${colors.bg1};
+    background:transparent;
     display: none;
     .mb-topbar {
         border-bottom: 1px solid ${colors.black2};
@@ -51,6 +52,7 @@ export const Styles = styled.div`
                     content : "";
                     background : ${colors.text1};
                     width: 1px;
+                    width: 0px;
                     height: 25px;
                     top: -4px;
                     right: -16px;
@@ -75,7 +77,7 @@ export const Styles = styled.div`
                     img {
                         max-width: 150px;
                         @media(max-width: 480px) {
-                            max-width : 120px;
+                            max-width : 50px;
                         }
                     }
                 }
@@ -136,7 +138,7 @@ export const Styles = styled.div`
         }
     }
 
-    @media(max-width: 767px) {
+    @media(max-width: 1000px) {
         display : block;
     }
 }
@@ -229,7 +231,7 @@ export const Styles = styled.div`
         }
     }
 
-    @media(max-width: 767px) {
+    @media(max-width: 1000px) {
         display : block;
     }
 

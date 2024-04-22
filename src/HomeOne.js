@@ -30,6 +30,7 @@ import Gallery from "./components/Gallery";
 import HeroSlide from "./components/HeroSlide";
 import LatestEventCarousel from "./components/LatestEventCarousel/LatestEventCarousel.jsx";
 import FooterNew from "./components/FooterNew/FooterNew.jsx";
+import HeaderNew from "./components/HeaderNew/HeaderNew.jsx";
 // import Cards from "./components/Cards";
 
 export default function HomeOne() {
@@ -38,6 +39,7 @@ export default function HomeOne() {
       {/* Header */}
       {/* <Header /> */}
       <HeaderTwo />
+      
 
       {/* Hero Slider */}
       {/* <HeroSlider /> */}

@@ -4,6 +4,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Styles } from "./styles/mobileMenu.js";
 
 function MobileMenu() {
+
+  const logoUrl = "/assets/images/Touheed-logo.png";
+
+
+
   useEffect(() => {
     // Mobile Menu
     const hmBtn = document.getElementById("mb-sidebar-btn");
@@ -57,28 +62,9 @@ function MobileMenu() {
         <Container>
           <Row>
             <Col md="0" sm="12">
-              <div className="mb-topbar d-flex justify-content-between">
-                <div className="topbar-item">
-                  <p>
-                    <i className="las la-phone"></i>+1 (111) 111 1111
-                  </p>
-                </div>
-                <div className="topbar-item">
-                  <ul className="list-unstyled list-inline">
-                    <li className="list-inline-item">
-                      <Link to={process.env.PUBLIC_URL + "/login"}>Log In</Link>
-                    </li>
-                    <li className="list-inline-item">/</li>
-                    <li className="list-inline-item">
-                      <Link to={process.env.PUBLIC_URL + "/registration"}>
-                        Register
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+             
               <div className="mb-logo-area d-flex justify-content-between">
-                <div className="mb-logo-box d-flex">
+                <div className="mb-logo-box d-flex justify-content-between w-100 align-items-center">
                   <div className="hm-button">
                     <a href={process.env.PUBLIC_URL + "/"} id="mb-sidebar-btn">
                       <i className="las la-bars"></i>
@@ -87,18 +73,13 @@ function MobileMenu() {
                   <div className="mb-logo">
                     <Link to={process.env.PUBLIC_URL + "/"}>
                       <img
-                        src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
+                        src={process.env.PUBLIC_URL + logoUrl}
                         alt=""
                       />
                     </Link>
                   </div>
                 </div>
-                <div className="mb-search-box">
-                  {/* <form action="#">
-                                        <input type="text" name="search" placeholder="Search Here" />
-                                        <button type="submit"><i className="las la-search"></i></button>
-                                    </form> */}
-                </div>
+                
               </div>
             </Col>
           </Row>
@@ -147,57 +128,41 @@ function MobileMenu() {
             </div>
           </div>
           <div className="mb-menu-item">
-            <button className="mb-menu-button toggle active">
+            <button className="mb-menu-button active">
               <p>
-                Admissions <i className="las la-plus"></i>
+                {" "}
+                <Link to={process.env.PUBLIC_URL + "/"}> Admission </Link>{" "}
               </p>
             </button>
-            <div className="mb-menu-content show">
-              <ul className="list-unstyled">
-                <li>
-                  <Link to={process.env.PUBLIC_URL + "/"}>
-                    Programs Offered
-                  </Link>
-                </li>
-                <li>
-                  <Link to={process.env.PUBLIC_URL + "/"}>Contact Details</Link>
-                </li>
-                <li>
-                  <Link to={process.env.PUBLIC_URL + "/"}>Brochure</Link>
-                </li>
-                <li>
-                  <Link to={process.env.PUBLIC_URL + "/"}>
-                    Scholarship Details
-                  </Link>
-                </li>
-              </ul>
-            </div>
           </div>
 
           <div className="mb-menu-item">
-            <button className="mb-menu-button toggle">
-              <p>
-                Activites <i className="las la-plus"></i>
-              </p>
-            </button>
-            <div className="mb-menu-content">
-              <ul className="list-unstyled">
-                <li>
-                  <Link to={process.env.PUBLIC_URL + "/events"}>Events</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mb-menu-item">
-            <button className="mb-menu-button">
+            <button className="mb-menu-button active">
               <p>
                 {" "}
-                <Link to={process.env.PUBLIC_URL + "/contact"}>
-                  Contact Us{" "}
-                </Link>
+                <Link to={process.env.PUBLIC_URL + "/"}> Institution </Link>{" "}
               </p>
             </button>
           </div>
+
+
+          <div className="mb-menu-item">
+            <button className="mb-menu-button active">
+              <p>
+                {" "}
+                <Link to={process.env.PUBLIC_URL + "/"}> Activities </Link>{" "}
+              </p>
+            </button>
+          </div>
+          <div className="mb-menu-item">
+            <button className="mb-menu-button active">
+              <p>
+                {" "}
+                <Link to={process.env.PUBLIC_URL + "/"}> Contact Us </Link>{" "}
+              </p>
+            </button>
+          </div>
+
         </div>
       </section>
       <div className="mb-sidebar-overlay" id="mb-sidebar-overlay"></div>
