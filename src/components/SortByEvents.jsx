@@ -5,6 +5,10 @@ import { Styles } from "./styles/SortByEvents";
 const SortByEvents = () => {
   const options = [
     {
+      value: "", // Set an empty value for the default option
+      label: "Select the Schools here", // Set the label for the default option
+    },
+    {
       value: "touheed-english-medium-school",
       label: "1) Touheed English Medium School",
     },
@@ -12,13 +16,14 @@ const SortByEvents = () => {
       value: "touheed-girls-p.u-college",
       label: "2) Touheed Girls' P.U.College, Ganguli",
     },
-    { value: "touheed-womens-college", label: "3) Touheed Womens College " },
+    { value: "touheed-womens-college", label: "3) Touheed Womens College" },
     { value: "touheed-public-school", label: "4) Touheed Public School" },
     {
       value: "dina-school-for-special-education-rehabilitation",
       label: "5) 'DINA' - School for Special Education & Rehabilitation",
     },
   ];
+
   // const Styles = styled.select`
   //   font-size: 1.2rem;
   //   padding: 0.5rem 1rem;

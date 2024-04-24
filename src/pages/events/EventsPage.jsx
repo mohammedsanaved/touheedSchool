@@ -40,6 +40,7 @@ const Events = () => {
 
         <div className="event-page-div mx-auto">
           <SortByEvents />
+
           {loading ? (
             <p>Loading...</p>
           ) : error ? (
@@ -51,7 +52,7 @@ const Events = () => {
           )}
         </div>
       </EventsStyles>
-     <FooterNew/>
+      <FooterNew />
     </>
   );
 };
