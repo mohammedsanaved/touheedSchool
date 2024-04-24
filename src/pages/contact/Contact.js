@@ -15,6 +15,7 @@ import { createContact } from "../../actions/contactActions";
 import ReCAPTCHA from "react-google-recaptcha";
 import BannerSection from "../../components/BannerSection/BannerSection.jsx";
 import SortByEvents from "../../components/SortByEvents.jsx";
+import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 
 function Contact() {
   const data = {
@@ -118,10 +119,6 @@ function Contact() {
       <div className="main-wrapper contact-page">
         {/* Header 2 */}
         <HeaderTwo />
-        {/* < Header /> */}
-
-        {/* Breadcroumb */}
-        {/* <BreadcrumbBox title="Contact Us" /> */}
         <BannerSection bg_image={bg} title={"Home/Contact"} />
 
         {/* Contact Area */}
@@ -262,10 +259,7 @@ function Contact() {
           {/* Google Map */}
           <GoogleMap />
         </section>
-
-        {/* Footer 2 */}
-        {/* <FooterTwo /> */}
-        <Footer />
+        <FooterNew />
       </div>
     </Styles>
   );

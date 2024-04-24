@@ -15,7 +15,10 @@ const EventSpeakers = ({ speakers }) => {
             <div className="card-main-div" key={guest.id}>
               <div className="img-div">
                 <img
-                  src={`${process.env.REACT_APP_API_URL}/${guest.image}`}
+                  src={
+                    `${process.env.REACT_APP_API_URL}/${guest.image}` ||
+                    `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt_NZykul07nU3cliFuRZQr4_q-gOdkRTmRA&usqp=CAU`
+                  }
                   alt={guest.name}
                   className="speakerImg"
                 />

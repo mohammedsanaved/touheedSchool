@@ -25,7 +25,7 @@ import NoticeBoard from "./components/NoticeBoard";
 import "./SchoolPage.css";
 import GreenButton from "../../components/GreenButton/GreenButton";
 import FooterNew from "../../components/FooterNew/FooterNew";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
 
 const SchoolPage = () => {
@@ -66,7 +66,9 @@ const SchoolPage = () => {
             </div>
             <div className="school-buttons d-flex justify-content-center mx-auto">
               <GreenButton text="Know More" />
-              <GreenButton text="Enquire" />
+              <Link to={"/admission-page"}>
+                <GreenButton text="Enquire" />
+              </Link>
             </div>
           </div>
         </div>
