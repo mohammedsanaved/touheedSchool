@@ -1,3 +1,7 @@
+import { styled } from "styled-components";
+
+export const SchoolPageStyle = styled.div`
+
 .school-title{
     font-family: Inter;
 font-size: 36px;
@@ -17,11 +21,14 @@ line-height: 24.2px;
 text-align: center;
 margin-bottom: 70px;
 color: white;
-
+display: -webkit-box;
+-webkit-box-orient: vertical;
+overflow: hidden;
+-webkit-line-clamp: 5;
 }
 
 .video-element{
-    height: 570px;
+    height: 700px;
     object-fit: cover;
 }
 
@@ -33,7 +40,7 @@ color: white;
     /* margin-top: -46%;
     margin-bottom: 70vh; */
 
-    top: 20%;
+    top: 30%;
 left: 0;
 right: 0;
 bottom: 0;
@@ -96,6 +103,9 @@ color: rgba(4, 156, 80, 1);
 max-width: 1207px;
 column-gap: 40px;
 
+display: grid;
+grid-template-columns: auto auto;
+
 }
 
 .contact-us-title{
@@ -113,7 +123,7 @@ margin-bottom: 80px;
     background-color: white !important;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 
 
     .school-description{
@@ -142,7 +152,8 @@ margin-bottom: 80px;
 }
 
 .event-container{
-    flex-direction: column;
+    /* flex-direction: column; */
+    grid-template-columns: auto;
 }
 
 
@@ -158,3 +169,23 @@ margin-bottom: 80px;
     background-color: rgba(0, 0, 0, 0.5);
     
 }
+
+.latest-event-title{
+    font-family: Inter;
+font-size: 36px;
+font-weight: 700;
+line-height: 43.57px;
+text-align: center;
+color:black;
+margin-top: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+
+.breadcrumbs-div{
+    padding-left:20px;
+    padding-right:20px;
+}
+}
+`;
+

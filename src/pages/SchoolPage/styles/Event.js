@@ -27,6 +27,10 @@ export const Styles = styled.div`
     text-align: left;
     color: black;
     margin-top:-10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
   }
 
   .event-div-container .first-col {
@@ -57,6 +61,10 @@ export const Styles = styled.div`
     line-height: 16.94px;
     text-align: left;
     margin-top: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
   }
 
   .single-event-event-date {
@@ -91,10 +99,19 @@ export const Styles = styled.div`
   .event-img{
     width:179px;
     height:252px;
+    object-fit: cover;
+  }
+  .event-img{
+    border-radius: 10px;
   }
 
-
   @media screen and (max-width: 600px) {
+
+    .event-img{
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+
+    }
 
     .single-event-div-container{
       padding-left:15px;
@@ -108,9 +125,48 @@ export const Styles = styled.div`
      
     }
 
-    .event-img{
-      display:none;
-    }
+   .single-event-div-container{
+    flex-direction:column;
+   }
+
+   .event-img{
+    width: 100%;
+   }
+
+   .event-div-container{
+    margin-top:0px;
+   }
+
+   .title-date{
+    flex-direction: column-reverse;
+
+   }
+   .event-details-btn{
+    width: fit-content;
+    margin:auto;
+   }
+
+
+   .single-event-event-title {
+    
+    line-height: 22.94px;
+    
+    font-size: 18px;
+    text-align:center;
+    -webkit-line-clamp: 2;
+   }
+   .event-div-container{
+    height: 240px;
+   }
+
+
+   .event-div-container{
+    max-width: 100%;
+    padding: 10px 20px;
+
+   }
 
   }
+
+ 
 `;

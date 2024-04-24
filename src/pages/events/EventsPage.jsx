@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import BannerSection from "../../components/BannerSection/BannerSection";
-import SingleEvent from "../../components/SingleEvent/SingleEvent";
+import BannerSection from "../../components/BannerSection/BannerSection.jsx";
+import SingleEvent from "../../components/SingleEvent/SingleEvent.jsx";
 import { EventsStyles } from "./EventsStyles.js";
 import HeaderTwo from "../../components/HeaderTwo.js";
 import Footer from "../../components/Footer.js";
@@ -8,6 +8,12 @@ import SortByEvents from "../../components/SortByEvents.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { listEvent } from "../../actions/eventActions.js";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
+
+
+
+
+
+
 
 const Events = () => {
   const bg =
@@ -22,7 +28,11 @@ const Events = () => {
   }, [dispatch]);
   console.warn(eventList, "eventList");
 
+
+  
+
   return (
+
     <>
       <EventsStyles>
         <HeaderTwo />

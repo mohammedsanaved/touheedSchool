@@ -116,7 +116,7 @@ const HeroSlide = () => {
                     <div className="mx-auto banner-text-container">
                       <h1 className="img-title">{img.name}</h1>
                       <p className="img-text mx-auto">{img.description}</p>
-                      <div className="school-buttons d-flex justify-content-center mx-auto">
+                      <div className="school-buttons d-flex justify-content-between mx-auto">
                         <Link to={`/schooldetail/${img.id}`}>
                           <GreenButton text="Know More" />
                         </Link>

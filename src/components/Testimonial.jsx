@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "react-bootstrap";
 import "swiper/css";
@@ -10,6 +10,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { testimonialsAction } from "../actions/LandingPageActions";
 
 const Testimonial = () => {
+
+
+
+  const  maxLengthToShowButton  = 100;
+
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleReadMore = (index) => {
+    setExpandedIndex(index === expandedIndex ? null : index);
+  };
+
+
+
+
+
   const dispatch = useDispatch();
   const testimonial = useSelector((state) => state.testimonialList);
 
@@ -98,7 +113,18 @@ const Testimonial = () => {
                         <img className="testimonial-profile-pic" src={`${placeholdernUrl}`} alt="" />
                         <div className="testimonial-username">{testimonial.username}</div>
                       </div>
-                      <p className="testimonial-desc">{testimonial.description}</p>
+                      <div key={index}>
+                        <p className="testimonial-desc">{expandedIndex === index ? testimonial.description : testimonial.description.slice(0,  maxLengthToShowButton ) + '...'}</p>
+
+                        {testimonial.description.length > maxLengthToShowButton && (
+                          <button className="testimonial-desc-readmore" onClick={() => toggleReadMore(index)}>
+                            {expandedIndex === index ? 'Read less' : 'Read more'}
+                          </button>
+                        )}
+
+                       
+                      </div>
+
                     </div>
                   </SwiperSlide>
                 ))}

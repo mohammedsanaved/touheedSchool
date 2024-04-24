@@ -105,4 +105,15 @@ export const Styles = styled.div`
     }
 
   }
+
+
+
+  @media (max-width: 1100px) {
+.about-us-section{
+  padding-left:20px;
+  padding-right:20px;
+}
+  }
+
+
 `;

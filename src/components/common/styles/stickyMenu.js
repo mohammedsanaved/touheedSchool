@@ -12,7 +12,7 @@ export const Styles = styled.div`
         animation: 300ms ease-in-out 0s normal none 1 fadeInDown;
         background: #ffffff;
         height: 75px;
-        padding-top: 18px;
+        padding-top: 0px;
         box-shadow: 0 0 20px -10px #222222;
 
         .logo {
@@ -199,5 +199,9 @@ export const Styles = styled.div`
         @media(max-width: 767px) {
             display: none;
         }
+    }
+
+    section.logo-area2.sticky-logo-area{
+        background: #ffffff;
     }
 `;

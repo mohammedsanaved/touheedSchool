@@ -187,8 +187,8 @@ export const Styles = styled.div`
   }
 
   .logo-area2 {
-    height: 120px;
-    padding-top: 20px;
+    height: 100px;
+    padding-top: 10px;
     // opacity: 50%;
     .logo {
       a {

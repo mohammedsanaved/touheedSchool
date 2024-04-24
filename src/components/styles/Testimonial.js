@@ -139,4 +139,19 @@ color:rgba(141, 138, 138, 1);
   background-color:#049C50;
 }
 
+
+.testimonial-desc-readmore{
+  font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 19.36px;
+text-align: left;
+color:black;
+  background: transparent;
+  border: none;
+  padding:0px;
+  margin-top:10px;
+}
+
+
 `;

@@ -2,8 +2,32 @@ import React from "react";
 import { SingleEventStyles } from "./SingleEventStyles.js";
 import { Link } from "react-router-dom";
 
+
+
+const formatDate = (dateString) => {
+ 
+  const date = new Date(dateString);
+  
+  
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  
+  
+  const formattedDate = date.toLocaleDateString('en-GB', options);
+  
+  return formattedDate;
+};
+
+
+
+
 const SingleEvent = ({ event }) => {
   const thumbnail = `${process.env.REACT_APP_API_URL}/${event.thumbnail}`;
+
+
+
+  const formattedDate = formatDate(event.date);
+
+
   return (
     <SingleEventStyles>
       <div className="d-flex single-event-div-container justify-content-center">
@@ -34,7 +58,7 @@ const SingleEvent = ({ event }) => {
           </div>
 
           <div className="second-col d-flex flex-column">
-            <h2 className="single-event-event-date">{event.date}</h2>
+            <h2 className="single-event-event-date">{formattedDate}</h2>
             <Link to={`/event-details/${event.id}`}>
               <button className="event-details-btn">DETAILS</button>
             </Link>

@@ -11,7 +11,7 @@ import CourseDetails from "./pages/courses/CourseDetails";
 import Instructor from "./pages/instructor/Instructors";
 import InstructorDetails from "./pages/instructor/InstructorDetails";
 import Gallery from "./pages/gallery/Gallery";
-import Events from "./pages/events/Events";
+import Events from "./pages/events/EventsPage";
 import EventDetails from "./pages/events/EventsDetails";
 import Login from "./pages/account/Login";
 import Register from "./pages/account/Register";

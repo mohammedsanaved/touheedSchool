@@ -1,7 +1,30 @@
 import React from "react";
 import { Styles } from "../styles/Event";
 
+
+
+const formatDate = (dateString) => {
+ 
+  const date = new Date(dateString);
+  
+  
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  
+  
+  const formattedDate = date.toLocaleDateString('en-GB', options);
+  
+  return formattedDate;
+};
+
+
+
+
+
 const Event = ({ item }) => {
+
+  const formattedDate = formatDate(item.date);
+
+
   return (
     <Styles>
       <div className="d-flex single-event-div-container justify-content-center">
@@ -12,15 +35,15 @@ const Event = ({ item }) => {
         />
         <div className="event-div-container d-flex">
           <div className="first-col">
-            <div className="d-flex mt-1 gap-4 align-content-center">
-              <button className="event-details-btn">{item.date}</button>
+            <div className="d-flex mt-1 gap-4 align-content-center title-date">
+              <button className="event-details-btn">{formattedDate}</button>
               <h2 className="single-event-event-title">{item.title}</h2>
             </div>
             <div className="d-flex event-icons-div align-items-center">
-              <img src="./assets/images/ion_time-outline.png" alt="" />
+              <img src="/assets/images/ion_time-outline.png" alt="" />
               &nbsp; {item.time}
               <img
-                src="./assets/images/carbon_location.png"
+                src="/assets/images/carbon_location.png"
                 alt=""
                 className="event-location-icon"
               />

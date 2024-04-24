@@ -22,11 +22,12 @@ import Event from "./components/Event";
 import FAQs from "./components/FAQs";
 import NoticeBoard from "./components/NoticeBoard";
 
-import "./SchoolPage.css";
+// import "./SchoolPage.js";
 import GreenButton from "../../components/GreenButton/GreenButton";
 import FooterNew from "../../components/FooterNew/FooterNew";
 import { useParams } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
+import { SchoolPageStyle } from "./SchoolPageStyle";
 
 const SchoolPage = () => {
   // const bg =
@@ -42,6 +43,7 @@ const SchoolPage = () => {
   }, [dispatch, id]);
   return (
     <>
+    <SchoolPageStyle>
       <HeaderTwo />
       <div className="">
         <div className="position-relative school-details-video">
@@ -84,7 +86,13 @@ const SchoolPage = () => {
           <Brouchers doc={doc} key={doc.id} />
         ))}
 
-        <div className="event-container d-flex mx-auto">
+
+        <div className="latest-event-title">Latest Events</div>
+        <div className="event-container mx-auto">
+
+
+
+
           {school?.events?.map((event) => (
             <Event key={event.id} item={event} />
           ))}
@@ -98,6 +106,7 @@ const SchoolPage = () => {
       </div>
 
       <FooterNew />
+      </SchoolPageStyle>
     </>
   );
 };

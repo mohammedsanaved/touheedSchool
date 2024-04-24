@@ -78,7 +78,7 @@ export const SingleEventStyles = styled.div`
   }
 
   .event-div-container .second-col {
-    padding-left: 53px;
+    padding-left: 30px;
     align-items: center;
     justify-content: center;
   }
@@ -154,4 +154,5 @@ export const SingleEventStyles = styled.div`
       object-fit: cover;
     }
   }
+
 `;
