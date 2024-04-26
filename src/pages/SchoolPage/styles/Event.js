@@ -168,5 +168,25 @@ export const Styles = styled.div`
 
   }
 
- 
+  @media screen and (min-width: 1000px) {
+
+
+    .title-date{
+      align-items: center;
+    }
+
+  .single-event-event-title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+  }
+
+  h2.single-event-event-title{
+    width: 200px;
+  }
+  .event-details-btn{
+    height: fit-content;
+  }
+}
 `;

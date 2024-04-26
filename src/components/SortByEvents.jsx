@@ -6,7 +6,7 @@ const SortByEvents = () => {
   const options = [
     {
       value: "", // Set an empty value for the default option
-      label: "Select the Schools here", // Set the label for the default option
+      label: "Select the School here", // Set the label for the default option
     },
     {
       value: "touheed-english-medium-school",
@@ -42,9 +42,9 @@ const SortByEvents = () => {
   // `;
   return (
     // <Styles>
-    <Styles name="SchoolSearch" id="schoolsearch">
+    <Styles name="SchoolSearch" id="schoolsearch" className="w-100">
       {options.map((data) => (
-        <option value={data.value}>{data.label}</option>
+        <option value={data.value}  >{data.label}</option>
       ))}
     </Styles>
     // </Styles>

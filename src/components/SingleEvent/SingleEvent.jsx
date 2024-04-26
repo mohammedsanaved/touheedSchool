@@ -29,8 +29,8 @@ const SingleEvent = ({ event }) => {
 
 
   return (
-    <SingleEventStyles>
-      <div className="d-flex single-event-div-container justify-content-center">
+    <SingleEventStyles className="w-100">
+      <div className="d-flex single-event-div-container justify-content-center w-100">
         <img
           src={thumbnail}
           //   src="../assets/images/SingleEventPlaceholder.png"

@@ -17,6 +17,7 @@ export const Styles = styled.div`
   .card-img-top {
     width: 347px;
     height: 347px;
+    object-fit: cover;
   }
 
   .header {

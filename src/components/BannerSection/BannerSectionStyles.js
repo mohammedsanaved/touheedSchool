@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const BannerSectionStyles = styled.div`
   .school-banner-section {
+    position: relative;
     min-height: 330px;
-    height: 100%;
+    height: 670px;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 30px;
@@ -37,5 +38,14 @@ export const BannerSectionStyles = styled.div`
       display: flex;
       padding-top: 0;
     }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
   }
 `;

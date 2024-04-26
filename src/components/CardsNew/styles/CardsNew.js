@@ -10,7 +10,7 @@ export const CardsNewStyles = styled.div`
   }
 
   .ReadMore {
-    background: #11b67a;
+    background: rgba(4, 156, 80, 1);
     padding: 7px 15px;
     border: none;
     border-radius: 10px;
@@ -20,10 +20,10 @@ export const CardsNewStyles = styled.div`
   }
   .ContactUs {
     padding: 5px 15px;
-    border: 2px solid #11b67a;
+    border: 2px solid rgba(4, 156, 80, 1);
     background: none;
     border-radius: 10px;
-    color: #11b67a;
+    color: rgba(4, 156, 80, 1);
     font-weight: 600;
     font-size: 20px;
   }
@@ -32,7 +32,7 @@ export const CardsNewStyles = styled.div`
     position: absolute;
     padding: 5px 20px 10px 20px;
     font-size: 22px;
-    background: #11b67a;
+    background: rgba(4, 156, 80, 1);
 
     margin: auto;
     font-weight: 600;

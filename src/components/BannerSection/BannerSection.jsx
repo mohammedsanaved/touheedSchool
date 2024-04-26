@@ -15,7 +15,8 @@ const BannerSection = ({ title, bg_image }) => {
             backgroundSize: "cover",
           }}
         >
-          <div className="school-name">{title}</div>
+          <div className="overlay"></div>
+          {/* <div className="school-name">{title}</div> */}
         </div>
       </BannerSectionStyles>
     </>

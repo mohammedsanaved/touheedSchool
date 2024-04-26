@@ -104,6 +104,18 @@ display: -webkit-box;
   right:10px;
 }
 
+@media only screen and (max-width: 1100px){
+.school-buttons{
+  flex-direction:column;
+  align-items: center;
+}
+
+.banner-custom-prev,.banner-custom-next{
+  display:none;
+}
+
+
+}
 
 
 `;

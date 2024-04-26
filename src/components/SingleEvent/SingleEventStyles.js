@@ -78,9 +78,12 @@ export const SingleEventStyles = styled.div`
   }
 
   .event-div-container .second-col {
-    padding-left: 30px;
+    
     align-items: center;
     justify-content: center;
+    margin-left: 30px;
+    max-width: 155px;
+    width: 100%;
   }
 
   .event-details-btn {
