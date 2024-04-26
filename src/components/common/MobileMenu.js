@@ -62,7 +62,6 @@ function MobileMenu() {
         <Container>
           <Row>
             <Col md="0" sm="12">
-             
               <div className="mb-logo-area d-flex justify-content-between">
                 <div className="mb-logo-box d-flex justify-content-between w-100 align-items-center">
                   <div className="hm-button">
@@ -72,14 +71,10 @@ function MobileMenu() {
                   </div>
                   <div className="mb-logo">
                     <Link to={process.env.PUBLIC_URL + "/"}>
-                      <img
-                        src={process.env.PUBLIC_URL + logoUrl}
-                        alt=""
-                      />
+                      <img src={process.env.PUBLIC_URL + logoUrl} alt="" />
                     </Link>
                   </div>
                 </div>
-                
               </div>
             </Col>
           </Row>
@@ -140,11 +135,13 @@ function MobileMenu() {
             <button className="mb-menu-button active">
               <p>
                 {" "}
-                <Link to={process.env.PUBLIC_URL + "/"}> Institution </Link>{" "}
+                <Link to={process.env.PUBLIC_URL + "/"}>
+                  {" "}
+                  Institution{" "}
+                </Link>{" "}
               </p>
             </button>
           </div>
-
 
           <div className="mb-menu-item">
             <button className="mb-menu-button active">
@@ -162,7 +159,6 @@ function MobileMenu() {
               </p>
             </button>
           </div>
-
         </div>
       </section>
       <div className="mb-sidebar-overlay" id="mb-sidebar-overlay"></div>
