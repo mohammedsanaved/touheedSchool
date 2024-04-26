@@ -2,7 +2,7 @@ import React from "react";
 import { Styles } from "../styles/NoticeBoard";
 import { GoDotFill } from "react-icons/go";
 import { TiPin } from "react-icons/ti";
-const NoticeBoard = () => {
+const NoticeBoard = ({ item }) => {
   const noticeData = [
     {
       id: 1,
@@ -47,30 +47,36 @@ const NoticeBoard = () => {
   ];
   return (
     <Styles>
-      <div className="notice-board-title">
-        Notice Board
-      </div>
+      <div className="notice-board-title">Notice Board</div>
       <div className="notice-background mx-auto">
-        
         <div className="inner_background mx-auto">
+          <div className="PinIcon">
+            <TiPin />
+          </div>
 
-
-        <div className="PinIcon">
-          <TiPin />
-        </div>
-
-    <div className="notice-scroll mx-auto">
-
-          {noticeData.map((values) => (
-            <>
-              <div key={values.id} className="noticeContent">
-                <span>
-                  <GoDotFill />
-                </span>
-                <div className="mb-3 notice-content">{values.content}</div>
-              </div>
-            </>
-          ))}
+          <div className="notice-scroll mx-auto">
+            {item.images.map((img, i) => (
+              // eslint-disable-next-line react/jsx-no-target-blank
+              <a
+                href={`${process.env.REACT_APP_API_URL}/${img.image}`}
+                target="_blank"
+                download={`${process.env.REACT_APP_API_URL}/${img.image}`}
+                key={i}
+              >
+                <div className="mb-3 notice-content">{item.title}</div>
+              </a>
+            ))}
+            {/* <a href={item}></a> */}
+            {/* {item.map((values) => (
+              <>
+                <div key={values.id} className="noticeContent">
+                  <span>
+                    <GoDotFill />
+                  </span>
+                </div>
+              </>
+            ))} */}
+            {}
           </div>
         </div>
       </div>

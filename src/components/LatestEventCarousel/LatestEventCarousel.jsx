@@ -36,47 +36,45 @@ const LatestEventCarousel = () => {
     <LatestEventsStyle>
       <div className="latest-events-title">Latest Events</div>
       <div className="latest-event-container">
-      <div className="event-container">
-      
-        <Swiper
-         // pagination={{ clickable: true }}
-          loop={true}
-          autoplay={{
-            delay: 9000,
-            disableOnInteraction: false,
-          }}
-          effect={"fade"}
-          navigation={{
-            prevEl: '.latest-event-custom-prev',
-            nextEl: '.latest-event-custom-next'
-          }}
-          modules={[Pagination, Navigation, Autoplay]}
-          className="mySwiper"
-        >
-         
-          {latestevent?.rows?.map((event) => (
-            <SwiperSlide key={event.id}>
-              <div className="event-carousel-container mx-auto">
-                <img
-                  src={`${process.env.REACT_APP_API_URL}/${event.thumbnail}`}
-                  alt={event.title}
-                  className="latest-event-img"
-                />
-                <div className="event-text-sec d-flex flex-column justify-content-center">
-                  <h3 className="event-title">{event.title}</h3>
-                  <p className="event-text">
-                    {truncateText(`${event.desc}`, 80)}
-                  </p>
+        <div className="event-container">
+          <Swiper
+            // pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{
+              delay: 9000,
+              disableOnInteraction: false,
+            }}
+            effect={"fade"}
+            navigation={{
+              prevEl: ".latest-event-custom-prev",
+              nextEl: ".latest-event-custom-next",
+            }}
+            modules={[Pagination, Navigation, Autoplay]}
+            className="mySwiper"
+          >
+            {latestevent?.rows?.map((event) => (
+              <SwiperSlide key={event.id}>
+                <div className="event-carousel-container mx-auto">
+                  <img
+                    src={`${process.env.REACT_APP_API_URL}/${event.thumbnail}`}
+                    alt={event.title}
+                    className="latest-event-img"
+                  />
+                  <div className="event-text-sec d-flex flex-column justify-content-center">
+                    <h3 className="event-title">{event?.school?.name}</h3>
+                    <h3 className="event-title">{event?.title}</h3>
+                    <p className="event-text">
+                      {truncateText(`${event.desc}`, 80)}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-          
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <div className="latest-event-custom-prev"></div>
-          <div className="latest-event-custom-next"></div>
-          </div>
+        <div className="latest-event-custom-next"></div>
+      </div>
     </LatestEventsStyle>
   );
 };

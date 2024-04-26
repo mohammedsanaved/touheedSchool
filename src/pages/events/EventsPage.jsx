@@ -30,11 +30,7 @@ const Events = () => {
   }, [dispatch]);
   console.warn(eventList, "eventList");
 
-
-  
-
   return (
-
     <>
       <EventsStyles>
         <HeaderTwo />

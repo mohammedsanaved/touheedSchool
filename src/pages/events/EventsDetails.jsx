@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import DemoCarousel from "../../components/EventCarousel.jsx";
 import EventDetailsData from "../../components/EventDetailsData.jsx";
 import EventSpeakers from "../../components/EventSpeakers.jsx";
-import Footer from "../../components/Footer.js";
+// import Footer from "../../components/Footer.js";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailEvent } from "../../actions/eventActions.js";

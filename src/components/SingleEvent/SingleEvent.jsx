@@ -26,7 +26,30 @@ const SingleEvent = ({ event }) => {
 
 
   const formattedDate = formatDate(event.date);
+  const formatTimeTo12Hour = (timeString) => {
+    if (!timeString) return ""; // Handle case where timeString is undefined
 
+    // Parse the time string into hours, minutes, and seconds
+    const [hours, minutes, seconds] = timeString.split(":");
+
+    // Create a Date object with the provided time
+    const date = new Date();
+    date.setHours(parseInt(hours, 10));
+    date.setMinutes(parseInt(minutes, 10));
+    date.setSeconds(parseInt(seconds, 10));
+
+    // Format the time to 12-hour format
+    const formattedTime = date.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+    });
+
+    return formattedTime;
+  };
+
+  const formattedTime = formatTimeTo12Hour(event.time);
 
   return (
     <SingleEventStyles className="w-100">
@@ -46,7 +69,7 @@ const SingleEvent = ({ event }) => {
                 alt=""
                 className="event-time-icon"
               />
-              {event.time}
+              {formattedTime}
               <img
                 src="./assets/images/carbon_location.png"
                 alt=""
