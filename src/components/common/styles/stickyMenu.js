@@ -11,9 +11,10 @@ export const Styles = styled.div`
         z-index: 11;
         animation: 300ms ease-in-out 0s normal none 1 fadeInDown;
         background: #ffffff;
+        background: transparent;
         height: 75px;
         padding-top: 0px;
-        box-shadow: 0 0 20px -10px #222222;
+        // box-shadow: 0 0 20px -10px #222222;
 
         .logo {
             a {
@@ -202,6 +203,6 @@ export const Styles = styled.div`
     }
 
     section.logo-area2.sticky-logo-area{
-        background: #ffffff;
+        background: rgba(245, 245, 245, 0.65);
     }
 `;

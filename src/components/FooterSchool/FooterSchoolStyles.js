@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../common/element/elements.js";
 
-export const FooterNewStyles
+export const FooterSchoolStyles
  = styled.div`
 
  .footer-div{
@@ -91,10 +91,9 @@ color:rgba(0, 0, 0, 0.81);
         justify-content: flex-start;
         padding-left:30px;
         padding-right:30px;
-        
+
         display : grid !important;
         grid-template-columns:auto auto;
-    
     }
     .logo-column{
         margin-right:100px;
@@ -241,6 +240,7 @@ ul.social {
       text-align: center;
     }
   }
+
 
   @media only screen and (max-width: 600px) {
     .footer-div-container{

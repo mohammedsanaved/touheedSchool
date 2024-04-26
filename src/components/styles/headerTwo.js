@@ -394,6 +394,8 @@ export const Styles = styled.div`
     margin-bottom: -120px;
     z-index: 2;
     background-color: rgba(245, 245, 245, 0.65);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
   }
 
   .menu-nav .nav-item .nav-link a{

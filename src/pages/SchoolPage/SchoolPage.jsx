@@ -28,6 +28,7 @@ import FooterNew from "../../components/FooterNew/FooterNew";
 import { Link, useParams } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
 import { SchoolPageStyle } from "./SchoolPageStyle";
+import FooterSchool from "../../components/FooterSchool/FooterSchool";
 
 const SchoolPage = () => {
   // const bg =
@@ -104,7 +105,8 @@ const SchoolPage = () => {
           <ContactInfoSection />
         </div>
 
-        <FooterNew />
+        
+        <FooterSchool />
       </SchoolPageStyle>
     </>
   );
