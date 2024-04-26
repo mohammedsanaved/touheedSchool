@@ -43,71 +43,68 @@ const SchoolPage = () => {
   }, [dispatch, id]);
   return (
     <>
-    <SchoolPageStyle>
-      <HeaderTwo />
-      <div className="">
-        <div className="position-relative school-details-video">
-          <video
-            className="w-100 video-element"
-            // style={{  }}
-            autoPlay
-            muted
-            loop
-          >
-            {/* <source src={schoolVideo} type="video/mp4" /> */}
-            <source
-              src={`${process.env.REACT_APP_API_URL}/${school.video}`}
-              type="video/mp4"
-            />
-          </video>
+      <SchoolPageStyle>
+        <HeaderTwo />
+        <div className="">
+          <div className="position-relative school-details-video">
+            <video
+              className="w-100 video-element"
+              // style={{  }}
+              autoPlay
+              muted
+              loop
+            >
+              {/* <source src={schoolVideo} type="video/mp4" /> */}
+              <source
+                src={`${process.env.REACT_APP_API_URL}/${school.video}`}
+                type="video/mp4"
+              />
+            </video>
 
-          <div className="video-banner-text mx-auto position-absolute">
-            <div className="text-center school-title">{school.name}</div>
-            <div className="text-center school-description">
-              {school.description}
-            </div>
-            <div className="school-buttons d-flex justify-content-center mx-auto">
-              <GreenButton text="Know More" />
-              <Link to={"/admission-page"}>
-                <GreenButton text="Enquire" />
-              </Link>
+            <div className="video-banner-text mx-auto position-absolute">
+              <div className="text-center school-title">{school.name}</div>
+              <div className="text-center school-description">
+                {school.description}
+              </div>
+              <div className="school-buttons d-flex justify-content-center mx-auto">
+                <GreenButton text="Know More" />
+                <Link to={"/admission-page"}>
+                  <GreenButton text="Enquire" />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="breadcrumbs-div mx-auto">
-          <p>
-            <span className="color-purple"> Touheed</span>/ Touheed English
-            medium School
-          </p>
-        </div>
+          <div className="breadcrumbs-div mx-auto">
+            <p>
+              <span className="color-purple"> Touheed</span>/ Touheed English
+              medium School
+            </p>
+          </div>
 
-        <WhyUs image={school.image} description={school.summary} />
+          <WhyUs image={school.image} description={school.summary} />
 
-        <Infrastructure infrastructure={school.infrastructure} />
-        {school?.brochure?.map((doc) => (
-          <Brouchers doc={doc} key={doc.id} />
-        ))}
-
-
-        <div className="latest-event-title">Latest Events</div>
-        <div className="event-container mx-auto">
-
-
-
-
-          {school?.events?.map((event) => (
-            <Event key={event.id} item={event} />
+          <Infrastructure infrastructure={school.infrastructure} />
+          {school?.brochure?.map((doc) => (
+            <Brouchers doc={doc} key={doc.id} />
           ))}
+
+          <div className="latest-event-title">Latest Events</div>
+          <div className="event-container mx-auto">
+            {school?.events?.map((event) => (
+              <Event key={event.id} item={event} />
+            ))}
+          </div>
+          <FAQs faqs={school.faq} />
+          {school?.noticeboard?.map((item) => (
+            <NoticeBoard key={item.id} item={item} />
+          ))}
+
+          <h3 className="contact-us-title">Contact Us</h3>
+
+          <ContactInfoSection />
         </div>
-        <FAQs faqs={school.faq} />
-        <NoticeBoard />
 
-        <h3 className="contact-us-title">Contact Us</h3>
-
-        <ContactInfoSection />
-      </div>
-
-      <FooterNew />
+        <FooterNew />
       </SchoolPageStyle>
     </>
   );
