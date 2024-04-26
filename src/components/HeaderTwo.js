@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Dropdown } from "react-bootstrap";
 import Search from "./common/Search";
@@ -7,15 +7,24 @@ import StickyMenu from "./common/StickyMenu";
 import MobileMenu from "./common/MobileMenu";
 import { Styles } from "./styles/headerTwo.js";
 import logo from "../assets/logo.jpeg";
+import { useDispatch, useSelector } from "react-redux";
+import { allSchoolsListAction } from "../actions/LandingPageActions.js";
 
 const HeaderTwo = () => {
-
   const logoUrl = "/assets/images/Touheed-logo.png";
+  const dispatch = useDispatch();
+  const {
+    allschools,
+    // loading: schoolLoading,
+    // error: errorMsg,
+  } = useSelector((state) => state.allSchoolsList);
 
+  useEffect(() => {
+    dispatch(allSchoolsListAction());
+  }, [dispatch]);
 
   return (
     <Styles>
-     
       <section className="logo-area2">
         <Container>
           <Row>
@@ -26,13 +35,12 @@ const HeaderTwo = () => {
                     // src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
                     src={logoUrl}
                     alt=""
-                   className="header-logo"
+                    className="header-logo"
                   />
                 </Link>
               </div>
             </Col>
             <Col md="9">
-              
               <div className="menu-box d-flex justify-content-end mt-4">
                 <ul className="nav menu-nav">
                   <li className="nav-item">
@@ -88,8 +96,19 @@ const HeaderTwo = () => {
                     >
                       Institutions<i className="las la-angle-down"></i>
                     </Link>
+
                     <ul className="dropdown list-unstyled">
-                      <li className="nav-item">
+                      {allschools?.rows?.map((names) => (
+                        <li className="nav-item">
+                          <Link
+                            className="nav-link"
+                            to={`/schooldetail/${names.id}`}
+                          >
+                            {names.name}
+                          </Link>
+                        </li>
+                      ))}
+                      {/* <li className="nav-item">
                         <Link
                           className="nav-link"
                           to={process.env.PUBLIC_URL + "/schooldetail"}
@@ -120,7 +139,7 @@ const HeaderTwo = () => {
                         >
                           School 04
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
@@ -153,7 +172,7 @@ const HeaderTwo = () => {
                     </Link>
                   </li>
                 </ul>
-                
+
                 <div className="apply-btn">
                   <Link to={process.env.PUBLIC_URL + "/registration"}>
                     <i className="las la-clipboard-list"></i>Apply Now

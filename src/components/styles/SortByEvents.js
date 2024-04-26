@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-export const Styles = styled.select`
+export const Styles = styled.div`
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   // border: 2px solid #00a712;

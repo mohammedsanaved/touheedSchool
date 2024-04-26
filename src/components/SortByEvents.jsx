@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import styled from "styled-components";
 import { Styles } from "./styles/SortByEvents";
+// import { allSchoolsListAction } from "../actions/LandingPageActions";
+// import { useDispatch, useSelector } from "react-redux";
 
-const SortByEvents = () => {
+const SortByEvents = ({ allschools, setId }) => {
   const options = [
     {
       value: "", // Set an empty value for the default option
@@ -24,28 +26,17 @@ const SortByEvents = () => {
     },
   ];
 
-  // const Styles = styled.select`
-  //   font-size: 1.2rem;
-  //   padding: 0.5rem 1rem;
-  //   border: 2px solid #00a712;
-  //   border-radius: 6px;
-  //   background-color: #f6f9ff;
-  //   font-weight: 400;
-  //   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2);
-  //   width: 90%;
-
-  //   &:focus {
-  //     outline: none;
-  //     border-color: #28a745;
-  //     box-shadow: 0px 0px 6px rgba(40, 167, 69, 0.5);
-  //   }
-  // `;
   return (
     // <Styles>
     <Styles name="SchoolSearch" id="schoolsearch" className="w-100">
-      {options.map((data) => (
-        <option value={data.value}  >{data.label}</option>
-      ))}
+      <select onChange={(e) => setId(e.target.value)}>
+        <option value="">Select the School here</option>
+        {allschools?.rows?.map((data) => (
+          <option key={data.id} value={data.id}>
+            {data.name}
+          </option>
+        ))}
+      </select>
     </Styles>
     // </Styles>
   );
