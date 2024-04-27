@@ -21,6 +21,7 @@ export const LatestEventsStyle = styled.div`
     display: flex;
     max-width: 1128px;
     column-gap: 50px;
+    align-items: center;
   }
  
 
@@ -138,5 +139,9 @@ export const LatestEventsStyle = styled.div`
   }
 
 
+  }
+
+  .swiper-wrapper{
+    align-items: center;
   }
 `;
