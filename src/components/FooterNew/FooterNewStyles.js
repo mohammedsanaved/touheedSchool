@@ -249,4 +249,7 @@ ul.social {
     }
   }
 
+  .footer-links a:hover{
+    color:rgba(4, 156, 80, 1);
+  }
 `;

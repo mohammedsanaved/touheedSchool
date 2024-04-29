@@ -54,6 +54,7 @@ const LatestEventCarousel = () => {
           >
             {latestevent?.rows?.map((event) => (
               <SwiperSlide key={event.id}>
+                
                 <div className="event-carousel-container mx-auto">
                   <img
                     src={`${process.env.REACT_APP_API_URL}/${event.thumbnail}`}
@@ -61,10 +62,11 @@ const LatestEventCarousel = () => {
                     className="latest-event-img"
                   />
                   <div className="event-text-sec d-flex flex-column justify-content-center">
-                    <h3 className="event-title">{event?.school?.name}</h3>
+                  <h3 className="event-school-name">{event?.school?.name}</h3>
                     <h3 className="event-title">{event?.title}</h3>
+                    
                     <p className="event-text">
-                      {truncateText(`${event.desc}`, 80)}
+                      {truncateText(`${event.desc}`, 50)}
                     </p>
                   </div>
                 </div>

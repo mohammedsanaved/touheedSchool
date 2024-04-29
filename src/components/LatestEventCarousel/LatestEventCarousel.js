@@ -144,4 +144,31 @@ export const LatestEventsStyle = styled.div`
   .swiper-wrapper{
     align-items: center;
   }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .swiper-wrapper{
+      align-items: flex-start;
+    }
+
+  }
+
+
+
+  h3.event-school-name {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+    background: rgba(4, 156, 80, 1);
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
 `;
