@@ -105,8 +105,7 @@ const SchoolPage = () => {
           <ContactInfoSection />
         </div>
 
-        
-        <FooterSchool />
+        <FooterSchool events={school.events} />
       </SchoolPageStyle>
     </>
   );

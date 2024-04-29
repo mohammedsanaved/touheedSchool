@@ -1,14 +1,9 @@
 import React from "react";
 import { Styles } from "../styles/Event";
-
-
-
-
-
-
-
+// import { useNavigate } from "react-router-dom";
 
 const Event = ({ item }) => {
+  // const navigate = useNavigate();
   const formatDate = (dateString) => {
     const date = new Date(dateString);
 
@@ -58,7 +53,12 @@ const Event = ({ item }) => {
           <div className="first-col">
             <div className="d-flex mt-1 gap-4 align-content-center title-date">
               <button className="event-details-btn">{formattedDate}</button>
-              <h2 className="single-event-event-title">{item.title}</h2>
+              <h2
+                className="single-event-event-title"
+                // onClick={() => navigate(`event-details/${item.id}`)}
+              >
+                {item.title}
+              </h2>
             </div>
             <div className="d-flex event-icons-div align-items-center">
               <img src="/assets/images/ion_time-outline.png" alt="" />

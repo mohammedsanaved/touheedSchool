@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
 
-const FooterSchool = () => {
+const FooterSchool = ({ events }) => {
   const logoUrl = "/assets/images/Touheed-logo.png";
   const dispatch = useDispatch();
   const {
@@ -64,10 +64,10 @@ const FooterSchool = () => {
             ))}
           </div>
           <div className="ourschools-column">
-            <div className="footer-subheading">RECENT POST</div>
-            {allschools?.rows?.map((item, i) => (
+            <div className="footer-subheading">Recent Event</div>
+            {events?.map((item, i) => (
               <div className="footer-links">
-                <Link to={`/schooldetail/${item.id}`}>{item.name}</Link>
+                <Link to={`/event-details/${item.id}`}>{item.title}</Link>
               </div>
             ))}
           </div>
@@ -106,7 +106,7 @@ const FooterSchool = () => {
           </div>
         </div>
       </div>
-      </FooterSchoolStyles>
+    </FooterSchoolStyles>
   );
 };
 
