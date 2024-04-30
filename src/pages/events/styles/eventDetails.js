@@ -421,8 +421,13 @@ text-align: left;
 color:black;
 }
 
-.event-details-page .card-main-div{
-  margin:auto;
+// .event-details-page .card-main-div{
+//   margin:auto;
+// }
+
+.event-speakers-guests{
+  gap:50px;
+  flex-wrap:wrap;
 }
 
 @media screen and (max-width: 700px) {

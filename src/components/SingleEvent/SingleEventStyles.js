@@ -117,6 +117,7 @@ export const SingleEventStyles = styled.div`
       flex-direction: column;
       max-width: 350px;
       margin-top: 50px;
+      
     }
     
     .event-div-container {
@@ -140,6 +141,7 @@ export const SingleEventStyles = styled.div`
       padding-left: 0px;
       border-top: 1px solid #c3d6c8;
       padding-top: 20px;
+      margin:auto;
     }
 
     .single-event-event-title {

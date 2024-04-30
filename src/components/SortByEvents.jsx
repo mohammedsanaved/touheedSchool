@@ -8,7 +8,7 @@ const SortByEvents = ({ allschools, setId }) => {
   const options = [
     {
       value: "", // Set an empty value for the default option
-      label: "Select the School here", // Set the label for the default option
+      label: "All Schools", // Set the label for the default option
     },
     {
       value: "touheed-english-medium-school",
@@ -30,7 +30,7 @@ const SortByEvents = ({ allschools, setId }) => {
     // <Styles>
     <Styles name="SchoolSearch" id="schoolsearch" className="w-100">
       <select onChange={(e) => setId(e.target.value)}>
-        <option value="">Select the School here</option>
+        <option value="">All Schools</option>
         {allschools?.rows?.map((data) => (
           <option key={data.id} value={data.id}>
             {data.name}

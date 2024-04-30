@@ -43,7 +43,11 @@ const Events = () => {
         <HeaderTwo />
         <BannerSection bg_image={bg} title={"Home/Events"} />
         <div className="event-page-div mx-auto w-100">
+
+        <div className="d-flex w-100 select-div">
+          <div className="w-100 select-school-text">Select the School Here : </div>
           <SortByEvents allschools={allschools} setId={setId} />
+          </div>
           {loading ? (
             <p>Loading...</p>
           ) : error ? (

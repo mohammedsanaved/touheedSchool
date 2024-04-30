@@ -10,7 +10,7 @@ const EventSpeakers = ({ speakers }) => {
           Event Speakers / Guests
         </h2>
 
-        <div className="d-flex justify-content-between event-speakers-guests">
+        <div className="d-flex justify-content-center event-speakers-guests">
           {speakers?.map((guest) => (
             <div className="card-main-div" key={guest.id}>
               <div className="img-div">
