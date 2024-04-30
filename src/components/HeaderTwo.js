@@ -10,7 +10,7 @@ import logo from "../assets/logo.jpeg";
 import { useDispatch, useSelector } from "react-redux";
 import { allSchoolsListAction } from "../actions/LandingPageActions.js";
 
-const HeaderTwo = () => {
+const HeaderTwo = ({ logo }) => {
   const logoUrl = "/assets/images/Touheed-logo.png";
   const dispatch = useDispatch();
   const {
@@ -32,9 +32,9 @@ const HeaderTwo = () => {
               <div className="logo">
                 <Link to={process.env.PUBLIC_URL + "/"}>
                   <img
-                    // src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
                     src={logoUrl}
-                    alt=""
+                    // src={`${process.env.REACT_APP_API_URL}/${logo} || ${logoUrl}`}
+                    alt="LOGO"
                     className="header-logo"
                   />
                 </Link>

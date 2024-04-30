@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
 
-const FooterSchool = ({ events }) => {
+const FooterSchool = ({ events, logo, description }) => {
   const logoUrl = "/assets/images/Touheed-logo.png";
   const dispatch = useDispatch();
   const {
@@ -22,11 +22,12 @@ const FooterSchool = ({ events }) => {
       <div className="footer-div">
         <div className="footer-div-container d-flex flex-wrap">
           <div className="logo-column">
-            <img src={`${logoUrl}`} alt="" className="footer-logo" />
-            <p className="footer-text">
-              Touheed Educational Trust (R) is a private charitable and minority
-              educational institution recognized by the Govt. of Karnataka.
-            </p>
+            <img
+              src={`${process.env.REACT_APP_API_URL}/${logo}`}
+              alt=""
+              className="footer-logo"
+            />
+            <p className="footer-text">{description}</p>
             <br />
             <div>Gangolli, udupi dist, karnataka.</div>
             <br />

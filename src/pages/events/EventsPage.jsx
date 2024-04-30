@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { listEvent } from "../../actions/eventActions.js";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Events = () => {
   // const bg =
@@ -60,6 +62,19 @@ const Events = () => {
               ) : null
             )
           )}
+        </div>
+        <div className="d-flex justify-content-center align-items-center mt-3 gap-3 px-2">
+          <button className="pagination-btn">
+            <IoIosArrowBack />
+            Previous
+          </button>
+          <div className="h-50 fs-3">
+            1 of 5 <span className="fw-bolder">From</span> 40
+          </div>
+          <button className="pagination-btn">
+            Next
+            <IoIosArrowForward />
+          </button>
         </div>
       </EventsStyles>
       <FooterNew />
