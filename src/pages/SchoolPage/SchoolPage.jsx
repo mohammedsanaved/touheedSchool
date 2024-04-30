@@ -45,7 +45,7 @@ const SchoolPage = () => {
   return (
     <>
       <SchoolPageStyle>
-        <HeaderTwo />
+        <HeaderTwo logo={school.logo} />
         <div className="">
           <div className="position-relative school-details-video">
             <video
@@ -105,7 +105,11 @@ const SchoolPage = () => {
           <ContactInfoSection />
         </div>
 
-        <FooterSchool events={school.events} />
+        <FooterSchool
+          logo={school.logo}
+          events={school.events}
+          description={school.description}
+        />
       </SchoolPageStyle>
     </>
   );

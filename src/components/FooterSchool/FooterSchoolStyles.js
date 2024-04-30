@@ -1,118 +1,104 @@
 import styled from "styled-components";
 import { colors } from "../common/element/elements.js";
 
-export const FooterSchoolStyles
- = styled.div`
+export const FooterSchoolStyles = styled.div`
+  .footer-div {
+    margin-top: 100px;
+    background-color: rgba(246, 249, 255, 1);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
- .footer-div{
-    margin-top:100px;
-    background-color:rgba(246, 249, 255, 1);
-    padding-top:60px;
-    padding-bottom:60px;
- }
-
- .footer-div-container {
-    
-    margin:auto;
-    max-width:1113px;
-    width:100%;
+  .footer-div-container {
+    margin: auto;
+    max-width: 1113px;
+    width: 100%;
     justify-content: space-between;
-    
- }
+  }
 
-
-.footer-div-container , .footer-text , .footer-links a{
-    background-color:rgba(246, 249, 255, 1);
+  .footer-div-container,
+  .footer-text,
+  .footer-links a {
+    background-color: rgba(246, 249, 255, 1);
     font-family: Inter;
-font-size: 16px;
-font-weight: 400;
-line-height: 19.36px;
-text-align: left;
-color:black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: black;
+  }
 
+  .footer-div-container .logo-column {
+    max-width: 286px;
+  }
 
-}
-
-
-.footer-div-container .logo-column{
-    max-width:286px;
-}
-
-
-.footer-subheading{
+  .footer-subheading {
     font-family: Inter;
-font-size: 16px;
-font-weight: 800;
-line-height: 19.36px;
-text-align: left;
-color:black;
-margin-top:30px;
-margin-bottom:57px;
-}
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19.36px;
+    text-align: left;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 57px;
+  }
 
-.footer-links a{
-    color:black;
-   
-}
-.footer-links{
-    margin-bottom:20px;
-
-}
-.footer-logo{
-    margin-bottom:30px;
-}
-.footer-hr{
-    border-top:1px solid rgba(0, 0, 0, 0.4);
-    margin-left:20px;
-    margin-right:20px;
-    margin-bottom:30px;
-}
-.footer-below-hr{
-    margin:auto;
-    max-width:1113px;
-    width:100%;
+  .footer-links a {
+    color: black;
+  }
+  .footer-links {
+    margin-bottom: 20px;
+  }
+  .footer-logo {
+    margin-bottom: 30px;
+    width: 120px;
+  }
+  .footer-hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .footer-below-hr {
+    margin: auto;
+    max-width: 1113px;
+    width: 100%;
     justify-content: space-between;
-
-}
-.footer-below-hr-text{
+  }
+  .footer-below-hr-text {
     font-family: Inter;
-font-size: 14px;
-font-weight: 200;
-line-height: 16.94px;
-text-align: left;
-color:rgba(0, 0, 0, 0.81);
-}
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 16.94px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.81);
+  }
 
+  @media only screen and (max-width: 900px) {
+    .footer-div-container {
+      justify-content: flex-start;
+      padding-left: 30px;
+      padding-right: 30px;
 
-
-
-@media only screen and (max-width: 900px) {
-    .footer-div-container{
-        justify-content: flex-start;
-        padding-left:30px;
-        padding-right:30px;
-
-        display : grid !important;
-        grid-template-columns:auto auto;
+      display: grid !important;
+      grid-template-columns: auto auto;
     }
-    .logo-column{
-        margin-right:100px;
+    .logo-column {
+      margin-right: 100px;
     }
-    .footer-below-hr{
-        padding-left:30px;
-        padding-right:30px;
+    .footer-below-hr {
+      padding-left: 30px;
+      padding-right: 30px;
     }
-}
+  }
 
-@media only screen and (max-width: 600px) {
-.footer-subheading{
-    margin-bottom: 27px;
-}
-}
+  @media only screen and (max-width: 600px) {
+    .footer-subheading {
+      margin-bottom: 27px;
+    }
+  }
 
-
-
-ul.social {
+  ul.social {
     li {
       a {
         text-align: center;
@@ -241,14 +227,12 @@ ul.social {
     }
   }
 
-
   @media only screen and (max-width: 600px) {
-    .footer-div-container{
-        
-        grid-template-columns:auto;
+    .footer-div-container {
+      grid-template-columns: auto;
     }
   }
-  .footer-links a:hover{
-    color:rgba(4, 156, 80, 1);
+  .footer-links a:hover {
+    color: rgba(4, 156, 80, 1);
   }
 `;
