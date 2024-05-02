@@ -106,4 +106,10 @@ export const Styles = styled.div`
             padding: 35px 0 30px;
         }
     }
+
+
+    .tab-section-container{
+        max-width:1259px;
+        margin:auto;
+    }
 `;

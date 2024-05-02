@@ -4,11 +4,14 @@ import AboutUsTwo from '../../components/AboutUsTwo';
 import HeaderTwo from '../../components/HeaderTwo';
 import BannerSection from '../../components/BannerSection/BannerSection';
 import TabBox from '../../components/TabBox.js';
+import AdditionalTabs from '../../components/AdditionalTabs/AdditionalTabs.jsx';
+import Infrastructure from '../SchoolPage/components/Infrastructure.jsx';
 
 const SchoolAboutUs = () => {
 
     const bg = "./assets/images/eventspageimage.png";
 
+    
 
 
   return (
@@ -23,6 +26,8 @@ const SchoolAboutUs = () => {
           </div>
     <AboutUsTwo/>
     <TabBox />
+    <AdditionalTabs/>
+    <Infrastructure />
     </SchoolAboutUsStyle>
   )
 }

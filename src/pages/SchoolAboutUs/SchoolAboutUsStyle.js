@@ -29,11 +29,6 @@ color: rgba(4, 156, 80, 1);
 }
 
 
-.about-us{
-    margin: auto;
-    max-width: 1259px;
-}
-
 
 @media only screen and (min-width: 1100px) {
 

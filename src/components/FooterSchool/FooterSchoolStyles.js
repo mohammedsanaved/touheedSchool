@@ -235,4 +235,16 @@ export const FooterSchoolStyles = styled.div`
   .footer-links a:hover {
     color: rgba(4, 156, 80, 1);
   }
+
+  @media only screen and (min-width: 900px) {
+
+  .ourschools-column.recent-posts-column {
+    max-width: 250px;
+}
+
+}
+
+
+
+  
 `;

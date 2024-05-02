@@ -7,6 +7,7 @@ const TabBox = () => {
     <Styles>
       {/* Tab Box Area */}
       <section className="tab-section">
+        <div className="tab-section-container">
         <Container>
           <Tab.Container defaultActiveKey="why">
             <Row>
@@ -14,27 +15,27 @@ const TabBox = () => {
                 <Nav className="flex-column">
                   <Nav.Item>
                     <Nav.Link eventKey="why">
-                      <i className="las la-arrow-right"></i> Why Edulyn
+                      <i className="las la-arrow-right"></i> Why Us
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="mission">
-                      <i className="las la-arrow-right"></i> Our Mission
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="vision">
                       <i className="las la-arrow-right"></i> Our Vision
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
+                    <Nav.Link eventKey="vision">
+                      <i className="las la-arrow-right"></i> Our Mission
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
                     <Nav.Link eventKey="ranking">
-                      <i className="las la-arrow-right"></i> Our Ranking
+                      <i className="las la-arrow-right"></i> Aim & Objectives
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="research">
-                      <i className="las la-arrow-right"></i> Our Research
+                      <i className="las la-arrow-right"></i> Transportation
                     </Nav.Link>
                   </Nav.Item>
                 </Nav>
@@ -196,6 +197,7 @@ const TabBox = () => {
             </Row>
           </Tab.Container>
         </Container>
+        </div>
       </section>
     </Styles>
   );
