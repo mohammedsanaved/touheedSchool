@@ -68,7 +68,9 @@ const SchoolPage = () => {
                 {school.description}
               </div>
               <div className="school-buttons d-flex justify-content-center mx-auto">
-                <GreenButton text="Know More" />
+                <Link to={"/school-about-us"}>
+                  <GreenButton text="Know More" />
+                </Link>
                 <Link to={"/admission-page"}>
                   <GreenButton text="Enquire" />
                 </Link>

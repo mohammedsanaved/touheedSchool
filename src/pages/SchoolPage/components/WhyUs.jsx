@@ -4,6 +4,7 @@ import { CiClock2 } from "react-icons/ci";
 import { LuMapPin } from "react-icons/lu";
 import GreenButton from "../../../components/GreenButton/GreenButton";
 import '../styles/WhyUs.css';
+import { Link } from "react-router-dom";
 
 
 const EventDetailsData = ({ image, description }) => {
@@ -28,7 +29,9 @@ const EventDetailsData = ({ image, description }) => {
         <h1 className="why-us-h1">Why Us</h1>
 
         <p className="why-us-text">{truncateText(`${description}`, 80)}</p>
-        <GreenButton text="Read More" class_Name="readmore-btn" />
+        <Link to={"/school-about-us"}>
+          <GreenButton text="Read More" class_Name="readmore-btn" />
+        </Link>
       </div>
     </div>
   );
