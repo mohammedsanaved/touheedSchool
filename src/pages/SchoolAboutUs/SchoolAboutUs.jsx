@@ -53,7 +53,7 @@ const SchoolAboutUs = () => {
           description={school.description}
         />
     </SchoolAboutUsStyle>
-  )
+  );
 }
 
 export default SchoolAboutUs
