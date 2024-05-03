@@ -1,5 +1,8 @@
 import axios from "axios";
 import {
+  SCHOOL_ABOUT_US_FAIL,
+  SCHOOL_ABOUT_US_REQUEST,
+  SCHOOL_ABOUT_US_SUCCESS,
   SCHOOL_DETAIL_FAIL,
   SCHOOL_DETAIL_REQUEST,
   SCHOOL_DETAIL_SUCCESS,
@@ -38,6 +41,27 @@ export const schoolDetails = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: SCHOOL_DETAIL_FAIL,
+      payload:
+        error.response && error.response.data.detail
+          ? error.response.data.detail
+          : error.message,
+    });
+  }
+};
+
+
+export const schoolAboutUs = (id) => async (dispatch) => {
+  try {
+    dispatch({ type: SCHOOL_ABOUT_US_REQUEST });
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_API_URL}/api/schools/schoolabout/${id}`
+    );
+    dispatch({ type: SCHOOL_ABOUT_US_SUCCESS, payload: data });
+
+    console.log("SCHOOL_ABOUT_US_SUCCESS", data);
+  } catch (error) {
+    dispatch({
+      type: SCHOOL_ABOUT_US_FAIL,
       payload:
         error.response && error.response.data.detail
           ? error.response.data.detail

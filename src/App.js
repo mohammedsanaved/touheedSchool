@@ -61,7 +61,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/schooldetail/:id" element={<SchoolPage />} />
         <Route path="/admission-page" element={<AdmissionPage />} />
-        <Route path="/school-about-us" element={<SchoolAboutUs/>} />
+        <Route path="/school-about-us/:id" element={<SchoolAboutUs/>} />
       </Routes>
     </Router>
   );

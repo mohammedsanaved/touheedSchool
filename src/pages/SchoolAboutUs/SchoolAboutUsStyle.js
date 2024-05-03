@@ -30,12 +30,20 @@ color: rgba(4, 156, 80, 1);
 
 
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (max-width: 1100px) {
 
 .about-us .container .row .col-md-6:first-child{
     padding-right: 60px;
 } 
 
 }
+@media only screen and (max-width: 1100px) {
+
+.breadcrumbs-div{
+    padding:10px;
+
+}
+}
+
 `
 ;

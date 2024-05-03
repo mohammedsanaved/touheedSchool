@@ -272,4 +272,24 @@ color:black;
 margin-bottom:28px;
 }
 
+.about-us .about-image .video-player::before{
+content:none;
+}
+
+video.about-us-video {
+    width: 226px;
+    height: 278px;
+}
+@media only screen and (max-width: 1100px) {
+    
+         .about-us .container .row .col-md-6:first-child {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+
+
+    .about-us{
+        margin-bottom: 80px;
+    }
 `;

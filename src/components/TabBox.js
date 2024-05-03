@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { Styles } from "./styles/tabBox.js";
 
-const TabBox = () => {
+const TabBox = ({summary,vision,mission,aim,transportation}) => {
   return (
     <Styles>
       {/* Tab Box Area */}
@@ -43,154 +43,39 @@ const TabBox = () => {
               <Col lg="9" md="8">
                 <Tab.Content>
                   <Tab.Pane eventKey="why">
-                    <h4 className="tab-title">Why Edulyn</h4>
+                    <h4 className="tab-title">Why Us</h4>
                     <p className="tab-desc">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatum amet quo eius saepe et quis necessitatibus hic
-                      natus facere a nisi fuga rem quas molestias, eveniet
-                      minima molestiae. Lorem ipsum dolor, sit amet consectetur
-                      adipisicing elit. Ea, recusandae? Assumenda, error. Quam
-                      dicta iusto saepe. Odit minus voluptas, fuga ipsum quia
-                      debitis totam, tempore laudantium quasi dicta dolorem
-                      deleniti.
+                     {summary}
                     </p>
-                    <ul className="list-unstyled check-list">
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                    </ul>
+                    
                   </Tab.Pane>
                   <Tab.Pane eventKey="mission">
                     <h4 className="tab-title">Our Mission</h4>
                     <p className="tab-desc">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatum amet quo eius saepe et quis necessitatibus hic
-                      natus facere a nisi fuga rem quas molestias, eveniet
-                      minima molestiae. Lorem ipsum dolor, sit amet consectetur
-                      adipisicing elit. Ea, recusandae? Assumenda, error. Quam
-                      dicta iusto saepe. Odit minus voluptas, fuga ipsum quia
-                      debitis totam, tempore laudantium quasi dicta dolorem
-                      deleniti.
+                     {mission}
                     </p>
-                    <ul className="list-unstyled check-list">
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                    </ul>
+                  
                   </Tab.Pane>
                   <Tab.Pane eventKey="vision">
                     <h4 className="tab-title">Our Vision</h4>
                     <p className="tab-desc">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatum amet quo eius saepe et quis necessitatibus hic
-                      natus facere a nisi fuga rem quas molestias, eveniet
-                      minima molestiae. Lorem ipsum dolor, sit amet consectetur
-                      adipisicing elit. Ea, recusandae? Assumenda, error. Quam
-                      dicta iusto saepe. Odit minus voluptas, fuga ipsum quia
-                      debitis totam, tempore laudantium quasi dicta dolorem
-                      deleniti.
+                     {vision}
                     </p>
-                    <ul className="list-unstyled check-list">
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                    </ul>
+                    
                   </Tab.Pane>
                   <Tab.Pane eventKey="ranking">
-                    <h4 className="tab-title">Our Ranking</h4>
+                    <h4 className="tab-title">Aims & Objectives</h4>
                     <p className="tab-desc">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatum amet quo eius saepe et quis necessitatibus hic
-                      natus facere a nisi fuga rem quas molestias, eveniet
-                      minima molestiae. Lorem ipsum dolor, sit amet consectetur
-                      adipisicing elit. Ea, recusandae? Assumenda, error. Quam
-                      dicta iusto saepe. Odit minus voluptas, fuga ipsum quia
-                      debitis totam, tempore laudantium quasi dicta dolorem
-                      deleniti.
+                    {aim}
                     </p>
-                    <ul className="list-unstyled check-list">
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                    </ul>
+                   
                   </Tab.Pane>
                   <Tab.Pane eventKey="research">
-                    <h4 className="tab-title">Our Research</h4>
+                    <h4 className="tab-title">Transportation</h4>
                     <p className="tab-desc">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatum amet quo eius saepe et quis necessitatibus hic
-                      natus facere a nisi fuga rem quas molestias, eveniet
-                      minima molestiae. Lorem ipsum dolor, sit amet consectetur
-                      adipisicing elit. Ea, recusandae? Assumenda, error. Quam
-                      dicta iusto saepe. Odit minus voluptas, fuga ipsum quia
-                      debitis totam, tempore laudantium quasi dicta dolorem
-                      deleniti.
+                     {transportation}
                     </p>
-                    <ul className="list-unstyled check-list">
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                      <li>
-                        <i className="fa fa-check"></i>Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit. Voluptatum amet quo
-                        eius saepe et quis necessitatibus hic natus facere.
-                      </li>
-                    </ul>
+                  
                   </Tab.Pane>
                 </Tab.Content>
               </Col>

@@ -81,9 +81,10 @@ font-size: 45px;
 }
 
 .add-tab-img{
-    width:213px;
-    height:213px;
+    width:300px;
+    height:300px;
     object-fit: cover;
+    border-radius:10px;
 }
 
 
@@ -115,6 +116,24 @@ margin-bottom: 20px;
     text-align: left;
     color:rgba(98, 95, 95, 1);
     
+
+}
+
+@media only screen and (max-width: 800px) {
+    .add-tab-container {
+        flex-direction: column;
+        padding:0px;
+    }
+  
+
+  .add-tab-img{
+    width:100%;
+    height:auto;
+    margin-bottom:30px;
+  }
+
+
+
 
 }
 

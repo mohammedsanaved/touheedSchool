@@ -5,6 +5,7 @@ import { contactCreateReducer } from "./reducers/contactReducers";
 import { eventListReducer, eventDetailReducer } from "./reducers/eventReducers";
 import { staffListReducer } from "./reducers/staffReducers";
 import {
+  schoolAboutUsReducer,
   schoolDetailsReducer,
   schoolIndividualDetailReducer,
   schoolListReducer,
@@ -17,6 +18,7 @@ import {
   latestEventReducer,
   testimonialsReducer,
 } from "./reducers/LandingPageReducers";
+import { schoolAboutUs } from "./actions/schoolActions";
 
 const reducer = combineReducers({
   contactCreate: contactCreateReducer,
@@ -31,6 +33,7 @@ const reducer = combineReducers({
   aboutUs: aboutUsReducer,
   featureList: featureReducer,
   galleryList: galleryReducer,
+  schoolAboutUs: schoolAboutUsReducer,
 });
 
 const initialState = {};
