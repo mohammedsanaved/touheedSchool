@@ -47,7 +47,7 @@ export default function HomeOne() {
 
       {/* About Area */}
       <AboutUs />
-
+        
       {/* About Us 2 */}
       {/* <AboutUsTwo /> */}
 

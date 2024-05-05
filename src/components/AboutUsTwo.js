@@ -18,16 +18,12 @@ const AboutUsTwo = ({description}) => {
             {/* About Us */}
             <section className="about-us">
                 <Container>
-                    <Row>
+                    <Row className='about-us-row'>
                         <Col md="6">
-                            <h2 className='about-us-h2'>About Us</h2>
+                            {/* <h2 className='about-us-h2'>About Us</h2> */}
                             <div className="about-image">
                                 <img src={process.env.PUBLIC_URL + `/assets/images/${Datas.mainImage}`} className="main-img" alt="" />
-                                <img src={process.env.PUBLIC_URL + "/assets/images/pattern.png"} className="pattern-img" alt="" />
-                                <div className="video-player" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${Datas.videoBackground})`}}>
-                                    <ModalVideo channel='youtube' isOpen={isOpen} videoId='uXFUl0KcIkA' onClose={() => setIsOpen(false)} />
-                                    <button onClick={openModal} className="play-button"><i className="las la-play"></i></button>
-                                </div>
+                               
                             </div>
                         </Col>
                         <Col md="6">

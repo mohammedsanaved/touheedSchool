@@ -13,7 +13,7 @@ export const Styles = styled.div`
                 border-radius: 5px;
 
                 @media(max-width: 767px) {
-                    display : none;
+                    // display : none;
                 }
             }
 
@@ -286,10 +286,34 @@ video.about-us-video {
             padding-right: 10px;
             padding-left: 10px;
         }
+        .about-us .about-image img.main-img{
+            width:100%;
+        }
+
+        .about-us-row{
+            flex-direction:column;
+        }
+        .about-us-row .col-md-6{
+            width:100%;
+
+        }
+        .main-img{
+            margin-bottom:40px;
+        }
+
+        .about-us .container .row .col-md-6:first-child{
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+
     }
 
 
     .about-us{
         margin-bottom: 80px;
     }
+
+
+
+
 `;

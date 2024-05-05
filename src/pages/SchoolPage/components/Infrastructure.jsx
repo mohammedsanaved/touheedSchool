@@ -1,7 +1,7 @@
 import React from "react";
 import { Styles } from "../styles/Infrastructure";
 
-const Infrastructure = ({ infrastructure }) => {
+const Infrastructure = ({ infrastructure , title_name }) => {
   const dataStructure = [
     {
       src: "https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -32,7 +32,7 @@ const Infrastructure = ({ infrastructure }) => {
   return (
     <Styles>
       <div className="infrastructure-div mx-auto">
-        <div className="infrastucture-title">Infrastructure</div>
+        <div className="infrastucture-title">{title_name}</div>
         <div className="infrastructure-row">
           {infrastructure?.map((item, index) => (
             <div key={index} className="infrastructure-item">

@@ -29,6 +29,9 @@ import SchoolPage from "./pages/SchoolPage/SchoolPage.jsx";
 import "./fonts.css"
 import AdmissionPage from "./pages/AdmissionPage/AdmissionPage.jsx";
 import SchoolAboutUs from "./pages/SchoolAboutUs/SchoolAboutUs.jsx";
+import ContactInfoSection from "./components/ContactInfoSection/ContactInfoSection.jsx";
+import ContactUsPage2 from "./pages/ContactUsPage2/ContactUsPage2.jsx";
+import BoardManagement from "./pages/BoardManagement/BoardManagement.jsx";
 
 function App() {
   return (
@@ -43,6 +46,7 @@ function App() {
         <Route path="/course-list" element={<CourseList />} />
         <Route path="/course-details" element={<CourseDetails />} />
         <Route path="/management" element={<Instructor />} />
+        <Route path="/management" element={<BoardManagement/>} />
         <Route path="/instructor-details" element={<InstructorDetails />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/events" element={<Events />} />
@@ -62,6 +66,7 @@ function App() {
         <Route path="/schooldetail/:id" element={<SchoolPage />} />
         <Route path="/admission-page" element={<AdmissionPage />} />
         <Route path="/school-about-us/:id" element={<SchoolAboutUs/>} />
+        <Route path="/contact-us" element={<ContactUsPage2/>} />
       </Routes>
     </Router>
   );

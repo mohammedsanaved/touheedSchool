@@ -45,8 +45,10 @@ const SchoolAboutUs = () => {
       video={school.video}
        /> 
       <TabBox why_us = {school.summary} vision={school.vision} mission={school.mission} aim={school.aim} transportation={school.transportation} />
-      <AdditionalTabs />
-      <Infrastructure infrastructure={school.infrastructure} />
+      <AdditionalTabs 
+      school_data = {school}
+      />
+      <Infrastructure infrastructure={school.infrastructure} title_name="Features"/>
       <FooterSchool
           logo={school.logo}
           events={school.events}

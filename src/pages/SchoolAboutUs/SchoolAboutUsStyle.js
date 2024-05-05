@@ -40,7 +40,7 @@ color: rgba(4, 156, 80, 1);
 @media only screen and (max-width: 1100px) {
 
 .breadcrumbs-div{
-    padding:10px;
+    padding-left:25px;
 
 }
 }

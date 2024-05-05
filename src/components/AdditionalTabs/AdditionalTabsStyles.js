@@ -137,4 +137,12 @@ margin-bottom: 20px;
 
 }
 
+button.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary{
+    font-size:18px;
+}
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall{
+    font-size:30px;
+}
+
+
 `;

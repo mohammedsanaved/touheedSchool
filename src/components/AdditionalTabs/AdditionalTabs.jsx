@@ -30,8 +30,9 @@ const TabPanel = (props) => {
 
 
 
-const AdditionalTabs = () => {
+const AdditionalTabs = ({school_data}) => {
     const [value, setValue] = useState(0);
+    
   
     const handleChange = (event, newValue) => {
       setValue(newValue);
@@ -56,48 +57,27 @@ const AdditionalTabs = () => {
           className='scrollable-tabs'
           
         >
-          <Tab icon={<MenuBookIcon />} label="Deeniyath Education" />
-          <Tab icon={<LoopIcon />} label="Life Skill Education" />
-          <Tab icon={<ScienceIcon />} label="Activity Lab" />
-          <Tab icon={<LibraryBooksIcon />} label="KREDOO Curriculum" />
+          {school_data?.additional_concept?.map((concept, index) => (
+              <Tab key={index} 
+              // icon={<img src={concept.logomark} alt={concept.title} />} 
+              label={concept.title} />
+            ))}
         </Tabs>
         
-        <TabPanel value={value} index={0}>
-          <div className='add-tab-container d-flex'>
-            <img src="/assets/images/education.jpg" alt="" className='add-tab-img' />
-            <div>
-              <h4 className='add-tab-title'>Deeniyath Education</h4>
-            <p className='add-tab-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-        <div className='add-tab-container d-flex'>
-            <img src="/assets/images/education.jpg" alt="" className='add-tab-img' />
-            <div>
-              <h4 className='add-tab-title'>Life Skill Education</h4>
-            <p className='add-tab-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-        <div className='add-tab-container d-flex'>
-            <img src="/assets/images/education.jpg" alt="" className='add-tab-img' />
-            <div>
-              <h4 className='add-tab-title'>Activity Lab</h4>
-            <p className='add-tab-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-        <div className='add-tab-container d-flex'>
-            <img src="/assets/images/education.jpg" alt="" className='add-tab-img' />
-            <div>
-              <h4 className='add-tab-title'>KREDOO Curriculum</h4>
-            <p className='add-tab-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </TabPanel>
+        {school_data?.detail_additional_concept?.map((detail, index) => (
+            <TabPanel key={index} value={value} index={index}>
+              <div className='add-tab-container d-flex'>
+                <img 
+                
+                src={`${process.env.REACT_APP_API_URL}/${detail.image}`}
+                className='add-tab-img' />
+                <div>
+                  <h4 className='add-tab-title'>{detail.title}</h4>
+                  <p className='add-tab-text'>{detail.description}</p>
+                </div>
+              </div>
+            </TabPanel>
+          ))}
       </Box>
       </div>
       </div>

@@ -86,7 +86,7 @@ const SchoolPage = () => {
 
           <WhyUs image={school.image} description={school.summary} />
 
-          <Infrastructure infrastructure={school.infrastructure} />
+          <Infrastructure infrastructure={school.infrastructure} title_name="Infrastructure" />
           {school?.brochure?.map((doc) => (
             <Brouchers doc={doc} key={doc.id} />
           ))}
