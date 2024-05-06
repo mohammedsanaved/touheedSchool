@@ -46,7 +46,7 @@ function App() {
         <Route path="/course-list" element={<CourseList />} />
         <Route path="/course-details" element={<CourseDetails />} />
         <Route path="/management" element={<Instructor />} />
-        <Route path="/management" element={<BoardManagement/>} />
+        <Route path="/management" element={<BoardManagement />} />
         <Route path="/instructor-details" element={<InstructorDetails />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/events" element={<Events />} />
@@ -64,9 +64,9 @@ function App() {
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/schooldetail/:id" element={<SchoolPage />} />
-        <Route path="/admission-page" element={<AdmissionPage />} />
-        <Route path="/school-about-us/:id" element={<SchoolAboutUs/>} />
-        <Route path="/contact-us" element={<ContactUsPage2/>} />
+        <Route path="/admission-page/:id" element={<AdmissionPage />} />
+        <Route path="/school-about-us/:id" element={<SchoolAboutUs />} />
+        <Route path="/contact-us" element={<ContactUsPage2 />} />
       </Routes>
     </Router>
   );

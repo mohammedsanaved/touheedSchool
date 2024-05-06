@@ -175,7 +175,7 @@ function StickyMenu() {
                       <li className="nav-item">
                         <Link
                           className="nav-link dropdown-toggle"
-                          to={process.env.PUBLIC_URL + "/contact"}
+                          to={"/contact-us"}
                           data-toggle="dropdown"
                         >
                           Contact Us<i className="las"></i>

@@ -69,9 +69,9 @@ const SchoolPage = () => {
               </div>
               <div className="school-buttons d-flex justify-content-center mx-auto">
                 <Link to={`/school-about-us/${id}`}>
-                <GreenButton text="Know More" />
+                  <GreenButton text="Know More" />
                 </Link>
-                <Link to={"/admission-page"}>
+                <Link to={`/admission-page/${id}`}>
                   <GreenButton text="Enquire" />
                 </Link>
               </div>
@@ -79,14 +79,19 @@ const SchoolPage = () => {
           </div>
           <div className="breadcrumbs-div mx-auto">
             <p>
-              <span className="color-purple"> Touheed</span>/ Touheed English
-              medium School
+              <span className="color-purple">
+                <Link to={"/"}>Touheed</Link>
+              </span>
+              / {school.name}
             </p>
           </div>
 
           <WhyUs image={school.image} description={school.summary} />
 
-          <Infrastructure infrastructure={school.infrastructure} title_name="Infrastructure" />
+          <Infrastructure
+            infrastructure={school.infrastructure}
+            title_name="Infrastructure"
+          />
           {school?.brochure?.map((doc) => (
             <Brouchers doc={doc} key={doc.id} />
           ))}

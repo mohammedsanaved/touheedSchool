@@ -6,6 +6,7 @@ import { eventListReducer, eventDetailReducer } from "./reducers/eventReducers";
 import { staffListReducer } from "./reducers/staffReducers";
 import {
   schoolAboutUsReducer,
+  schoolAdmissionReducer,
   schoolDetailsReducer,
   schoolIndividualDetailReducer,
   schoolListReducer,
@@ -34,6 +35,7 @@ const reducer = combineReducers({
   featureList: featureReducer,
   galleryList: galleryReducer,
   schoolAboutUs: schoolAboutUsReducer,
+  schoolAdmission: schoolAdmissionReducer,
 });
 
 const initialState = {};
