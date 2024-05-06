@@ -16,7 +16,6 @@ export const EventsStyles = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
     padding-left:20px;
     padding-right:20px;
 }
@@ -55,11 +54,6 @@ color:black;
   flex-direction:column;
 }
 }
-=======
-    padding-left: 20px;
-    padding-right: 20px;
-  }
->>>>>>> f2b928b200b46d003637703320071b0acd929894
 
   .pagination-btn {
     background: rgba(4, 156, 80, 1);
@@ -74,4 +68,20 @@ color:black;
     border-radius: 6px;
     margin-top: 28px;
   }
+
+
+.load-more-btn{
+  margin-top:100px;
+  background: rgba(4, 156, 80, 1);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: center;
+  color: white;
+  padding: 11px 15px;
+  border: none;
+  border-radius: 6px;
+}
+
 `;

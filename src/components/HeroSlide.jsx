@@ -16,6 +16,8 @@ import GreenButton from "./GreenButton/GreenButton";
 import { useDispatch, useSelector } from "react-redux";
 import { allSchoolsListAction } from "../actions/LandingPageActions";
 import { Link } from "react-router-dom";
+import { EffectCreative } from 'swiper/modules';
+
 const HeroSlide = () => {
   const dispatch = useDispatch();
   const {
@@ -27,54 +29,6 @@ const HeroSlide = () => {
   useEffect(() => {
     dispatch(allSchoolsListAction());
   }, [dispatch]);
-
-  const imgData = [
-    {
-      id: "1",
-      backgroundImage: "../assets/images/LandingPageCaraouselImage1.png",
-      uniqClass: "slider-box slider-box1",
-      title: "Touheed English Medium School",
-      desc: "Touheed English medium School founded in the year 1990 is managed by Touheed Educational Trust (Regd.) Ganguli.",
-      btnOneLink: "course-grid",
-      btnTwoLink: "contact",
-    },
-    {
-      id: "2",
-      backgroundImage: "../assets/images/LandingPageCaraouselImage2.png",
-      uniqClass: "slider-box slider-box2 text-right",
-      title: "Touheed Girls' P.U.College, Ganguli",
-      desc: "Touheed English medium School founded in the year 1990 is managed by Touheed Educational Trust (Regd.) Ganguli.",
-      btnOneLink: "course-grid",
-      btnTwoLink: "contact",
-    },
-    {
-      id: "3",
-      backgroundImage: "../assets/images/LandingPageCaraouselImage3.png",
-      uniqClass: "slider-box slider-box2 text-right",
-      title: "Touheed Womens College",
-      desc: "Touheed English medium School founded in the year 1990 is managed by Touheed Educational Trust (Regd.) Ganguli.",
-      btnOneLink: "course-grid",
-      btnTwoLink: "contact",
-    },
-    {
-      id: "4",
-      backgroundImage: "../assets/images/LandingPageCaraouselImage4.png",
-      uniqClass: "slider-box slider-box2 text-right",
-      title: "Touheed Public School",
-      desc: "'DINA' - School for Special Education & Rehabilitation",
-      btnOneLink: "course-grid",
-      btnTwoLink: "contact",
-    },
-    {
-      id: "52",
-      backgroundImage: "../assets/images/LandingPageCaraouselImage5.png",
-      uniqClass: "slider-box slider-box2 text-right",
-      title: "'DINA' - School for Special Education & Rehabilitation",
-      desc: "Touheed English medium School founded in the year 1990 is managed by Touheed Educational Trust (Regd.) Ganguli.",
-      btnOneLink: "course-grid",
-      btnTwoLink: "contact",
-    },
-  ];
 
   return (
     <>
@@ -89,23 +43,28 @@ const HeroSlide = () => {
               pagination={{ clickable: true }}
               loop={true}
               autoplay={{
-                delay: 8000,
+                delay: 1000,
                 disableOnInteraction: false,
               }}
-              navigation={{
-                prevEl: '.banner-custom-prev',
-                nextEl: '.banner-custom-next'
+              grabCursor={true}
+              effect={'creative'}
+              creativeEffect={{
+                prev: {
+                  shadow: true,
+                  translate: ['-100%', 0, 0],
+                  
+                },
+                next: {
+                  translate: ['0%', 0, 0],
+                  
+                },
+                speed: 1000,
               }}
-              modules={[Pagination, Navigation, Autoplay]}
-              className="mySwiper"
-
-
-
-
-
+              modules={[Pagination, Navigation, Autoplay, EffectCreative]}
+              className="mySwiper3"
             >
               {allschools?.rows?.map((img) => (
-                <SwiperSlide>
+                <SwiperSlide key={img.id}>
                   <div
                     className="image-container d-flex align-items-center"
                     key={img.id}

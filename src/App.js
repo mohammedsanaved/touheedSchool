@@ -45,7 +45,7 @@ function App() {
         <Route path="/course-grid" element={<CourseGrid />} />
         <Route path="/course-list" element={<CourseList />} />
         <Route path="/course-details" element={<CourseDetails />} />
-        <Route path="/management" element={<Instructor />} />
+        {/* <Route path="/management" element={<Instructor />} /> */}
         <Route path="/management" element={<BoardManagement/>} />
         <Route path="/instructor-details" element={<InstructorDetails />} />
         <Route path="/gallery" element={<Gallery />} />

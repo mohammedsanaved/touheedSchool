@@ -39,6 +39,15 @@ const Events = () => {
     dispatch(allSchoolsListAction());
   }, [dispatch]);
 
+
+  const [displayCount, setDisplayCount] = useState(4);
+
+ 
+  const handleLoadMore = () => {
+    
+    setDisplayCount(prevCount => prevCount + 4);
+  };
+
   return (
     <>
       <EventsStyles>
@@ -51,31 +60,25 @@ const Events = () => {
           <SortByEvents allschools={allschools} setId={setId} />
           </div>
           {loading ? (
-            <p>Loading...</p>
-          ) : error ? (
-            <p>Error: {error}</p>
-          ) : (
-            events?.rows?.map((event) =>
-              // Check if id is set or not to determine whether to display all events or filter by id
-              !id || id === event?.school_id ? (
-                <SingleEvent key={event.id} event={event} />
-              ) : null
-            )
-          )}
+  <p>Loading...</p>
+) : error ? (
+  <p>Error: {error}</p>
+) : (
+  <>
+    {events?.rows
+      ?.filter((event) => !id || id === event?.school_id) // Filter events based on selected school ID
+      .slice(0, displayCount) // Slice the filtered events
+      .map((event) => (
+        <SingleEvent key={event.id} event={event} />
+      ))}
+    {/* Render "Load More" button if there are more events to load */}
+    {displayCount < events?.rows?.filter((event) => !id || id === event?.school_id).length && (
+      <button onClick={handleLoadMore} className="load-more-btn">Load More</button>
+    )}
+  </>
+)}
         </div>
-        <div className="d-flex justify-content-center align-items-center mt-3 gap-3 px-2">
-          <button className="pagination-btn">
-            <IoIosArrowBack />
-            Previous
-          </button>
-          <div className="h-50 fs-3">
-            1 of 5 <span className="fw-bolder">From</span> 40
-          </div>
-          <button className="pagination-btn">
-            Next
-            <IoIosArrowForward />
-          </button>
-        </div>
+        
       </EventsStyles>
       <FooterNew />
     </>

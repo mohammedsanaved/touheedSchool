@@ -415,4 +415,6 @@ color:rgba(26, 48, 129, 1);
   max-width:99px;
   height:auto;
 }
+
+
 `;
