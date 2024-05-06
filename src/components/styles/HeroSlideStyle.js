@@ -117,42 +117,5 @@ display: -webkit-box;
 
 }
 
-.banner-text-container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  opacity: 0;
-  animation: fadeUpText 0.5s ease forwards;
-}
-
-.image-container{
-  animation: fadeUp 0.5s ease;
-}
-
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUpText {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -0%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-
-
 
 `;
