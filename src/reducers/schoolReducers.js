@@ -3,6 +3,9 @@ import {
   SCHOOL_ABOUT_US_FAIL,
   SCHOOL_ABOUT_US_REQUEST,
   SCHOOL_ABOUT_US_SUCCESS,
+  SCHOOL_ADMISSION_FAIL,
+  SCHOOL_ADMISSION_REQUEST,
+  SCHOOL_ADMISSION_SUCCESS,
   SCHOOL_DETAIL_FAIL,
   SCHOOL_DETAIL_REQUEST,
   SCHOOL_DETAIL_SUCCESS,
@@ -61,10 +64,7 @@ export const schoolIndividualDetailReducer = (
       return state;
   }
 };
-export const schoolAboutUsReducer = (
-  state = { school: {} },
-  action
-) => {
+export const schoolAboutUsReducer = (state = { school: {} }, action) => {
   switch (action.type) {
     case SCHOOL_ABOUT_US_REQUEST:
       return { loading: true, ...state };
@@ -80,3 +80,39 @@ export const schoolAboutUsReducer = (
   }
 };
 
+// export const schoolAdmissionReducer = (
+//   state = { admissionDetail: {} },
+//   action
+// ) => {
+//   switch (action.type) {
+//     case SCHOOL_ADMISSION_REQUEST:
+//       return { loading: true, ...state };
+
+//     case SCHOOL_ADMISSION_SUCCESS:
+//       return { loading: false, admissionDetail: action.payload };
+
+//     case SCHOOL_ADMISSION_FAIL:
+//       return { loading: false, error: action.payload, admissionDetail: [] };
+
+//     default:
+//       return state;
+//   }
+// };
+export const schoolAdmissionReducer = (
+  state = { admissionDetail: {} },
+  action
+) => {
+  switch (action.type) {
+    case SCHOOL_ADMISSION_REQUEST:
+      return { loading: true, ...state };
+
+    case SCHOOL_ADMISSION_SUCCESS:
+      return { loading: false, admissionDetail: action.payload };
+
+    case SCHOOL_ADMISSION_FAIL:
+      return { loading: false, error: action.payload, admissionDetail: [] };
+
+    default:
+      return state;
+  }
+};

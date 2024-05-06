@@ -64,9 +64,9 @@ function App() {
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/schooldetail/:id" element={<SchoolPage />} />
-        <Route path="/admission-page" element={<AdmissionPage />} />
-        <Route path="/school-about-us/:id" element={<SchoolAboutUs/>} />
-        <Route path="/contact-us" element={<ContactUsPage2/>} />
+        <Route path="/admission-page/:id" element={<AdmissionPage />} />
+        <Route path="/school-about-us/:id" element={<SchoolAboutUs />} />
+        <Route path="/contact-us" element={<ContactUsPage2 />} />
       </Routes>
     </Router>
   );

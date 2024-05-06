@@ -165,7 +165,7 @@ const HeaderTwo = ({ logo }) => {
                   <li className="nav-item">
                     <Link
                       className="nav-link dropdown-toggle"
-                      to={process.env.PUBLIC_URL + "/contact"}
+                      to={process.env.PUBLIC_URL + "/contact-us"}
                       data-toggle="dropdown"
                     >
                       Contact Us<i className="las"></i>
