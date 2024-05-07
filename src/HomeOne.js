@@ -31,6 +31,7 @@ import HeroSlide from "./components/HeroSlide";
 import LatestEventCarousel from "./components/LatestEventCarousel/LatestEventCarousel.jsx";
 import FooterNew from "./components/FooterNew/FooterNew.jsx";
 import HeaderNew from "./components/HeaderNew/HeaderNew.jsx";
+import HeaderNew2 from "./components/HeaderNew2/HeaderNew2.jsx";
 // import Cards from "./components/Cards";
 
 export default function HomeOne() {
@@ -38,7 +39,8 @@ export default function HomeOne() {
     <div className="main-wrapper">
       {/* Header */}
       {/* <Header /> */}
-      <HeaderTwo />
+      {/* <HeaderTwo /> */}
+      <HeaderNew2/>
       
 
       {/* Hero Slider */}
