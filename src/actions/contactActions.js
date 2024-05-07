@@ -7,7 +7,15 @@ import {
 } from "../constants/contactConstants";
 
 export const createContact =
-  (nameValue, emailValue, subjectValue, messageValue) => async (dispatch) => {
+  (
+    nameValue,
+    school,
+    mobileNumberValue,
+    messageValue,
+    emailValue,
+    classGradeValue
+  ) =>
+  async (dispatch) => {
     try {
       dispatch({ type: CONTACT_CREATE_REQUEST });
 
@@ -18,18 +26,22 @@ export const createContact =
         },
       };
       contact_data = {
-        contact_name: nameValue,
-        contact_email: emailValue,
-        contact_subject: subjectValue,
-        contact_message: messageValue,
+        school: school,
+        parents_name: nameValue,
+        user_email: emailValue,
+        mobile_no: mobileNumberValue,
+        message: messageValue,
+        class_grade: classGradeValue,
       };
       const { data } = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/send-mail/`,
+        `${process.env.REACT_APP_API_URL}/api/schools/contactus/`,
         contact_data,
         config
       );
+      console.log(data, "Data");
 
       dispatch({ type: CONTACT_CREATE_SUCCESS, payload: data });
+      console.log(data, "Data from ContactApi");
     } catch (error) {
       dispatch({
         type: CONTACT_CREATE_FAIL,

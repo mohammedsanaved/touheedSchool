@@ -37,25 +37,32 @@ const SchoolAboutUs = () => {
       <BannerSection bg_image={bg} title={"Home/Events"} />
       <div className="breadcrumbs-div mx-auto">
         <p>
-          <span className="color-purple"> Touheed</span>/ Touheed English
-          medium School
+          <span className="color-purple"> Touheed</span>/ Touheed English medium
+          School
         </p>
       </div>
-      <AboutUsTwo 
-      description={school.description}
-      image={school.image}
-      video={school.video}
-       /> 
-      <TabBox why_us = {school.summary} vision={school.vision} mission={school.mission} aim={school.aim} transportation={school.transportation} />
-      <AdditionalTabs 
-      school_data = {school}
+      <AboutUsTwo
+        description={school.description}
+        image={school.image}
+        video={school.video}
       />
-      <Infrastructure infrastructure={school.infrastructure} title_name="Features"/>
+      <TabBox
+        why_us={school.summary}
+        vision={school.vision}
+        mission={school.mission}
+        aim={school.aim}
+        transportation={school.transportation}
+      />
+      <AdditionalTabs school_data={school} />
+      <Infrastructure
+        infrastructure={school.infrastructure}
+        title_name="Features"
+      />
       <FooterSchool
-          logo={school.logo}
-          events={school.events}
-          description={school.description}
-        />
+        logo={school.logo}
+        events={school.events}
+        description={school.description}
+      />
     </SchoolAboutUsStyle>
   );
 }
