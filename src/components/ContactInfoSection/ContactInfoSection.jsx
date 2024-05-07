@@ -16,7 +16,15 @@ const ContactInfoSection = () => {
     class_grade: "",
     message: "",
     mobileNumber: "",
-    // school_email: "",
+    school_id: "",
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    user_email: "",
+    class_grade: "",
+    message: "",
+    mobileNumber: "",
+    school_id: "",
   });
   console.log(formData, "FormData");
   const dispatch = useDispatch();
@@ -32,21 +40,81 @@ const ContactInfoSection = () => {
       ...formData,
       [name]: value,
     });
+    setErrors({
+      ...errors,
+      [name]: "", // Clear the error message for this field
+    });
   };
+
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Dispatch action to create contact
-    dispatch(
-      createContact(
-        formData.name,
-        formData.school_id,
-        formData.mobileNumber,
-        formData.message,
-        formData.user_email,
-        formData.class_grade
-      )
-    );
+    // Validate form fields
+    const formErrors = {};
+    let isValid = true;
+
+    // Validate name
+    if (!formData.name.trim()) {
+      formErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    // Validate user_email
+    if (!formData.user_email.trim()) {
+      formErrors.user_email = "Email is required";
+      isValid = false;
+    }
+
+    if (
+      !formData.mobileNumber.trim() ||
+      formData.mobileNumber.trim().length !== 10
+    ) {
+      formErrors.mobileNumber =
+        "Mobile Number is required and must be 10 digits";
+      isValid = false;
+    }
+
+    // Validate class_grade
+    if (!formData.class_grade.trim()) {
+      formErrors.class_grade = "Class/Grade is required";
+      isValid = false;
+    }
+
+    // Validate school_id
+    if (!formData.school_id) {
+      formErrors.school_id = "School is required";
+      isValid = false;
+    }
+
+    // Validate message
+    if (!formData.message.trim()) {
+      formErrors.message = "Message is required";
+      isValid = false;
+    }
+
+    // Update error state
+    setErrors(formErrors);
+
+    // If form is valid, submit
+    if (isValid) {
+      dispatch(
+        createContact(
+          formData.name,
+          formData.school_id,
+          formData.mobileNumber,
+          formData.message,
+          formData.user_email,
+          formData.class_grade
+        )
+      );
+    }
   };
 
   return (
@@ -102,6 +170,9 @@ const ContactInfoSection = () => {
                   placeholder="Parent's name :"
                   className="get-in-touch-form-input"
                 />
+                <span className="errorMsg">
+                  {errors.name && <span>{errors.name}</span>}
+                </span>
               </div>
               <div className="form-email-subject d-flex">
                 <input
@@ -112,7 +183,9 @@ const ContactInfoSection = () => {
                   placeholder="Email Address"
                   className="get-in-touch-form-input"
                 />
-
+                <span className="errorMsg">
+                  {errors.user_email && <span>{errors.user_email}</span>}
+                </span>
                 <input
                   type="text"
                   name="mobileNumber"
@@ -121,6 +194,9 @@ const ContactInfoSection = () => {
                   placeholder="Mobile Number :"
                   className="get-in-touch-form-input"
                 />
+                <span className="errorMsg">
+                  {errors.mobileNumber && <span>{errors.mobileNumber}</span>}
+                </span>
               </div>
 
               <div className="form-email-subject d-flex">
@@ -132,6 +208,9 @@ const ContactInfoSection = () => {
                   placeholder="Class/Grade :"
                   className="get-in-touch-form-input"
                 />
+                <span className="errorMsg">
+                  {errors.class_grade && <span>{errors.class_grade}</span>}
+                </span>
 
                 <select
                   name="school_id"
@@ -146,6 +225,9 @@ const ContactInfoSection = () => {
                     </option>
                   ))}
                 </select>
+                <span className="errorMsg">
+                  {errors.school_id && <span>{errors.school_id}</span>}
+                </span>
               </div>
 
               <div>
@@ -156,6 +238,9 @@ const ContactInfoSection = () => {
                   placeholder="Message"
                   className="get-in-touch-form-input message-area"
                 />
+                <span className="errorMsg">
+                  {errors.message && <span>{errors.message}</span>}
+                </span>
               </div>
               <button type="submit" className="form-btn">
                 SEND MESSAGE
