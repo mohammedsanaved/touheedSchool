@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { HeaderNew2Styles } from "./HeaderNew2Styles.js";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
 
-const HeaderNew2 = () => {
+const HeaderNew2 = ({logo_img}) => {
 
 
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -34,11 +34,14 @@ const HeaderNew2 = () => {
             <Container className="header-div">
                 <div className="logo">
                     <Link to={process.env.PUBLIC_URL + "/"}>
-                        <img
-                            src={logoUrl} // Assuming logoUrl is defined somewhere
-                            alt="LOGO"
-                            className="header-logo"
-                        />
+                        
+                        {logo_img ? (
+                            // If 'img' prop exists, use it
+                            <img src={logo_img} alt="LOGO" className="header-logo"/>
+                        ) : (
+                            // If 'img' prop doesn't exist, use the default image
+                            <img src={logoUrl} alt="Default" className="header-logo"/>
+                        )}
                     </Link>
                 </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMobileMenu} />

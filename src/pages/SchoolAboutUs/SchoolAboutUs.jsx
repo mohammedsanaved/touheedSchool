@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { schoolAboutUs } from '../../actions/schoolActions.js';
 import { useParams } from 'react-router-dom';
 import FooterSchool from '../../components/FooterSchool/FooterSchool.jsx';
+import HeaderNew2 from '../../components/HeaderNew2/HeaderNew2.jsx';
 
 const SchoolAboutUs = () => {
 
@@ -31,7 +32,8 @@ const SchoolAboutUs = () => {
 
   return (
     <SchoolAboutUsStyle>
-      <HeaderTwo />
+      
+      <HeaderNew2/>
       <BannerSection bg_image={bg} title={"Home/Events"} />
       <div className="breadcrumbs-div mx-auto">
         <p>

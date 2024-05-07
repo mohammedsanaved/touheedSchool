@@ -172,7 +172,7 @@ const HeaderTwo = ({ logo }) => {
       </section>
 
       {/* Sticky Menu */}
-      <StickyMenu />
+      {/* <StickyMenu /> */}
 
       {/* Mobile Menu */}
       <MobileMenu />

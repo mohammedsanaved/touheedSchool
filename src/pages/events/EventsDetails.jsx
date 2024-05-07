@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { detailEvent } from "../../actions/eventActions.js";
 import EventCarousel from "../../components/EventCarousel.jsx";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
+import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 
 const EventsDetails = () => {
   const { id } = useParams();
@@ -31,7 +32,8 @@ const EventsDetails = () => {
   return (
     <Styles>
       <div className="main-wrapper event-details-page mb-5 sm">
-        <HeaderTwo />
+       
+        <HeaderNew2/>
         <BannerSection bg_image={bg}  />
 
         

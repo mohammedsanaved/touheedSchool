@@ -116,6 +116,10 @@ export const HeaderNew2Styles = styled.div`
     .dropdown-menu.show{
         background-color:#dbe0d1;
     }
+    .header-div.container {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
 
   }
 `;

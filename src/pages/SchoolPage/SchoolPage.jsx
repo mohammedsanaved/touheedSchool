@@ -29,6 +29,7 @@ import { Link, useParams } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
 import { SchoolPageStyle } from "./SchoolPageStyle";
 import FooterSchool from "../../components/FooterSchool/FooterSchool";
+import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2";
 
 const SchoolPage = () => {
   // const bg =
@@ -45,7 +46,8 @@ const SchoolPage = () => {
   return (
     <>
       <SchoolPageStyle>
-        <HeaderTwo logo={school.logo} />
+        {/* <HeaderTwo logo={school.logo} /> */}
+        <HeaderNew2 logo_img={school.logo} />
         <div className="">
           <div className="position-relative school-details-video">
             <video

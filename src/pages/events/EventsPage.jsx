@@ -11,6 +11,7 @@ import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 
 const Events = () => {
   // const bg =
@@ -51,7 +52,8 @@ const Events = () => {
   return (
     <>
       <EventsStyles>
-        <HeaderTwo />
+        
+        <HeaderNew2/>
         <BannerSection bg_image={bg} title={"Home/Events"} />
         <div className="event-page-div mx-auto w-100">
 
