@@ -4,6 +4,7 @@ import HeaderTwo from '../../components/HeaderTwo';
 import { ContactUsPage2Styles } from './ContactUsPage2Styles';
 import BannerSection from '../../components/BannerSection/BannerSection';
 import FooterNew from '../../components/FooterNew/FooterNew';
+import HeaderNew2 from '../../components/HeaderNew2/HeaderNew2';
 
 const ContactUsPage2 = () => {
 
@@ -12,7 +13,8 @@ const ContactUsPage2 = () => {
 
   return (
     <ContactUsPage2Styles>
-      <HeaderTwo />
+      
+      <HeaderNew2/>
       <BannerSection bg_image={bg} title={"Home/Events"} />
 
       <ContactInfoSection />

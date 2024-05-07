@@ -44,7 +44,7 @@ const HeaderNew2 = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMobileMenu} />
                 <Navbar.Collapse id="basic-navbar-nav" className={showMobileMenu ? "show" : ""}>
                     <Col lg={9}>
-                        <Nav className="ml-auto justify-content-end  align-items-center nav-link-container">
+                        <Nav className="ml-auto justify-content-end nav-link-container">
                             <Nav.Link as={Link} to={process.env.PUBLIC_URL + "/"}>
                                 Home
                             </Nav.Link>
@@ -80,13 +80,13 @@ const HeaderNew2 = () => {
                             </Nav.Link>
                         </Nav>
                     </Col>
-                    <Col lg={3} className="apply-btn-div">
+                    {/* <Col lg={3} className="apply-btn-div">
                         <div className="apply-btn">
                             <Link to={process.env.PUBLIC_URL + "/registration"}>
                                 <i className="las la-clipboard-list"></i>Apply Now
                             </Link>
                         </div>
-                    </Col>
+                    </Col> */}
                 </Navbar.Collapse>
             </Container>
         </Navbar>

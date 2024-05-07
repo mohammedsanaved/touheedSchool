@@ -3,6 +3,7 @@ import { BoardManagementStyles } from "./BoardManagementStyles.js";
 import HeaderTwo from '../../components/HeaderTwo';
 import BannerSection from '../../components/BannerSection/BannerSection.jsx';
 import FooterNew from '../../components/FooterNew/FooterNew.jsx';
+import HeaderNew2 from '../../components/HeaderNew2/HeaderNew2.jsx';
 
 const BoardManagement = () => {
 
@@ -13,7 +14,8 @@ const BoardManagement = () => {
    
       <BoardManagementStyles>
       
-      <HeaderTwo/>
+      
+      <HeaderNew2/>
 
       <BannerSection bg_image={bg} />
 
