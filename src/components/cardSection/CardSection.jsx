@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Styles } from "./styles/cardSection";
 import { Container, Row, Col } from "react-bootstrap";
 // import Cards from "../Cards";
-import CardFlip from "../CardFlip";
+// import CardFlip from "../CardFlip";
 import { useDispatch, useSelector } from "react-redux";
 import { schoolList } from "../../actions/schoolActions";
 import CardsNew from "../CardsNew/CardsNew";

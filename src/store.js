@@ -20,6 +20,7 @@ import {
   testimonialsReducer,
 } from "./reducers/LandingPageReducers";
 import { schoolAboutUs } from "./actions/schoolActions";
+import { boardOfManagementReducer } from "./reducers/boardOfManagmentReducer";
 
 const reducer = combineReducers({
   contactCreate: contactCreateReducer,
@@ -36,6 +37,7 @@ const reducer = combineReducers({
   galleryList: galleryReducer,
   schoolAboutUs: schoolAboutUsReducer,
   schoolAdmission: schoolAdmissionReducer,
+  boardManagementList: boardOfManagementReducer,
 });
 
 const initialState = {};

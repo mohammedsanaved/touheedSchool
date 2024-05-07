@@ -1,14 +1,13 @@
-import React from 'react';
-import ContactInfoSection from '../../components/ContactInfoSection/ContactInfoSection';
-import HeaderTwo from '../../components/HeaderTwo';
-import { ContactUsPage2Styles } from './ContactUsPage2Styles';
-import BannerSection from '../../components/BannerSection/BannerSection';
-import FooterNew from '../../components/FooterNew/FooterNew';
+/* eslint-disable react/jsx-no-comment-textnodes */
+import React from "react";
+import ContactInfoSection from "../../components/ContactInfoSection/ContactInfoSection";
+import HeaderTwo from "../../components/HeaderTwo";
+import { ContactUsPage2Styles } from "./ContactUsPage2Styles";
+import BannerSection from "../../components/BannerSection/BannerSection";
+import FooterNew from "../../components/FooterNew/FooterNew";
 
 const ContactUsPage2 = () => {
-
   const bg = "./assets/images/eventspageimage.png";
-
 
   return (
     <ContactUsPage2Styles>
@@ -30,6 +29,6 @@ const ContactUsPage2 = () => {
       <FooterNew />
     </ContactUsPage2Styles>
   );
-}
+};
 
-export default ContactUsPage2
+export default ContactUsPage2;
