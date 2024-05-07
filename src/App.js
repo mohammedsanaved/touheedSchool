@@ -32,11 +32,13 @@ import SchoolAboutUs from "./pages/SchoolAboutUs/SchoolAboutUs.jsx";
 import ContactInfoSection from "./components/ContactInfoSection/ContactInfoSection.jsx";
 import ContactUsPage2 from "./pages/ContactUsPage2/ContactUsPage2.jsx";
 import BoardManagement from "./pages/BoardManagement/BoardManagement.jsx";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
+      <ToastContainer />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomeOne />} />
@@ -46,7 +48,7 @@ function App() {
         <Route path="/course-list" element={<CourseList />} />
         <Route path="/course-details" element={<CourseDetails />} />
         {/* <Route path="/management" element={<Instructor />} /> */}
-        <Route path="/management" element={<BoardManagement/>} />
+        <Route path="/management" element={<BoardManagement />} />
         <Route path="/instructor-details" element={<InstructorDetails />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/events" element={<Events />} />
