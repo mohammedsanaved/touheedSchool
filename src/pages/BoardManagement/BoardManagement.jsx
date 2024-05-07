@@ -5,6 +5,7 @@ import BannerSection from "../../components/BannerSection/BannerSection.jsx";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { boardOfManagmentAction } from "../../actions/BoardofManagmentAction.js";
+import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 
 const BoardManagement = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,8 @@ const BoardManagement = () => {
 
   return (
     <BoardManagementStyles>
-      <HeaderTwo />
+      
+      <HeaderNew2/>
 
       <BannerSection bg_image={bg} />
 

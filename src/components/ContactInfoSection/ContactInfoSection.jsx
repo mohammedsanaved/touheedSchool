@@ -162,6 +162,7 @@ const ContactInfoSection = () => {
             <hr className="green-hr" />
             <form onSubmit={handleSubmit}>
               <div>
+                <div className="d-flex flex-column w-100 form-container-div">
                 <input
                   type="text"
                   name="name"
@@ -173,8 +174,10 @@ const ContactInfoSection = () => {
                 <span className="errorMsg">
                   {errors.name && <span>{errors.name}</span>}
                 </span>
+                </div>
               </div>
               <div className="form-email-subject d-flex">
+              <div className="d-flex flex-column w-100 form-container-div">
                 <input
                   type="email"
                   name="user_email"
@@ -186,6 +189,8 @@ const ContactInfoSection = () => {
                 <span className="errorMsg">
                   {errors.user_email && <span>{errors.user_email}</span>}
                 </span>
+                </div>
+                <div className="d-flex flex-column w-100 form-container-div">
                 <input
                   type="text"
                   name="mobileNumber"
@@ -197,9 +202,11 @@ const ContactInfoSection = () => {
                 <span className="errorMsg">
                   {errors.mobileNumber && <span>{errors.mobileNumber}</span>}
                 </span>
+                </div>
               </div>
 
               <div className="form-email-subject d-flex">
+              <div className="d-flex flex-column w-100 form-container-div">
                 <input
                   type="text"
                   name="class_grade"
@@ -211,7 +218,8 @@ const ContactInfoSection = () => {
                 <span className="errorMsg">
                   {errors.class_grade && <span>{errors.class_grade}</span>}
                 </span>
-
+</div>
+<div className="d-flex flex-column w-100 form-container-div">
                 <select
                   name="school_id"
                   value={formData.school_id}
@@ -228,9 +236,11 @@ const ContactInfoSection = () => {
                 <span className="errorMsg">
                   {errors.school_id && <span>{errors.school_id}</span>}
                 </span>
+                </div>
               </div>
 
               <div>
+              <div className="d-flex flex-column w-100 form-container-div">
                 <textarea
                   name="message"
                   value={formData.message}
@@ -241,6 +251,7 @@ const ContactInfoSection = () => {
                 <span className="errorMsg">
                   {errors.message && <span>{errors.message}</span>}
                 </span>
+                </div>
               </div>
               <button type="submit" className="form-btn">
                 SEND MESSAGE

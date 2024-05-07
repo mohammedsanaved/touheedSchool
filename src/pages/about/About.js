@@ -10,6 +10,7 @@ import FooterTwo from "../../components/FooterTwo";
 import Footer from "../../components/Footer";
 import { Styles } from "./styles/about.js";
 import BannerSection from "../../components/BannerSection/BannerSection.jsx";
+import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 
 const About = () => {
   const value = "About US";
@@ -18,7 +19,8 @@ const About = () => {
       {/* Main Wrapper */}
       <div className="main-wrapper about-page">
         {/* Header 2 */}
-        <HeaderTwo />
+        
+        <HeaderNew2/>
 
         {/* Breadcroumb */}
         {/* <BreadcrumbBox title="About Us" /> */}

@@ -14,7 +14,8 @@ import HeaderNew2 from '../../components/HeaderNew2/HeaderNew2.jsx';
 
 const SchoolAboutUs = () => {
 
-  const bg = "./assets/images/eventspageimage.png";
+  const bg = "/assets/images/eventspageimage.png";
+  
   const {
     id
   } = useParams();

@@ -118,8 +118,8 @@ export const ContactInfoSectionStyles = styled.div`
     padding-bottom: 20px;
   }
   .errorMsg {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight:400;
     color: red;
   }
 
@@ -140,5 +140,14 @@ export const ContactInfoSectionStyles = styled.div`
     .form-email-subject {
       flex-direction: column;
     }
+  }
+
+
+  .get-in-touch-form-input{
+    margin-bottom: 5px;
+  }
+
+  .form-container-div{
+    margin-bottom:15px;
   }
 `;
