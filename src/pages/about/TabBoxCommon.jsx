@@ -44,23 +44,23 @@ const TabBoxCommon = () => {
                   <Tab.Content>
                     <Tab.Pane eventKey="why">
                       <h4 className="tab-title">Why Us</h4>
-                      <p className="tab-desc">{why_us}</p>
+                      <p className="tab-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="mission">
                       <h4 className="tab-title">Our Mission</h4>
-                      <p className="tab-desc">{mission}</p>
+                      <p className="tab-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="vision">
                       <h4 className="tab-title">Our Vision</h4>
-                      <p className="tab-desc">{vision}</p>
+                      <p className="tab-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="ranking">
                       <h4 className="tab-title">Aims & Objectives</h4>
-                      <p className="tab-desc">{aim}</p>
+                      <p className="tab-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="research">
                       <h4 className="tab-title">Transportation</h4>
-                      <p className="tab-desc">{transportation}</p>
+                      <p className="tab-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Col>

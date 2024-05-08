@@ -4,10 +4,11 @@ export const BannerSectionStyles = styled.div`
   .school-banner-section {
     position: relative;
     min-height: 330px;
-    height: 670px;
+    height: 370px;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 30px;
+    background-position: bottom;
   }
 
   .school-name {

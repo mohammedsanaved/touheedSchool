@@ -18,4 +18,27 @@ export const Styles = styled.div`
             }
         }
     }
+    .readmore-btn{
+        display:none;
+    }
+
+    section.about-us-section {
+        margin-bottom: 100px;
+    }
+
+    .EventsHeader{
+        font-family: Inter;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43.57px;
+        text-align:center;
+        color:black;
+        margin-bottom:75px;
+        margin-top:75px;
+    }
+
+    .accordion-title{
+        padding:10px 16px;
+    }
+
 `;

@@ -144,8 +144,5 @@ export const TabBoxCommonSytles = styled.div`
   }
 
 
-  body{
-    background:black;
-  }
   
 `;
