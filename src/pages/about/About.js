@@ -30,7 +30,7 @@ const About = () => {
         <AboutUs />
 
         {/* Icon Box Area */}
-        <IconBox />
+        {/* <IconBox /> */}
 
         {/* Tab Section */}
         <TabBox />

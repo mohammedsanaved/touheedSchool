@@ -43,7 +43,9 @@ const BoardManagement = () => {
               />
 
               <h3 className="member-name">{item.name}</h3>
-              <h5 className="member-title">{item.description}</h5>
+              <h3 className="member-title">{item.title}</h3>
+
+              <h5 className="member-description">{item.description}</h5>
             </div>
           ))
         )}
