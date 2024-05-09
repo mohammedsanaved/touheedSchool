@@ -65,7 +65,7 @@ const FooterSchool = ({ events, logo, description }) => {
             ))}
           </div>
           <div className="ourschools-column recent-posts-column">
-            <div className="footer-subheading">RECENT POSTS</div>
+            <div className="footer-subheading">RECENT EVENTS</div>
             {events?.map((item, i) => (
               <div className="footer-links">
                 <Link to={`/event-details/${item.id}`}>{item.title}</Link>

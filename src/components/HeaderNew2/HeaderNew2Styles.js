@@ -122,4 +122,10 @@ export const HeaderNew2Styles = styled.div`
   }
 
   }
+
+
+  img.header-logo{
+    max-width:80px;
+    
+  }
 `;

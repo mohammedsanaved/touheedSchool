@@ -107,45 +107,7 @@ const About = () => {
 
         <Testimonial />
 
-        <div className="EventsHeader">Upcoming Events</div>
-        {loading ? (
-          <p>Loading...</p>
-        ) : error ? (
-          <p>Error: {error}</p>
-        ) : (
-          <>
-            {events?.rows
-              ?.filter((event) => !id || id === event?.school_id) // Filter events based on selected school ID
-              .slice(0, displayCount) // Slice the filtered events
-              .map((event) => (
-                <SingleEvent key={event.id} event={event} />
-              ))}
-            {/* Render "Load More" button if there are more events to load */}
-            {displayCount <
-              events?.rows?.filter((event) => !id || id === event?.school_id)
-                .length && (
-              <button onClick={handleLoadMore} className="load-more-btn">
-                Load More
-              </button>
-            )}
-          </>
-        )}
-
-
-
-
         
-        
-
-
-        <div>
-      <div className="faq-title">FAQs</div>
-      <div className="accordion mt-3 mb-4 mx-auto">
-        {items?.map((item, index) => (
-          <FAQItem key={index} title={item.title} content={item.content} />
-        ))}
-      </div>
-    </div>
 
 
 
