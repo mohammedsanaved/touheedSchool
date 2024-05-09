@@ -1,8 +1,11 @@
+// eslint-disable-next-line react/jsx-no-comment-textnodes
+// eslint-disable-next-line react/jsx-no-target-blank
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { Styles } from "../styles/NoticeBoard";
 import { GoDotFill } from "react-icons/go";
 import { TiPin } from "react-icons/ti";
-const NoticeBoard = ({ item }) => {
+const NoticeBoard = ({ noticeboard }) => {
   const noticeData = [
     {
       id: 1,
@@ -54,30 +57,18 @@ const NoticeBoard = ({ item }) => {
             <TiPin />
           </div>
 
-          <div className="notice-scroll mx-auto">
-            {item.images.map((img, i) => (
-              // eslint-disable-next-line react/jsx-no-target-blank
+          {noticeboard.map((img, i) => (
+            <div className="notice-scroll mx-auto">
               <a
                 href={`${process.env.REACT_APP_API_URL}/${img.image}`}
                 target="_blank"
                 download={`${process.env.REACT_APP_API_URL}/${img.image}`}
                 key={i}
               >
-                <div className="mb-3 notice-content">{item.title}</div>
+                <div className="mb-3 notice-content">{noticeboard.title}</div>
               </a>
-            ))}
-            {/* <a href={item}></a> */}
-            {/* {item.map((values) => (
-              <>
-                <div key={values.id} className="noticeContent">
-                  <span>
-                    <GoDotFill />
-                  </span>
-                </div>
-              </>
-            ))} */}
-            {}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </Styles>
