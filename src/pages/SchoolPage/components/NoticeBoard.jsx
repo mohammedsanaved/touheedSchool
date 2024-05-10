@@ -57,18 +57,18 @@ const NoticeBoard = ({ noticeboard }) => {
             <TiPin />
           </div>
 
-          {noticeboard.map((img, i) => (
-            <div className="notice-scroll mx-auto">
+          <div className="notice-scroll mx-auto">
+            {noticeboard?.map((img, i) => (
               <a
                 href={`${process.env.REACT_APP_API_URL}/${img.image}`}
                 target="_blank"
                 download={`${process.env.REACT_APP_API_URL}/${img.image}`}
                 key={i}
               >
-                <div className="mb-3 notice-content">{noticeboard.title}</div>
+                <div className="mb-3 notice-content">{img.title}</div>
               </a>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </Styles>

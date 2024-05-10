@@ -113,6 +113,7 @@ const SchoolPage = () => {
           logo={school.logo}
           events={school.events}
           description={school.description}
+          location={school.location}
         />
       </SchoolPageStyle>
     </>
