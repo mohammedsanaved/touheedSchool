@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
 
-const FooterSchool = ({ events, logo, description }) => {
+const FooterSchool = ({ events, logo, description, location }) => {
   const logoUrl = "/assets/images/Touheed-logo.png";
   const dispatch = useDispatch();
   const {
@@ -29,7 +29,7 @@ const FooterSchool = ({ events, logo, description }) => {
             />
             <p className="footer-text">{description}</p>
             <br />
-            <div>Gangolli, udupi dist, karnataka.</div>
+            <div>{location}</div>
             <br />
             <div>info@touheed.education</div>
             <br />
