@@ -15,6 +15,7 @@ export const LatestEventsStyle = styled.div`
     width: 463px;
     height: 439px;
     border-radius:10px;
+    object-fit: cover;
   }
 
   .event-carousel-container {

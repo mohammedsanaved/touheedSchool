@@ -44,17 +44,11 @@ const FooterSchool = ({ events, logo, description }) => {
             <div className="footer-links">
               <Link>Contact Us</Link>
             </div>
-            <div className="footer-links">
-              {" "}
-              <Link>Our Services</Link>
-            </div>
+            
             <div className="footer-links">
               <Link>Privacy Policy</Link>
             </div>
-            <div className="footer-links">
-              {" "}
-              <Link>Online Support</Link>
-            </div>
+           
           </div>
           <div className="ourschools-column">
             <div className="footer-subheading">OUR SCHOOLS</div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { schoolList } from "../../actions/schoolActions.js";
 import { createContact } from "../../actions/contactActions.js";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactInfoSection = () => {
   const locationIconUrl = "/assets/images/location.png";
@@ -30,6 +31,9 @@ const ContactInfoSection = () => {
   const dispatch = useDispatch();
   const schoolEmails = useSelector((state) => state.schoolList);
   const { schools } = schoolEmails;
+
+  const [disable, setDisable] = useState("");
+
   useEffect(() => {
     dispatch(schoolList());
   }, [dispatch]);
@@ -116,6 +120,11 @@ const ContactInfoSection = () => {
       );
     }
   };
+
+  function onChange() {
+    console.log("on chnage called ");
+    setDisable(true);
+  }
 
   return (
     <ContactInfoSectionStyles>
@@ -253,6 +262,10 @@ const ContactInfoSection = () => {
                 </span>
                 </div>
               </div>
+              <ReCAPTCHA
+                            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                            onChange={onChange}
+                          />
               <button type="submit" className="form-btn">
                 SEND MESSAGE
               </button>

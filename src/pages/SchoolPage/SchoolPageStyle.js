@@ -131,7 +131,7 @@ margin-bottom: 80px;
     }
 
     .video-banner-text{
-        top: 10%;
+        top: 26%;
         
     
     }

@@ -22,7 +22,7 @@ export const Styles = styled.div`
 
   @media screen and (min-width: 800px) {
     .cardsRow{
-      gap:70px;
+      gap:10px;
     }
 
   }

@@ -57,7 +57,7 @@ const NoticeBoard = ({ noticeboard }) => {
             <TiPin />
           </div>
 
-          {noticeboard.map((img, i) => (
+          {noticeboard?.map((img, i) => (
             <div className="notice-scroll mx-auto">
               <a
                 href={`${process.env.REACT_APP_API_URL}/${img.image}`}
