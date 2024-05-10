@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
 
-const FooterSchool = ({ events, logo, description, location }) => {
+const FooterSchool = ({
+  events,
+  logo,
+  description,
+  location,
+  email,
+  contactNumber,
+}) => {
   const logoUrl = "/assets/images/Touheed-logo.png";
   const dispatch = useDispatch();
   const {
@@ -31,9 +38,9 @@ const FooterSchool = ({ events, logo, description, location }) => {
             <br />
             <div>{location}</div>
             <br />
-            <div>info@touheed.education</div>
+            <div>{email}</div>
             <br />
-            <div>+91 999 999 9999</div>
+            <div>{contactNumber}</div>
             <br />
           </div>
           <div className="quicklinks-column">
@@ -44,11 +51,10 @@ const FooterSchool = ({ events, logo, description, location }) => {
             <div className="footer-links">
               <Link>Contact Us</Link>
             </div>
-            
+
             <div className="footer-links">
               <Link>Privacy Policy</Link>
             </div>
-           
           </div>
           <div className="ourschools-column">
             <div className="footer-subheading">OUR SCHOOLS</div>

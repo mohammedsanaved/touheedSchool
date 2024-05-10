@@ -114,6 +114,8 @@ const SchoolPage = () => {
           events={school.events}
           description={school.description}
           location={school.location}
+          email={school.school_email}
+          contactNumber={school.contact_no}
         />
       </SchoolPageStyle>
     </>
