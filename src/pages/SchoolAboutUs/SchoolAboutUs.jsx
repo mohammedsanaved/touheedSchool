@@ -33,8 +33,7 @@ const SchoolAboutUs = () => {
 
   return (
     <SchoolAboutUsStyle>
-      
-      <HeaderNew2/>
+      <HeaderNew2 logo_img={school.logo} />
       <BannerSection bg_image={bg} title={"Home/Events"} />
       <div className="breadcrumbs-div mx-auto">
         <p>

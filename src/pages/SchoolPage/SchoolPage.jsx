@@ -118,6 +118,12 @@ const SchoolPage = () => {
           logo={school.logo}
           events={school.events}
           description={school.description}
+<<<<<<< HEAD
+=======
+          location={school.location}
+          email={school.school_email}
+          contactNumber={school.contact_no}
+>>>>>>> c6f06ee8f301dd831c86d0ffb8fc55a5b5bad99a
         />
       </SchoolPageStyle>
     </>
