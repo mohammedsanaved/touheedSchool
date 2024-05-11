@@ -107,6 +107,7 @@ export const ContactInfoSectionStyles = styled.div`
     letter-spacing: 0em;
     border-radius: 5px;
     padding: 10px 10px;
+    margin-top: 20px;
   }
   .form-btn:hover {
     background-color: rgba(12, 173, 200, 134);

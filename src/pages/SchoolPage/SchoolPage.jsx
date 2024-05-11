@@ -87,7 +87,9 @@ const SchoolPage = () => {
               / {school.name}
             </p>
           </div>
+
           <WhyUs image={school.image} description={school.summary} />
+
           <Infrastructure
             infrastructure={school.infrastructure}
             title_name="Infrastructure"
@@ -95,6 +97,7 @@ const SchoolPage = () => {
           {school?.brochure?.map((doc) => (
             <Brouchers doc={doc} key={doc.id} />
           ))}
+
           <div className="latest-event-title">Latest Events</div>
           <div className="event-container mx-auto">
             {school?.events?.map((event) => (
@@ -102,10 +105,12 @@ const SchoolPage = () => {
             ))}
           </div>
           <FAQs faqs={school.faq} />
-          {/* {school?.noticeboard?.map((item) => ( */}
-          <NoticeBoard noticeboard={school.noticeboard} />
-          {/* // ))} */}
+          {school?.noticeboard?.map((item) => (
+            <NoticeBoard key={item.id} item={item} />
+          ))}
+
           <h3 className="contact-us-title">Contact Us</h3>
+
           <ContactInfoSection />
         </div>
 
@@ -113,7 +118,6 @@ const SchoolPage = () => {
           logo={school.logo}
           events={school.events}
           description={school.description}
-          location={school.location}
         />
       </SchoolPageStyle>
     </>
