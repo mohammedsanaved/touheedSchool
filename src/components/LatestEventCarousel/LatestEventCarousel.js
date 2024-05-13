@@ -14,7 +14,7 @@ export const LatestEventsStyle = styled.div`
   .latest-event-img {
     width: 463px;
     height: 439px;
-    border-radius:10px;
+    border-radius: 10px;
     object-fit: cover;
   }
 
@@ -24,7 +24,6 @@ export const LatestEventsStyle = styled.div`
     column-gap: 50px;
     align-items: center;
   }
- 
 
   .event-title {
     font-family: Inter;
@@ -49,113 +48,103 @@ export const LatestEventsStyle = styled.div`
     max-width: 463px;
   }
 
-
   .latest-event-custom-prev,
   .latest-event-custom-next {
     width: 35px;
     height: 35px;
-    background-image:url("/assets/images/right-arrow.png");
+    background-image: url("/assets/images/right-arrow.png");
     background-size: contain;
-    cursor:pointer;
-    position:absolute;
-    top:45%;
-    background-color:white;
-    border:5px solid white;
-    border-radius:50%;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 50%;
     z-index: 1;
   }
-  
 
-  .latest-event-custom-prev{
+  .latest-event-custom-prev {
     transform: scaleX(-1);
-    left:10px;
+    left: 10px;
   }
-  
+
   .latest-event-custom-next {
-    right:10px;
+    right: 10px;
   }
 
-  .latest-event-container{
-    position:relative;
-    max-width:1128px;
-    margin:auto;
-    border:1px solid black;
-    border-radius:10px;
+  .latest-event-container {
+    position: relative;
+    max-width: 1128px;
+    margin: auto;
+    // border:1px solid black;
+    // background-color: lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
   }
-.event-container{
-  max-width:979px;
-  margin:auto;
-}
+  .event-container {
+    max-width: 979px;
+    margin: auto;
+  }
 
-.swiper.swiper-initialized.swiper-horizontal.mySwiper{
-  padding-top:50px;
-  padding-bottom:50px;
-}
+  .swiper.swiper-initialized.swiper-horizontal.mySwiper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
-
-@media screen and (max-width: 900px) {
-.event-carousel-container{
- padding-left:30px;
- padding-right:30px;
-    align-items: center;
-}
-
-.swiper-wrapper{
-  align-items: center;
-}
-
- .latest-event-img {
-  width: 300px;
-    height: 300px;
-
-}
-}
-
-@media screen and (max-width: 600px) {
-  .event-carousel-container{
-   flex-direction:column;
+  @media screen and (max-width: 900px) {
+    .event-carousel-container {
+      padding-left: 30px;
+      padding-right: 30px;
       align-items: center;
-  }
-  
-  .swiper-wrapper{
-    align-items: flex-start;
-  }
-  
-   .latest-event-img {
-    width: 300px;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .latest-event-img {
+      width: 300px;
       height: 300px;
-  
-  }
-  .latest-event-custom-prev,
-  .latest-event-custom-next {
-    display:none;
-  }
-  img.latest-event-img{
-    margin-bottom:30px;
-    width: 100%;
+    }
   }
 
-  .latest-event-container{
-    border:none;
-  }
+  @media screen and (max-width: 600px) {
+    .event-carousel-container {
+      flex-direction: column;
+      align-items: center;
+    }
 
-
-  }
-
-  .swiper-wrapper{
-    align-items: center;
-  }
-
-
-
-  @media only screen and (max-width: 600px) {
-    .swiper-wrapper{
+    .swiper-wrapper {
       align-items: flex-start;
     }
 
+    .latest-event-img {
+      width: 300px;
+      height: 300px;
+    }
+    .latest-event-custom-prev,
+    .latest-event-custom-next {
+      display: none;
+    }
+    img.latest-event-img {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    .latest-event-container {
+      border: none;
+    }
   }
 
+  .swiper-wrapper {
+    align-items: center;
+  }
 
+  @media only screen and (max-width: 600px) {
+    .swiper-wrapper {
+      align-items: flex-start;
+    }
+  }
 
   h3.event-school-name {
     font-family: Inter;
@@ -170,6 +159,5 @@ export const LatestEventsStyle = styled.div`
     border-radius: 10px;
     color: white;
     margin-bottom: 20px;
-}
-
+  }
 `;

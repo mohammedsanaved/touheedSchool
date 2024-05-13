@@ -16,7 +16,6 @@ const AdmissionPage = () => {
     (state) => state.schoolAdmission.admissionDetail
   );
 
-  // Assuming only one admission detail is returned
   const admission =
     admissionDetails && admissionDetails.length > 0
       ? admissionDetails[0]
@@ -24,7 +23,7 @@ const AdmissionPage = () => {
 
   const renderDocumentRequirements = () => {
     if (!admission || !admission.documents_required) return null;
-    return admission.documents_required.split(".").map((point, index) => (
+    return admission.documents_required.split("\n").map((point, index) => (
       <p key={index} className="doc-text mx-auto">
         {index + 1}. {point}
       </p>
@@ -33,19 +32,23 @@ const AdmissionPage = () => {
 
   return (
     <AdmissionPageStyles>
-      <div className="admission-header d-flex justify-content-center align-items-center">
-        <Link to={"/"}>
-          <img
-            src="/assets/images/AdmissionLogo.png"
-            alt=""
-            className="logo-img"
-          />
-        </Link>
-        <div className="admission-title">Touheed English Medium School</div>
-      </div>
-
       {admission && (
         <>
+          <div className="admission-header d-flex justify-content-center align-items-center">
+            <Link to={"/"}>
+              {admission.school_detail && (
+                <img
+                  src={`${process.env.REACT_APP_API_URL}/${admission.school_detail.logo}`}
+                  alt={admission.school_detail.name}
+                  className="logo-img"
+                />
+              )}
+            </Link>
+            <div className="admission-title">
+              {admission.school_detail && admission.school_detail.name}
+            </div>
+          </div>
+
           <p className="fresh-admission-text mx-auto">
             {admission.description}
           </p>
@@ -65,7 +68,7 @@ const AdmissionPage = () => {
           </div>
 
           <div className="document-req-div mx-auto">
-            <h3 className="document-req-text">Document Required</h3>.
+            <h3 className="document-req-text">Document Required</h3>
             {renderDocumentRequirements()}
           </div>
 
