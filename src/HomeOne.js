@@ -40,8 +40,7 @@ export default function HomeOne() {
       {/* Header */}
       {/* <Header /> */}
       {/* <HeaderTwo /> */}
-      <HeaderNew2/>
-      
+      <HeaderNew2 />
 
       {/* Hero Slider */}
       {/* <HeroSlider /> */}
@@ -49,7 +48,7 @@ export default function HomeOne() {
 
       {/* About Area */}
       <AboutUs />
-        
+
       {/* About Us 2 */}
       {/* <AboutUsTwo /> */}
 
@@ -93,8 +92,7 @@ export default function HomeOne() {
       {/* <NewsletterForm /> */}
 
       {/* Footer */}
-      
-      <FooterNew/>
+      <FooterNew />
     </div>
   );
 }

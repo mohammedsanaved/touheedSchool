@@ -14,20 +14,21 @@ import { HeroSlideStyle } from "./styles/HeroSlideStyle";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import GreenButton from "./GreenButton/GreenButton";
 import { useDispatch, useSelector } from "react-redux";
-import { allSchoolsListAction } from "../actions/LandingPageActions";
+// import { allSchoolsListAction } from "../actions/LandingPageActions";
 import { Link } from "react-router-dom";
 import { EffectCreative } from 'swiper/modules';
+import { schoolList } from "../actions/schoolActions";
 
 const HeroSlide = () => {
   const dispatch = useDispatch();
   const {
-    allschools,
+    schools,
     loading: schoolLoading,
     error: errorMsg,
-  } = useSelector((state) => state.allSchoolsList);
+  } = useSelector((state) => state.schoolList);
 
   useEffect(() => {
-    dispatch(allSchoolsListAction());
+    dispatch(schoolList());
   }, [dispatch]);
 
   return (
@@ -47,23 +48,21 @@ const HeroSlide = () => {
                 disableOnInteraction: false,
               }}
               grabCursor={true}
-              effect={'creative'}
+              effect={"creative"}
               creativeEffect={{
                 prev: {
                   shadow: true,
-                  translate: ['-100%', 0, 0],
-                  
+                  translate: ["-100%", 0, 0],
                 },
                 next: {
-                  translate: ['0%', 0, 0],
-                  
+                  translate: ["0%", 0, 0],
                 },
                 speed: 1000,
               }}
               modules={[Pagination, Navigation, Autoplay, EffectCreative]}
               className="mySwiper3"
             >
-              {allschools?.rows?.map((img) => (
+              {schools?.rows?.map((img) => (
                 <SwiperSlide key={img.id}>
                   <div
                     className="image-container d-flex align-items-center"
@@ -76,7 +75,11 @@ const HeroSlide = () => {
                       <h1 className="img-title">{img.name}</h1>
                       <p className="img-text mx-auto">{img.description}</p>
                       <div className="school-buttons d-flex justify-content-between mx-auto">
-                        <Link to={`/schooldetail/${img.id}`}>
+                        <Link
+                          to={`/schooldetail/${img.slug}`}
+                          state={{ id: img.id }}
+                        >
+                          {/* /schooldetail/${school.slug}`} state={{ id: school.id }} */}
                           <GreenButton text="Know More" />
                         </Link>
                         <GreenButton text="Enquire Page" />

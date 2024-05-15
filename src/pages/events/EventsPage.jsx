@@ -9,78 +9,86 @@ import { useDispatch, useSelector } from "react-redux";
 import { listEvent } from "../../actions/eventActions.js";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 
 const Events = () => {
-  // const bg =
-  ("https://images.unsplash.com/photo-1558008258-3256797b43f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHNjaG9vbCUyMGV2ZW50fGVufDB8fDB8fHww");
-
   const bg = "./assets/images/eventspageimage.png";
 
   const dispatch = useDispatch();
   const eventList = useSelector((state) => state.eventList);
-  const { loading, error, events } = eventList;
+  const { loading, error, events, totalPages } = eventList;
+  // console.log(totalPages, "total");
+  console.log(eventList, "Events");
   const [id, setId] = useState();
+  const [limit] = useState(1);
+  const [page] = useState(1);
 
-  // useEffect(() => {
-  //   dispatch(listEvent());
-  // }, [dispatch]);
-  console.warn(eventList, "eventList");
-  // const dispatch = useDispatch();
-  const {
-    allschools,
-    // loading: schoolLoading,
-    // error: errorMsg,
-  } = useSelector((state) => state.allSchoolsList);
+  const { allschools } = useSelector((state) => state.allSchoolsList);
 
   useEffect(() => {
-    dispatch(listEvent());
+    dispatch(listEvent(page, limit));
     dispatch(allSchoolsListAction());
-  }, [dispatch]);
+  }, [dispatch, page, limit]);
 
+  const handleNextPage = () => {
+    if (page < totalPages) {
+      dispatch(listEvent(page + 1, limit));
+    }
+  };
 
-  const [displayCount, setDisplayCount] = useState(4);
-
- 
-  const handleLoadMore = () => {
-    
-    setDisplayCount(prevCount => prevCount + 4);
+  const handlePreviousPage = () => {
+    if (page > 1) {
+      dispatch(listEvent(page - 1, limit)); // Fetch previous page of events
+    }
   };
 
   return (
     <>
       <EventsStyles>
-        
-        <HeaderNew2/>
+        <HeaderNew2 />
         <BannerSection bg_image={bg} title={"Home/Events"} />
         <div className="event-page-div mx-auto w-100">
-
-        <div className="d-flex w-100 select-div">
-          <div className="w-100 select-school-text">Select the School Here : </div>
-          <SortByEvents allschools={allschools} setId={setId} />
+          <div className="d-flex w-100 select-div">
+            <div className="w-100 select-school-text">
+              Select the School Here :{" "}
+            </div>
+            <SortByEvents allschools={allschools} setId={setId} />
           </div>
           {loading ? (
-  <p>Loading...</p>
-) : error ? (
-  <p>Error: {error}</p>
-) : (
-  <>
-    {events?.rows
-      ?.filter((event) => !id || id === event?.school_id) // Filter events based on selected school ID
-      .slice(0, displayCount) // Slice the filtered events
-      .map((event) => (
-        <SingleEvent key={event.id} event={event} />
-      ))}
-    {/* Render "Load More" button if there are more events to load */}
-    {displayCount < events?.rows?.filter((event) => !id || id === event?.school_id).length && (
-      <button onClick={handleLoadMore} className="load-more-btn">Load More</button>
-    )}
-  </>
-)}
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error}</p>
+          ) : (
+            <>
+              {events?.rows?.map((event) => (
+                <SingleEvent key={event.id} event={event} />
+              ))}
+              {/* Pagination buttons */}
+              <div className="pagination-buttons">
+                <button
+                  onClick={handlePreviousPage}
+                  disabled={page === 1}
+                  className="pagination-button"
+                >
+                  <IoIosArrowBack />
+                  Previous
+                </button>
+                <span>
+                  {page} / {totalPages}
+                </span>
+                <button
+                  onClick={handleNextPage}
+                  // disabled={page === totalPages}
+                  className="pagination-button"
+                >
+                  Next
+                  <IoIosArrowForward />
+                </button>
+              </div>
+            </>
+          )}
         </div>
-        
       </EventsStyles>
       <FooterNew />
     </>

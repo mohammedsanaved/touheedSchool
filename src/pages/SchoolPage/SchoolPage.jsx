@@ -25,7 +25,7 @@ import NoticeBoard from "./components/NoticeBoard";
 // import "./SchoolPage.js";
 import GreenButton from "../../components/GreenButton/GreenButton";
 import FooterNew from "../../components/FooterNew/FooterNew";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
 import { SchoolPageStyle } from "./SchoolPageStyle";
 import FooterSchool from "../../components/FooterSchool/FooterSchool";
@@ -35,7 +35,9 @@ const SchoolPage = () => {
   // const bg =
   //   "https://images.unsplash.com/photo-1558008258-3256797b43f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHNjaG9vbCUyMGV2ZW50fGVufDB8fDB8fHww";
 
-  const { id } = useParams();
+  // const { id } = useParams();
+  let { state } = useLocation();
+  let { id } = state;
   const dispatch = useDispatch();
   const schoolDetail = useSelector((state) => state.schoolDetails);
   const { loading, school } = schoolDetail;
@@ -70,7 +72,12 @@ const SchoolPage = () => {
                 {school.description}
               </div>
               <div className="school-buttons d-flex justify-content-center mx-auto">
-                <Link to={`/school-about-us/${id}`}>
+                <Link
+                  to={`/school-about-us/${school.slug}`}
+                  // to={`/schooldetail/${img.slug}`}
+                  state={{ id: school.id }}
+                >
+                  {console.log(school, "Changes")}
                   <GreenButton text="Know More" />
                 </Link>
                 <Link to={`/admission-page/${id}`}>

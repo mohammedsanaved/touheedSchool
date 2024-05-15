@@ -8,28 +8,24 @@ import AdditionalTabs from '../../components/AdditionalTabs/AdditionalTabs.jsx';
 import Infrastructure from '../SchoolPage/components/Infrastructure.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { schoolAboutUs } from '../../actions/schoolActions.js';
-import { useParams } from 'react-router-dom';
-import FooterSchool from '../../components/FooterSchool/FooterSchool.jsx';
-import HeaderNew2 from '../../components/HeaderNew2/HeaderNew2.jsx';
+import { useLocation } from "react-router-dom";
+import FooterSchool from "../../components/FooterSchool/FooterSchool.jsx";
+import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 
 const SchoolAboutUs = () => {
-
   const bg = "/assets/images/eventspageimage.png";
-  
-  const {
-    id
-  } = useParams();
+
+  let { state } = useLocation();
+  let { id } = state;
+  console.log(id, "id AboutUs");
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(schoolAboutUs(id))
-  }, [dispatch,id])
+    dispatch(schoolAboutUs(id));
+  }, [dispatch, id]);
 
-  const  schoolAboutUsdata= useSelector(state=> state.schoolAboutUs);
-  const {school, loading} = schoolAboutUsdata
+  const schoolAboutUsdata = useSelector((state) => state.schoolAboutUs);
+  const { school, loading } = schoolAboutUsdata;
   console.log(school, "Data from schoolAboutUs");
-
-
-
 
   return (
     <SchoolAboutUsStyle>
@@ -65,6 +61,6 @@ const SchoolAboutUs = () => {
       />
     </SchoolAboutUsStyle>
   );
-}
+};
 
 export default SchoolAboutUs
