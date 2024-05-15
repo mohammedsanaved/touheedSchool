@@ -41,52 +41,54 @@ const HeroSlide = () => {
             <p>Error: {errorMsg}</p>
           ) : (
             <Swiper
-  pagination={{ clickable: true }}
-  loop={true}
-  autoplay={{
-    delay: 5000,
-    disableOnInteraction: false,
-  }}
-  grabCursor={true}
-  effect="creative"
-  creativeEffect={{
-    prev: {
-      shadow: true,
-      translate: ['-100%', 0, 0],
-    },
-    next: {
-      translate: ['0%', 0, 0],
-    },
-    speed: 1000,
-  }}
-  modules={[Pagination, Navigation, Autoplay, EffectCreative]}
-  className="mySwiper3"
->
-  {schools?.rows?.map((img) => (
-    <SwiperSlide key={img.id}>
-      <div
-        className="image-container d-flex align-items-center"
-        style={{
-          backgroundImage: `url(${process.env.REACT_APP_API_URL}/${img.image})`,
-        }}
-      >
-        <div className="mx-auto banner-text-container">
-          <h1 className="img-title">{img.name}</h1>
-          <p className="img-text mx-auto">{img.description}</p>
-          <div className="school-buttons d-flex justify-content-between mx-auto">
-            <Link
-              to={`/schooldetail/${img.slug}`}
-              state={{ id: img.id }}
+              pagination={{ clickable: true }}
+              loop={true}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              grabCursor={true}
+              effect={"creative"}
+              creativeEffect={{
+                prev: {
+                  shadow: true,
+                  translate: ["-100%", 0, 0],
+                },
+                next: {
+                  translate: ["0%", 0, 0],
+                },
+                speed: 1000,
+              }}
+              modules={[Pagination, Navigation, Autoplay, EffectCreative]}
+              className="mySwiper3"
             >
-              <GreenButton text="Know More" />
-            </Link>
-            <GreenButton text="Enquire Page" />
-          </div>
-        </div>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+              {schools?.rows?.map((img) => (
+                <SwiperSlide key={img.id}>
+                  <div
+                    className="image-container d-flex align-items-center"
+                    key={img.id}
+                    style={{
+                      backgroundImage: `url(${process.env.REACT_APP_API_URL}/${img.image})`,
+                    }}
+                  >
+                    <div className="mx-auto banner-text-container">
+                      <h1 className="img-title">{img.name}</h1>
+                      <p className="img-text mx-auto">{img.description}</p>
+                      <div className="school-buttons d-flex justify-content-between mx-auto">
+                        <Link
+                          to={`/schooldetail/${img.slug}`}
+                          state={{ id: img.id }}
+                        >
+                          {/* /schooldetail/${school.slug}`} state={{ id: school.id }} */}
+                          <GreenButton text="Know More" />
+                        </Link>
+                        <GreenButton text="Enquire Page" />
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           )}
           <div className="banner-custom-prev"></div>
           <div className="banner-custom-next"></div>

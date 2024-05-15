@@ -44,9 +44,6 @@ display: -webkit-box;
   
     height: 750px;
     background-size:cover;
-
-    
-
   }
 
    
@@ -111,9 +108,9 @@ display: -webkit-box;
   align-items: center;
 }
 
-.banner-custom-prev,.banner-custom-next{
-  display:none;
-}
+// .banner-custom-prev,.banner-custom-next{
+//   display:none;
+// }
 .banner-text-container{
   width: 90%;
 }
@@ -134,7 +131,6 @@ display: -webkit-box;
 .image-container{
   animation: fadeUp 0.5s ease;
 }
-
 
 @keyframes fadeUp {
   from {
@@ -160,7 +156,5 @@ display: -webkit-box;
   max-width:410px;
   width:100%;
 }
-
-
 
 `;
