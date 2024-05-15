@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 
-export const SchoolAboutUsStyle = styled.div`
-
+export const BreadCrumbsStyles = styled.div`
 .breadcrumbs-div{
     max-width: 1207px;
     width: 100%;
@@ -48,7 +47,6 @@ color: rgba(4, 156, 80, 1);
 .about-us .about-content p.about-para{
     text-align:justify;
 }
-
 
 
 `

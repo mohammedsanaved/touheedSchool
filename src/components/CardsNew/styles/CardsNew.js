@@ -76,6 +76,7 @@ export const CardsNewStyles = styled.div`
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 4;
+    text-align:justify;
   }
   .cards-button {
     margin-bottom: 20px;

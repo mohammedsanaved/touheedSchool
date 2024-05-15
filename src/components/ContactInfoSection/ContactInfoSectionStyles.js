@@ -80,6 +80,7 @@ export const ContactInfoSectionStyles = styled.div`
     font-weight: 300;
     line-height: 24px;
     letter-spacing: 0em;
+    color: rgba(0, 0, 0, 0.58);
   }
 
   .get-in-touch-form-input::placeholder {
@@ -151,4 +152,28 @@ export const ContactInfoSectionStyles = styled.div`
   .form-container-div{
     margin-bottom:15px;
   }
+
+
+  select.get-in-touch-form-input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image:url("./assets/images/down-arrow.png");
+    background-repeat: no-repeat;
+    background-position-x: 290px;
+    background-position-y: 8px;
+    background-size: 7%;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    select.get-in-touch-form-input{
+      -webkit-appearance: auto;
+    -moz-appearance:auto;
+    appearance: auto;
+    background-image:none;
+    }
+
+  }
+
+
 `;

@@ -390,7 +390,7 @@ margin-bottom:30px;
 font-size: 20px;
 font-weight: 400;
 line-height: 24.2px;
-text-align: left;
+text-align: justify;
 color:rgba(98, 95, 95, 1);
 margin-top:30px;
 }

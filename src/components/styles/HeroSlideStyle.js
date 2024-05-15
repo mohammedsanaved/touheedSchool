@@ -31,6 +31,7 @@ text-align: center;
 color:white;
 max-width:410px;
 margin-bottom:40px;
+text-align:justify;
 
 display: -webkit-box;
   -webkit-box-orient: vertical;

@@ -66,7 +66,7 @@ const SchoolPage = () => {
 
             <div className="video-banner-text mx-auto position-absolute">
               <div className="text-center school-title">{school.name}</div>
-              <div className="text-center school-description">
+              <div className="school-description">
                 {school.description}
               </div>
               <div className="school-buttons d-flex justify-content-center mx-auto">
@@ -87,9 +87,7 @@ const SchoolPage = () => {
               / {school.name}
             </p>
           </div>
-
           <WhyUs image={school.image} description={school.summary} />
-
           <Infrastructure
             infrastructure={school.infrastructure}
             title_name="Infrastructure"
@@ -97,7 +95,6 @@ const SchoolPage = () => {
           {school?.brochure?.map((doc) => (
             <Brouchers doc={doc} key={doc.id} />
           ))}
-
           <div className="latest-event-title">Latest Events</div>
           <div className="event-container mx-auto">
             {school?.events?.map((event) => (
@@ -105,12 +102,10 @@ const SchoolPage = () => {
             ))}
           </div>
           <FAQs faqs={school.faq} />
-          {school?.noticeboard?.map((item) => (
-            <NoticeBoard key={item.id} item={item} />
-          ))}
-
+          {/* {school?.noticeboard?.map((item) => ( */}
+          <NoticeBoard noticeboard={school.noticeboard} />
+          {/* // ))} */}
           <h3 className="contact-us-title">Contact Us</h3>
-
           <ContactInfoSection />
         </div>
 

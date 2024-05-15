@@ -42,6 +42,7 @@ export const LatestEventsStyle = styled.div`
     line-height: 24.2px;
     text-align: left;
     color: rgba(141, 138, 138, 1);
+    text-align:justify;
   }
 
   .event-text-sec {

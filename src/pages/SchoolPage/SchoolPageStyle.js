@@ -25,6 +25,7 @@ display: -webkit-box;
 -webkit-box-orient: vertical;
 overflow: hidden;
 -webkit-line-clamp: 5;
+text-align:justify;
 }
 
 .video-element{

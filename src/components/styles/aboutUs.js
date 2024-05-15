@@ -24,6 +24,7 @@ export const Styles = styled.div`
     font-size: 20px;
     font-weight: 500;
     line-height: 28px;
+    text-align:justify;
     
     color: rgba(98, 95, 95, 1);
     display: -webkit-box;

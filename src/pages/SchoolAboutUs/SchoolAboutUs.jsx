@@ -11,6 +11,7 @@ import { schoolAboutUs } from '../../actions/schoolActions.js';
 import { useParams } from 'react-router-dom';
 import FooterSchool from '../../components/FooterSchool/FooterSchool.jsx';
 import HeaderNew2 from '../../components/HeaderNew2/HeaderNew2.jsx';
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs.jsx';
 
 const SchoolAboutUs = () => {
 
@@ -41,6 +42,11 @@ const SchoolAboutUs = () => {
           School
         </p>
       </div>
+
+<BreadCrumbs/>
+
+
+
       <AboutUsTwo
         description={school.description}
         image={school.image}
