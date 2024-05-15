@@ -49,5 +49,34 @@ color: rgba(4, 156, 80, 1);
 }
 
 
+.breadcrumb{
+    max-width:1207px;
+    margin:auto;
+    text-transform: uppercase;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.breadcrumb-item a{
+    text-transform: uppercase;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: left;
+    color: rgba(26, 48, 129, 1);
+}
+
+li.breadcrumb-item.active{
+    text-transform: uppercase;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: left;
+}
+
+
+
 `
 ;

@@ -13,6 +13,7 @@ import { detailEvent } from "../../actions/eventActions.js";
 import EventCarousel from "../../components/EventCarousel.jsx";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs.jsx";
 
 const EventsDetails = () => {
   const { id } = useParams();
@@ -36,9 +37,10 @@ const EventsDetails = () => {
         <HeaderNew2/>
         <BannerSection bg_image={bg}  />
 
+      <BreadCrumbs/>
         
         <Container>
-        <div className="bread-crumbs">Home/<span className="event-details-text">Event Details</span></div>
+        
           <Row className="mt-5 d-flex justify-content-around gap-4 carousel-details-container">
             <Col>
            

@@ -32,6 +32,7 @@ import LatestEventCarousel from "./components/LatestEventCarousel/LatestEventCar
 import FooterNew from "./components/FooterNew/FooterNew.jsx";
 import HeaderNew from "./components/HeaderNew/HeaderNew.jsx";
 import HeaderNew2 from "./components/HeaderNew2/HeaderNew2.jsx";
+import BreadCrumbs from "./components/BreadCrumbs/BreadCrumbs.jsx";
 // import Cards from "./components/Cards";
 
 export default function HomeOne() {
@@ -40,16 +41,17 @@ export default function HomeOne() {
       {/* Header */}
       {/* <Header /> */}
       {/* <HeaderTwo /> */}
-      <HeaderNew2/>
-      
+      <HeaderNew2 />
 
       {/* Hero Slider */}
       {/* <HeroSlider /> */}
       <HeroSlide />
 
+      <BreadCrumbs/>
+
       {/* About Area */}
       <AboutUs />
-        
+
       {/* About Us 2 */}
       {/* <AboutUsTwo /> */}
 
@@ -93,8 +95,7 @@ export default function HomeOne() {
       {/* <NewsletterForm /> */}
 
       {/* Footer */}
-      
-      <FooterNew/>
+      <FooterNew />
     </div>
   );
 }

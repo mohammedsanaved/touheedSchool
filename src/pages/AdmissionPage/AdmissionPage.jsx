@@ -79,6 +79,5 @@ const AdmissionPage = () => {
       )}
     </AdmissionPageStyles>
   );
-};
-
-export default AdmissionPage;
+}
+export default AdmissionPage

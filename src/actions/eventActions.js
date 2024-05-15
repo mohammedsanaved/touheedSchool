@@ -9,12 +9,12 @@ import {
   EVENT_DETAIL_FAIL,
 } from "../constants/eventConstants";
 
-export const listEvent = () => async (dispatch) => {
+export const listEvent = (page, limit) => async (dispatch) => {
   try {
     dispatch({ type: EVENT_LIST_REQUEST });
 
     const { data } = await axios.get(
-      `${process.env.REACT_APP_API_URL}/api/events/events-np/list`
+      `${process.env.REACT_APP_API_URL}/api/events/events-details?page=${page}&limit=${limit}`
     );
 
     dispatch({ type: EVENT_LIST_SUCCESS, payload: data });

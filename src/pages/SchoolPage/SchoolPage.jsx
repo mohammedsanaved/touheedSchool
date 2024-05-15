@@ -11,7 +11,7 @@ import HeaderTwo from "../../components/HeaderTwo";
 import EventCarousel from "../../components/EventCarousel";
 import EventDetailsData from "../../components/EventDetailsData";
 import WhyUs from "./components/WhyUs";
-
+// import LazyLoad from 'react-lazy-load';
 import { Container, Row, Col } from "react-bootstrap";
 import bg from "../../assets/SchoolBgImage.png";
 import schoolVideo from "../../assets/schoolVideo.mp4";
@@ -25,17 +25,21 @@ import NoticeBoard from "./components/NoticeBoard";
 // import "./SchoolPage.js";
 import GreenButton from "../../components/GreenButton/GreenButton";
 import FooterNew from "../../components/FooterNew/FooterNew";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
 import { SchoolPageStyle } from "./SchoolPageStyle";
 import FooterSchool from "../../components/FooterSchool/FooterSchool";
 import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
+
 
 const SchoolPage = () => {
   // const bg =
   //   "https://images.unsplash.com/photo-1558008258-3256797b43f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHNjaG9vbCUyMGV2ZW50fGVufDB8fDB8fHww";
 
-  const { id } = useParams();
+  // const { id } = useParams();
+  let { state } = useLocation();
+  let { id } = state;
   const dispatch = useDispatch();
   const schoolDetail = useSelector((state) => state.schoolDetails);
   const { loading, school } = schoolDetail;
@@ -45,24 +49,50 @@ const SchoolPage = () => {
   }, [dispatch, id]);
   return (
     <>
+
+
+   
+
+
       <SchoolPageStyle>
         {/* <HeaderTwo logo={school.logo} /> */}
         <HeaderNew2 logo_img={school.logo} />
         <div className="">
           <div className="position-relative school-details-video">
+            {loading ? (
+           <div>
+           Loading.....
+         </div>  
+          ) : (
             <video
+            className="w-100 video-element"
+            // style={{  }}
+            autoPlay
+            muted
+            loop
+          >
+           
+            <source
+              src={`${process.env.REACT_APP_API_URL}/${school.video}`}
+              type="video/mp4"
+            />
+          </video>)
+              
+            }
+            {/* <video
               className="w-100 video-element"
               // style={{  }}
               autoPlay
               muted
               loop
             >
-              {/* <source src={schoolVideo} type="video/mp4" /> */}
+             
               <source
                 src={`${process.env.REACT_APP_API_URL}/${school.video}`}
                 type="video/mp4"
               />
-            </video>
+            </video> */}
+            
 
             <div className="video-banner-text mx-auto position-absolute">
               <div className="text-center school-title">{school.name}</div>
@@ -70,7 +100,12 @@ const SchoolPage = () => {
                 {school.description}
               </div>
               <div className="school-buttons d-flex justify-content-center mx-auto">
-                <Link to={`/school-about-us/${id}`}>
+                <Link
+                  to={`/school-about-us/${school.slug}`}
+                  // to={`/schooldetail/${img.slug}`}
+                  state={{ id: school.id }}
+                >
+                  {console.log(school, "Changes")}
                   <GreenButton text="Know More" />
                 </Link>
                 <Link to={`/admission-page/${id}`}>
@@ -79,14 +114,12 @@ const SchoolPage = () => {
               </div>
             </div>
           </div>
-          <div className="breadcrumbs-div mx-auto">
-            <p>
-              <span className="color-purple">
-                <Link to={"/"}>Touheed</Link>
-              </span>
-              / {school.name}
-            </p>
-          </div>
+        
+
+<BreadCrumbs/>
+
+
+
           <WhyUs image={school.image} description={school.summary} />
           <Infrastructure
             infrastructure={school.infrastructure}

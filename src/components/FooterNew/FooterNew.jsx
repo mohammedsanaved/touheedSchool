@@ -3,18 +3,19 @@ import { FooterNewStyles } from "./FooterNewStyles.js";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
+import { schoolList } from "../../actions/schoolActions.js";
 
 const FooterNew = () => {
   const logoUrl = "/assets/images/Touheed-logo.png";
   const dispatch = useDispatch();
   const {
-    allschools,
+    schools,
     loading: schoolLoading,
     error: errorMsg,
-  } = useSelector((state) => state.allSchoolsList);
+  } = useSelector((state) => state.schoolList);
 
   useEffect(() => {
-    dispatch(allSchoolsListAction());
+    dispatch(schoolList());
   }, [dispatch]);
 
   return (
@@ -43,17 +44,18 @@ const FooterNew = () => {
             <div className="footer-links">
               <Link>Contact Us</Link>
             </div>
-           
+
             <div className="footer-links">
               <Link>Privacy Policy</Link>
             </div>
-           
           </div>
           <div className="ourschools-column">
             <div className="footer-subheading">OUR SCHOOLS</div>
-            {allschools?.rows?.map((item, i) => (
+            {schools?.rows?.map((item, i) => (
               <div className="footer-links">
-                <Link to={`/schooldetail/${item.id}`}>{item.name}</Link>
+                <Link to={`/schooldetail/${item.slug}`} state={{ id: item.id }}>
+                  {item.name}
+                </Link>
               </div>
             ))}
           </div>

@@ -227,4 +227,9 @@ export const AdmissionPageStyles = styled.div`
       padding: 25px;
     }
   }
+
+
+  .logo-img{
+    max-width:80px;
+  }
 `;
