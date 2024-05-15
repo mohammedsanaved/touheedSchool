@@ -21,14 +21,13 @@ const BoardManagement = () => {
 
   return (
     <BoardManagementStyles>
-      
-      <HeaderNew2/>
+      <HeaderNew2 />
 
       <BannerSection bg_image={bg} />
 
       <h1 className="page-title">Board Of Management</h1>
 
-      <div className="board-container d-flex mx-auto flex-wrap">
+      <div className="board-container d-flex mx-auto flex-wrap justify-content-center">
         {loading ? (
           <div>Loading...</div>
         ) : error ? (
