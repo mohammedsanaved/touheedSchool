@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import BannerSection from "../../components/BannerSection/BannerSection.jsx";
 import SingleEvent from "../../components/SingleEvent/SingleEvent.jsx";
 import { EventsStyles } from "./EventsStyles.js";
-import HeaderTwo from "../../components/HeaderTwo.js";
-import Footer from "../../components/Footer.js";
 import SortByEvents from "../../components/SortByEvents.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { listEvent } from "../../actions/eventActions.js";
@@ -15,16 +13,12 @@ import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs.jsx";
 
 const Events = () => {
   const bg = "./assets/images/eventspageimage.png";
-
   const dispatch = useDispatch();
   const eventList = useSelector((state) => state.eventList);
   const { loading, error, events, totalPages } = eventList;
-  // console.log(totalPages, "total");
-  console.log(eventList, "Events");
   const [id, setId] = useState();
-  const [limit] = useState(1);
-  const [page] = useState(1);
-
+  const [limit, setLimit] = useState(1);
+  const [page, setPage] = useState(1);
   const { allschools } = useSelector((state) => state.allSchoolsList);
 
   useEffect(() => {
@@ -34,14 +28,19 @@ const Events = () => {
 
   const handleNextPage = () => {
     if (page < totalPages) {
-      dispatch(listEvent(page + 1, limit));
+      setPage(page + 1);
     }
   };
 
   const handlePreviousPage = () => {
     if (page > 1) {
-      dispatch(listEvent(page - 1, limit)); // Fetch previous page of events
+      setPage(page - 1);
     }
+  };
+
+  const handleLimitChange = (e) => {
+    setLimit(e.target.value);
+    setPage(3); // Reset page to 1 when limit changes
   };
 
   return (
@@ -60,6 +59,14 @@ const Events = () => {
             </div>
             <SortByEvents allschools={allschools} setId={setId} />
           </div>
+          <div className="pagination-limit">
+            <label htmlFor="limit">Items per page:</label>
+            <select id="limit" value={limit} onChange={handleLimitChange}>
+              <option value="2">2</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+            </select>
+          </div>
           {loading ? (
             <p>Loading...</p>
           ) : error ? (
@@ -76,19 +83,17 @@ const Events = () => {
                   disabled={page === 1}
                   className="pagination-button"
                 >
-                  <IoIosArrowBack />
-                  Previous
+                  <IoIosArrowBack /> Previous
                 </button>
                 <span>
                   {page} / {totalPages}
                 </span>
                 <button
                   onClick={handleNextPage}
-                  // disabled={page === totalPages}
+                  disabled={page === totalPages}
                   className="pagination-button"
                 >
-                  Next
-                  <IoIosArrowForward />
+                  Next <IoIosArrowForward />
                 </button>
               </div>
             </>

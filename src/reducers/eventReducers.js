@@ -29,26 +29,30 @@ import {
 //       return state;
 //   }
 // };
-export const eventListReducer = (
-  state = { events: [], loading: false, error: null, page: 1, totalPages: 5 }, // Ensure page and totalPages are initialized
-  action
-) => {
+const initialState = {
+  events: [],
+  loading: false,
+  error: null,
+  page: 1, // Initialize page to 1
+  limit: 2, // Initialize limit (items per page)
+  totalPages: 4,
+};
+
+export const eventListReducer = (state = initialState, action) => {
   switch (action.type) {
     case EVENT_LIST_REQUEST:
       return { ...state, loading: true, error: null };
-
     case EVENT_LIST_SUCCESS:
       return {
         ...state,
         loading: false,
-        events: action.payload, // Assuming events is an array
+        events: action.payload,
         totalPages: action.payload.totalPages,
         page: action.payload.page,
+        limit: action.payload.limit, // Store the limit value from the action payload
       };
-
     case EVENT_LIST_FAIL:
       return { ...state, loading: false, error: action.payload };
-
     default:
       return state;
   }

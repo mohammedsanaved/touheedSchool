@@ -12,9 +12,8 @@ const ContactUsPage2 = () => {
 
   return (
     <ContactUsPage2Styles>
-      
-      <HeaderNew2/>
-     
+      <HeaderNew2 />
+
       <BannerSection bg_image={bg} title={"Home/Events"} />
 
       <ContactInfoSection />
@@ -26,6 +25,7 @@ const ContactUsPage2 = () => {
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
+          title="Location"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>

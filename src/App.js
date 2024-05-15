@@ -55,7 +55,7 @@ function App() {
         <Route path="/event-details/:id" element={<EventDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Register />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/faq" element={<Faq />} />
         <Route path="/404" element={<PageNotFound />} />
         <Route path="/coming-soon" element={<ComingSoon />} />

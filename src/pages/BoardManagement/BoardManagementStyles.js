@@ -21,45 +21,44 @@ export const BoardManagementStyles = styled.div`
   .member-name {
     font-family: Inter;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 29.05px;
     text-align: center;
-    color: black;
+    color: #222831;
     margin-top: 10px;
     margin-bottom: 10px;
   }
   .member-title {
     font-family: Inter;
-font-size: 21px;
-font-weight: 400;
-line-height: 29.05px;
-text-align: center;
-color:black;
-margin-top:10px;
-margin-bottom:0px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29.05px;
+    text-align: center;
+    color: #9db2bf;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
 
-}
-
-
-.member-description{
+  .member-description {
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
     line-height: 19.36px;
     text-align: center;
-    color: black;
+    color: #393e46;
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
   .board-member-div {
     max-width: 191px;
-    width: 100%;
+    width: 100%;393E46
     margin: auto;
   }
 
   .member-img {
     width: 90%;
-    aspect-ratio: 3/3;
+    aspect-ratio: 4/5;
+    border-radius: 6%;
   }
 `;
