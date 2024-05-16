@@ -57,7 +57,7 @@ color: rgba(4, 156, 80, 1);
     margin-bottom:20px;
 }
 
-.breadcrumb-item a{
+.breadcrumb-item a , .breadcrumb-item span{
     text-transform: uppercase;
     font-family: Inter;
     font-size: 16px;

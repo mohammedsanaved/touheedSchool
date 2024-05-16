@@ -20,6 +20,7 @@ import SingleEvent from "../../components/SingleEvent/SingleEvent.jsx";
 import FAQs from "../SchoolPage/components/FAQs.jsx";
 import FAQItem from "../SchoolPage/components/FAQs/FAQItem.jsx";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs.jsx";
 
 const About = () => {
   const value = "About US";
@@ -91,6 +92,8 @@ const About = () => {
         {/* Breadcroumb */}
         {/* <BreadcrumbBox title="About Us" /> */}
         <BannerSection bg_image={bg} />
+
+        <BreadCrumbs/>
 
         {/* About Area */}
         <AboutUs />

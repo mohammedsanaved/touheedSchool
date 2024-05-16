@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { schoolList } from "../../actions/schoolActions.js";
 import { createContact } from "../../actions/contactActions.js";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactInfoSection = () => {
   const locationIconUrl = "/assets/images/location.png";
@@ -103,11 +105,32 @@ const ContactInfoSection = () => {
       isValid = false;
     }
 
+    if (!recaptchaValue) {
+          setRecaptchaError('Please complete the reCAPTCHA.');
+          
+        }
+        else{
+          setRecaptchaError('');
+        }
+
     // Update error state
     setErrors(formErrors);
 
     // If form is valid, submit
     if (isValid) {
+      setTimeout(() => {
+        toast.success('Thank You For Submitting', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          
+          });
+      }, 1000);
       dispatch(
         createContact(
           formData.name,
@@ -119,12 +142,32 @@ const ContactInfoSection = () => {
         )
       );
     }
+    
+
+  };
+ 
+ 
+
+  const onChangeRecaptcha = (value) => {
+    console.log("reCAPTCHA value:", value);
+    setRecaptchaValue(value);
   };
 
-  function onChange() {
-    console.log("on chnage called ");
-    setDisable(true);
-  }
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const [recaptchaError, setRecaptchaError] = useState('');
+
+
+
+  useEffect(()=>{
+    if (!recaptchaValue) {
+      setRecaptchaError('Please complete the reCAPTCHA.');
+      return;
+    }
+    else{
+      setRecaptchaError('');
+      return;
+    }
+  } , [recaptchaValue])
 
   return (
     <ContactInfoSectionStyles>
@@ -262,10 +305,12 @@ const ContactInfoSection = () => {
                 </span>
                 </div>
               </div>
-              <ReCAPTCHA
-                            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                            onChange={onChange}
+              <ReCAPTCHA  
+                            sitekey="6Lfudt4pAAAAAGlY6hPEjmWLzdtx79c_UJIvCbsI"
+                            onChange={onChangeRecaptcha}
                           />
+                          <ToastContainer />
+                          {recaptchaError && <span style={{ color: 'red' }}>{recaptchaError}</span>}
               <button type="submit" className="form-btn">
                 SEND MESSAGE
               </button>

@@ -2,16 +2,19 @@ import React from 'react';
 import { BreadCrumbsStyles } from './BreadCrumbsStyles';
 import { Link, useLocation } from 'react-router-dom';
 
-
 const capitalize = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-
 const replaceSymbols = (str) => {
   return str.replace(/[_-]/g, ' ');
 };
-const skipText = ['School about us', 'schooldetail' ];
+
+const skipText = ['School about us', 'schooldetail'];
+
+const isId = (str) => {
+  return /^[a-fA-F0-9-]+$/g.test(str); // Matches UUID format
+};
 
 
 const BreadCrumbs = () => {
@@ -19,19 +22,24 @@ const BreadCrumbs = () => {
 
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
-  const indexOfEventDetails = pathnames.indexOf('EVENT DETAILS');
-  const isEventDetailsIncluded = indexOfEventDetails !== -1;
+  const lastSegment = pathnames[pathnames.length - 1];
+  const isLastSegmentId = isId(lastSegment);
+  const indexOfEventDetails = pathnames.indexOf('event-details');
+  const isEventDetailsPage = indexOfEventDetails !== -1;
 
-  
 
 
-    return (
-        <BreadCrumbsStyles>
-             <ol className="breadcrumb">
+  return (
+    <BreadCrumbsStyles>
+     
+     <nav aria-label="breadcrumb">
+      <ol className="breadcrumb">
         <li className="breadcrumb-item">
           <Link to="/">Home</Link>
         </li>
         {pathnames.map((name, index) => {
+          if (isEventDetailsPage && index > indexOfEventDetails) return null; // Stop rendering after "EVENT DETAILS"
+          if (index === pathnames.length - 1 && isLastSegmentId) return null; // Exclude last ID segment
           const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
           const isLast = index === pathnames.length - 1;
           let displayName = replaceSymbols(capitalize(name));
@@ -42,27 +50,25 @@ const BreadCrumbs = () => {
             }
           });
           displayName = displayName.trim();
-          // Check if "Event Details" is included in the breadcrumbs and stop rendering breadcrumbs after that
-          if (isEventDetailsIncluded && index > indexOfEventDetails) {
-            return null;
-          }
           // Render breadcrumb link only if displayName is not empty and the routeTo doesn't contain adjacent slashes
           if (displayName && !/\/{2,}/.test(routeTo)) {
-            return isLast ? (
-              <li key={name} className="breadcrumb-item active" aria-current="page">
-                <span style={{ color: 'green' }}>{displayName}</span>
-              </li>
-            ) : (
+            return (
               <li key={name} className="breadcrumb-item">
-                <Link to={routeTo}>{displayName}</Link>
+                {isLast || isEventDetailsPage ? (
+                  <span style={{ color: 'green' }}>{displayName}</span>
+                ) : (
+                  <Link to={routeTo}>{displayName}</Link>
+                )}
               </li>
             );
           }
           return null;
         })}
       </ol>
-        </BreadCrumbsStyles>
-    )
+    </nav>
+   
+    </BreadCrumbsStyles>
+  )
 }
 
 export default BreadCrumbs
