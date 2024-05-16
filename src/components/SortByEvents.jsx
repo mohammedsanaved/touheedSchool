@@ -4,7 +4,7 @@ import { Styles } from "./styles/SortByEvents";
 // import { allSchoolsListAction } from "../actions/LandingPageActions";
 // import { useDispatch, useSelector } from "react-redux";
 
-const SortByEvents = ({ allschools, setId }) => {
+const SortByEvents = ({ allschools, setSelectedSchoolId }) => {
   const options = [
     {
       value: "", // Set an empty value for the default option
@@ -29,7 +29,7 @@ const SortByEvents = ({ allschools, setId }) => {
   return (
     // <Styles>
     <Styles name="SchoolSearch" id="schoolsearch" className="w-100">
-      <select onChange={(e) => setId(e.target.value)}>
+      <select onChange={(e) => setSelectedSchoolId(e.target.value)}>
         <option value="">All Schools</option>
         {allschools?.rows?.map((data) => (
           <option key={data.id} value={data.id}>
