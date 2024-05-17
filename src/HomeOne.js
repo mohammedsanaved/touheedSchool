@@ -49,6 +49,8 @@ export default function HomeOne() {
 
       <BreadCrumbs/>
 
+     
+
       {/* About Area */}
       <AboutUs />
 

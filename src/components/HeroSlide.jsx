@@ -61,6 +61,10 @@ const HeroSlide = () => {
               }}
               modules={[Pagination, Navigation, Autoplay, EffectCreative]}
               className="mySwiper3"
+              navigation={{
+                prevEl: '.banner-custom-prev',
+                nextEl: '.banner-custom-next',
+              }}
             >
               {schools?.rows?.map((img) => (
                 <SwiperSlide key={img.id}>

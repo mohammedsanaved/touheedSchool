@@ -108,9 +108,7 @@ display: -webkit-box;
   align-items: center;
 }
 
-// .banner-custom-prev,.banner-custom-next{
-//   display:none;
-// }
+
 .banner-text-container{
   width: 90%;
 }
