@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listEvent } from "../../actions/eventActions.js";
 import FooterNew from "../../components/FooterNew/FooterNew.jsx";
 import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
-// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs.jsx";
 
@@ -15,16 +15,26 @@ const Events = () => {
   const bg = "./assets/images/eventspageimage.png";
   const dispatch = useDispatch();
   const eventList = useSelector((state) => state.eventList);
-  const { loading, error, events } = eventList;
+  const { loading, events } = eventList;
+  const { pages_count, count, error, rows } = events;
   const { allschools } = useSelector((state) => state.allSchoolsList);
   const [selectedSchoolId, setSelectedSchoolId] = useState("");
-  // const [page, setPage] = useState(1);
-  // const [limit, setLimit] = useState(5);
+  const [page, setPage] = useState(1);
+  const [limit] = useState(4);
 
   useEffect(() => {
-    dispatch(listEvent());
+    dispatch(listEvent(page, limit));
     dispatch(allSchoolsListAction());
-  }, [dispatch]);
+  }, [dispatch, limit, page]);
+
+  const handlePreviousPage = () => {
+    setPage(() => page - 1);
+  };
+  const handleNextPage = () => {
+    if (page <= pages_count) {
+      setPage(() => page + 1);
+    }
+  };
 
   return (
     <>
@@ -48,12 +58,42 @@ const Events = () => {
             <p>Error: {error}</p>
           ) : (
             <>
-              {events?.rows?.map(
+              {rows?.map(
                 (event) =>
-                  selectedSchoolId === event.id && (
+                  !selectedSchoolId ? (
                     <SingleEvent key={event.id} event={event} />
+                  ) : (
+                    selectedSchoolId &&
+                    selectedSchoolId === event.school_id && (
+                      <SingleEvent key={event.id} event={event} />
+                    )
                   )
+
+                // selectedSchoolId && selectedSchoolId === event.school_id ? (
+                //   <SingleEvent key={event.id} event={event} />
+                // ) : (
+                //   <SingleEvent key={event.id} event={event} />
               )}
+              {/* {console.log(selectedSchoolId)} */}
+              <div className="pagination-buttons">
+                <button
+                  onClick={handlePreviousPage}
+                  disabled={page === 1}
+                  className="pagination-button"
+                >
+                  <IoIosArrowBack /> Previous
+                </button>
+                <span>
+                  {page} / {pages_count}
+                </span>
+                <button
+                  onClick={handleNextPage}
+                  disabled={page === pages_count}
+                  className="pagination-button"
+                >
+                  Next <IoIosArrowForward />
+                </button>
+              </div>
             </>
           )}
         </div>
