@@ -7,6 +7,9 @@ import { createContact } from "../../actions/contactActions.js";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa6";
 
 const ContactInfoSection = () => {
   const locationIconUrl = "/assets/images/location.png";
@@ -179,14 +182,16 @@ const ContactInfoSection = () => {
 
             <div className="contact-info-icon-text-div">
               <div className="icon-text-div d-flex">
-                <img src={`${locationIconUrl}`} alt="" />
+              <FaLocationDot size={50} color="#0CAD6C"/>
+                
                 <div className="contact-info-text">
                   <h3>Our Location</h3>
                   <p>Gangolli, Udupi Dist, Karnataka, India 576216.</p>
                 </div>
               </div>
               <div className="icon-text-div d-flex">
-                <img src={`${emailIconUrl}`} alt="" />
+              <MdEmail size={50} color="#0CAD6C"/>
+                
                 <div className="contact-info-text">
                   <h3>Email Address</h3>
                   <p>
@@ -197,7 +202,8 @@ const ContactInfoSection = () => {
                 </div>
               </div>
               <div className="icon-text-div d-flex">
-                <img src={`${phoneIconUrl}`} alt="" />
+              <FaPhone size={50} color="#0CAD6C"/>
+                
                 <div className="contact-info-text">
                   <h3>Phone Number</h3>
                   <p>

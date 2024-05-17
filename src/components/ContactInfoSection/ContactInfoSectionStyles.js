@@ -176,4 +176,12 @@ export const ContactInfoSectionStyles = styled.div`
   }
 
 
+  @media only screen and (max-width: 600px) {
+
+    .icon-text-div{
+      column-gap: 30px;
+    }
+  }
+
+
 `;

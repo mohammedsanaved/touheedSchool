@@ -62,9 +62,9 @@ const HeaderNew2 = ({ logo_img }) => {
                                         Board of Management
                                     </NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link as={Link} to={process.env.PUBLIC_URL + "/"}>
+                                {/* <Nav.Link as={Link} to={process.env.PUBLIC_URL + "/"}>
                                     Admission
-                                </Nav.Link>
+                                </Nav.Link> */}
                                 <NavDropdown title="Institutions" id="basic-nav-dropdown">
                                     {allschools?.rows?.map((names) => (
                                         <NavDropdown.Item
