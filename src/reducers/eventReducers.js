@@ -33,9 +33,8 @@ const initialState = {
   events: [],
   loading: false,
   error: null,
-  page: 1, // Initialize page to 1
-  limit: 2, // Initialize limit (items per page)
-  totalPages: 4,
+  // page: 1, // Initialize page to 1
+  // limit: 2, // Initialize limit (items per page)
 };
 
 export const eventListReducer = (state = initialState, action) => {
@@ -47,9 +46,10 @@ export const eventListReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         events: action.payload,
-        totalPages: action.payload.totalPages,
-        page: action.payload.page,
-        limit: action.payload.limit, // Store the limit value from the action payload
+
+        // totalPages: action.payload.totalPages,
+        // page: action.payload.page,
+        // limit: action.payload.limit, // Store the limit value from the action payload
       };
     case EVENT_LIST_FAIL:
       return { ...state, loading: false, error: action.payload };

@@ -3,12 +3,10 @@ import { Container, Row, Col, Dropdown, Nav, Navbar, NavDropdown } from "react-b
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { HeaderNew2Styles } from "./HeaderNew2Styles.js";
-import { allSchoolsListAction } from "../../actions/LandingPageActions.js";
+import { schoolList } from "../../actions/schoolActions.js";
 
 const HeaderNew2 = ({ logo_img }) => {
-
-
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     const toggleMobileMenu = () => {
         setShowMobileMenu(!showMobileMenu);
@@ -93,11 +91,11 @@ const HeaderNew2 = ({ logo_img }) => {
                             </Link>
                         </div>
                     </Col> */}
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </HeaderNew2Styles>
-    )
-}
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </HeaderNew2Styles>
+  );
+};
 
 export default HeaderNew2
