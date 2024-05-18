@@ -21,7 +21,7 @@ const Events = () => {
   const { allschools } = useSelector((state) => state.allSchoolsList);
   const [selectedSchoolId, setSelectedSchoolId] = useState("");
   const [page, setPage] = useState(1);
-  const [limit] = useState(4);
+  const [limit] = useState(2);
 
   useEffect(() => {
     dispatch(listEvent(page, limit));
