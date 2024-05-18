@@ -160,4 +160,42 @@ export const SingleEventStyles = styled.div`
     }
   }
 
+
+  .event-icons-div{
+    column-gap: 5px;
+  }
+
+
+  h2.single-event-event-date{
+    color:rgba(4, 156, 80, 1);
+  }
+
+ 
+  .event-icons-div{
+
+    display: grid !important;
+    grid-template-columns: max-content max-content max-content max-content;
+      row-gap:10px;
+  
+  
+    }
+  
+
+
+
+  @media only screen and (min-width: 700px) and (max-width: 900px)  {
+
+  .event-icons-div{
+
+  display: grid !important;
+    grid-template-columns: auto auto;
+    row-gap:10px;
+
+
+  }
+}
+
+
+
+
 `;

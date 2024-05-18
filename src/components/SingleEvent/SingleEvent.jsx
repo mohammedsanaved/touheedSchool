@@ -1,6 +1,8 @@
 import React from "react";
 import { SingleEventStyles } from "./SingleEventStyles.js";
 import { Link } from "react-router-dom";
+import { IoTimeSharp } from "react-icons/io5";
+import { FaLocationDot } from "react-icons/fa6";
 
 
 
@@ -64,18 +66,20 @@ const SingleEvent = ({ event }) => {
           <div className="first-col">
             <h2 className="single-event-event-title">{event.title}</h2>
             <div className="d-flex event-icons-div align-items-center">
-              <img
+            <IoTimeSharp size={20} color="rgba(4, 156, 80, 1)"/>
+              {/* <img
                 src="./assets/images/ion_time-outline.png"
                 alt=""
                 className="event-time-icon"
-              />
-              {formattedTime}
-              <img
+              /> */}
+              <div>{formattedTime}</div>
+              <FaLocationDot size={20} color="rgba(4, 156, 80, 1)"/>
+              {/* <img
                 src="./assets/images/carbon_location.png"
                 alt=""
                 className="event-location-icon"
-              />
-               {event.location}
+              /> */}
+              <div>{event.location}</div>
             </div>
             <p className="single-event-text">{event.desc}</p>
           </div>

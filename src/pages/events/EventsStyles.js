@@ -84,4 +84,31 @@ color:black;
   border-radius: 6px;
 }
 
+
+.pagination-buttons{
+  margin-top: 50px;
+}
+
+button.pagination-button{
+  background: rgba(4, 156, 80, 1);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: center;
+    color: white;
+    padding: 11px 15px;
+    border: none;
+    border-radius: 6px;
+    max-width:100px;
+    width: 200px;
+    
+}
+
+
+.pcount{
+  margin:50px;
+}
+
+
 `;

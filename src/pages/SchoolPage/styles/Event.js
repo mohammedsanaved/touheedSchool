@@ -177,4 +177,9 @@ export const Styles = styled.div`
       height: fit-content;
     }
   }
+
+
+  .event-icons-div{
+    column-gap:10px;
+  }
 `;

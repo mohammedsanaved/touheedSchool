@@ -11,6 +11,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import HeaderNew2 from "../../components/HeaderNew2/HeaderNew2.jsx";
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs.jsx";
 
+
 const Events = () => {
   const bg = "./assets/images/eventspageimage.png";
   const dispatch = useDispatch();
@@ -81,9 +82,9 @@ const Events = () => {
                   disabled={page === 1}
                   className="pagination-button"
                 >
-                  <IoIosArrowBack /> Previous
+                   Previous
                 </button>
-                <span>
+                <span className="pcount">
                   {page} / {pages_count}
                 </span>
                 <button
@@ -91,7 +92,7 @@ const Events = () => {
                   disabled={page === pages_count}
                   className="pagination-button"
                 >
-                  Next <IoIosArrowForward />
+                  Next 
                 </button>
               </div>
             </>

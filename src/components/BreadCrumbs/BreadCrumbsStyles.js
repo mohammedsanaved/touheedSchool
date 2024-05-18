@@ -77,6 +77,13 @@ li.breadcrumb-item.active{
 }
 
 
+@media only screen and (max-width: 1100px) {
+.breadcrumb{
+    padding-left:20px;
+    padding-right:20px;
+
+}
+}
 
 `
 ;

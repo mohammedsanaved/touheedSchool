@@ -1,6 +1,8 @@
 import React from "react";
 import { Styles } from "../styles/Event";
 // import { useNavigate } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoTimeSharp } from "react-icons/io5";
 
 const Event = ({ item }) => {
   // const navigate = useNavigate();
@@ -61,13 +63,15 @@ const Event = ({ item }) => {
               </h2>
             </div>
             <div className="d-flex event-icons-div align-items-center">
-              <img src="/assets/images/ion_time-outline.png" alt="" />
+              {/* <img src="/assets/images/ion_time-outline.png" alt="" /> */}
+              <IoTimeSharp size={20} color="rgba(4, 156, 80, 1)"/>
               &nbsp; {formattedTime}
-              <img
+              {/* <img
                 src="/assets/images/carbon_location.png"
                 alt=""
                 className="event-location-icon"
-              />
+              /> */}
+              <FaLocationDot size={20} color="rgba(4, 156, 80, 1)"/>
               {item.location}
             </div>
             <p className="single-event-text">{item.desc}</p>

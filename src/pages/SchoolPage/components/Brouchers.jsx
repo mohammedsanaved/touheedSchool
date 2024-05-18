@@ -2,6 +2,7 @@
 import React from "react";
 import { Styles } from "../styles/Brouchers";
 import GreenButton from "../../../components/GreenButton/GreenButton";
+import { FaBookOpen } from "react-icons/fa6";
 
 const Brouchers = ({ doc }) => {
   const brochurelogo = "/assets/images/BrochureLogo.png";
@@ -14,11 +15,12 @@ const Brouchers = ({ doc }) => {
         </div>
         <div className="brochure-bg rounded-4  mx-auto">
           <div className="mx-auto d-flex justify-center">
-            <img
+          <FaBookOpen size={50} color="#0CAD6C" className="mx-auto brochure-img"/>
+            {/* <img
               src={`${brochurelogo}`}
               alt=""
               className="mx-auto brochure-img"
-            />
+            /> */}
           </div>
           <div className="brochure-text align-items-center align-content-center mx-auto">
             {doc.description}
