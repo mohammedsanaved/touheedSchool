@@ -41,6 +41,7 @@ const HeroSlide = () => {
             <p>Error: {errorMsg}</p>
           ) : (
             <Swiper
+            initialSlide={8}
               pagination={{ clickable: true }}
               loop={true}
               autoplay={{

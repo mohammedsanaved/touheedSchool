@@ -155,4 +155,13 @@ display: -webkit-box;
   width:100%;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+
+  .banner-custom-prev,.banner-custom-next{
+    display:none;
+  }
+}
+
 `;
