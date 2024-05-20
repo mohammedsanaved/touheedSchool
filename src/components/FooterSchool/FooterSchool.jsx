@@ -11,6 +11,7 @@ const FooterSchool = ({
   location,
   email,
   contactNumber,
+  slug,
 }) => {
   const logoUrl = "/assets/images/Touheed-logo.png";
   const dispatch = useDispatch();
@@ -60,18 +61,24 @@ const FooterSchool = ({
             <div className="footer-subheading">OUR SCHOOLS</div>
             {allschools?.rows?.map((item, i) => (
               <div className="footer-links">
-                <Link to={`/schooldetail/${item.id}`}>{item.name}</Link>
+                <Link
+                  // to={`/schooldetail/${item.id}`}
+                  to={`/schooldetail/${slug}`}
+                  state={{ id: item.id }}
+                >
+                  {item.name}
+                </Link>
               </div>
             ))}
           </div>
-          <div className="ourschools-column recent-posts-column">
+          {/* <div className="ourschools-column recent-posts-column">
             <div className="footer-subheading">RECENT EVENTS</div>
             {events?.map((item, i) => (
               <div className="footer-links">
                 <Link to={`/event-details/${item.id}`}>{item.title}</Link>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         <hr className="footer-hr" />
         <div className="footer-below-hr d-flex">

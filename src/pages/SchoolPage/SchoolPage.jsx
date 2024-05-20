@@ -34,10 +34,6 @@ import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 
 
 const SchoolPage = () => {
-  // const bg =
-  //   "https://images.unsplash.com/photo-1558008258-3256797b43f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHNjaG9vbCUyMGV2ZW50fGVufDB8fDB8fHww";
-
-  // const { id } = useParams();
   let { state } = useLocation();
   let { id } = state;
   const dispatch = useDispatch();
@@ -49,36 +45,27 @@ const SchoolPage = () => {
   }, [dispatch, id]);
   return (
     <>
-
-
-   
-
-
       <SchoolPageStyle>
         {/* <HeaderTwo logo={school.logo} /> */}
         <HeaderNew2 logo_img={school.logo} />
         <div className="">
           <div className="position-relative school-details-video">
             {loading ? (
-           <div>
-           Loading.....
-         </div>  
-          ) : (
-            <video
-            className="w-100 video-element"
-            // style={{  }}
-            autoPlay
-            muted
-            loop
-          >
-           
-            <source
-              src={`${process.env.REACT_APP_API_URL}/${school.video}`}
-              type="video/mp4"
-            />
-          </video>)
-              
-            }
+              <div>Loading.....</div>
+            ) : (
+              <video
+                className="w-100 video-element"
+                // style={{  }}
+                autoPlay
+                muted
+                loop
+              >
+                <source
+                  src={`${process.env.REACT_APP_API_URL}/${school.video}`}
+                  type="video/mp4"
+                />
+              </video>
+            )}
             {/* <video
               className="w-100 video-element"
               // style={{  }}
@@ -92,13 +79,10 @@ const SchoolPage = () => {
                 type="video/mp4"
               />
             </video> */}
-            
 
             <div className="video-banner-text mx-auto position-absolute">
               <div className="text-center school-title">{school.name}</div>
-              <div className="school-description">
-                {school.description}
-              </div>
+              <div className="school-description">{school.description}</div>
               <div className="school-buttons d-flex justify-content-center mx-auto">
                 <Link
                   to={`/school-about-us/${school.slug}`}
@@ -106,19 +90,15 @@ const SchoolPage = () => {
                   state={{ id: school.id }}
                 >
                   {console.log(school, "Changes")}
-                  <GreenButton text="Know More" />
+                  <GreenButton text="About Us" />
                 </Link>
                 <Link to={`/admission-page/${id}`}>
-                  <GreenButton text="Enquire" />
+                  <GreenButton text="Admission Details" />
                 </Link>
               </div>
             </div>
           </div>
-        
-
-<BreadCrumbs/>
-
-
+          <BreadCrumbs />
 
           <WhyUs image={school.image} description={school.summary} />
           <Infrastructure

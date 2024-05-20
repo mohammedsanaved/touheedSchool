@@ -59,21 +59,15 @@ const Events = () => {
             <p>Error: {error}</p>
           ) : (
             <>
-              {rows?.map(
-                (event) =>
-                  !selectedSchoolId ? (
+              {rows?.map((event) =>
+                !selectedSchoolId ? (
+                  <SingleEvent key={event.id} event={event} />
+                ) : (
+                  selectedSchoolId &&
+                  selectedSchoolId === event.school_id && (
                     <SingleEvent key={event.id} event={event} />
-                  ) : (
-                    selectedSchoolId &&
-                    selectedSchoolId === event.school_id && (
-                      <SingleEvent key={event.id} event={event} />
-                    )
                   )
-
-                // selectedSchoolId && selectedSchoolId === event.school_id ? (
-                //   <SingleEvent key={event.id} event={event} />
-                // ) : (
-                //   <SingleEvent key={event.id} event={event} />
+                )
               )}
               {/* {console.log(selectedSchoolId)} */}
               <div className="pagination-buttons">
