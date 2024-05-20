@@ -52,3 +52,4 @@ export const detailEvent = (id) => async (dispatch) => {
     });
   }
 };
+// /api/events/events-list/0078ea22-e420-479d-ac21-28b48d724c1e

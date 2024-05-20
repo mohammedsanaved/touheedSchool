@@ -63,8 +63,8 @@ const HeroSlide = () => {
               modules={[Pagination, Navigation, Autoplay, EffectCreative]}
               className="mySwiper3"
               navigation={{
-                prevEl: '.banner-custom-prev',
-                nextEl: '.banner-custom-next',
+                prevEl: ".banner-custom-prev",
+                nextEl: ".banner-custom-next",
               }}
             >
               {schools?.rows?.map((img) => (
@@ -87,7 +87,9 @@ const HeroSlide = () => {
                           {/* /schooldetail/${school.slug}`} state={{ id: school.id }} */}
                           <GreenButton text="Know More" />
                         </Link>
-                        <GreenButton text="Enquire Page" />
+                        <Link to={`/admission-page/${img.id}`}>
+                          <GreenButton text="Enquire" />
+                        </Link>
                       </div>
                     </div>
                   </div>

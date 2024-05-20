@@ -20,8 +20,8 @@ const Events = () => {
   const { pages_count, count, error, rows } = events;
   const { allschools } = useSelector((state) => state.allSchoolsList);
   const [selectedSchoolId, setSelectedSchoolId] = useState("");
-  const [page, setPage] = useState(1);
-  const [limit] = useState(2);
+  const [page, setPage] = useState(0);
+  const [limit] = useState(4);
 
   useEffect(() => {
     dispatch(listEvent(page, limit));
@@ -59,40 +59,36 @@ const Events = () => {
             <p>Error: {error}</p>
           ) : (
             <>
-              {rows?.map(
-                (event) =>
-                  !selectedSchoolId ? (
+              {rows?.map((event) =>
+                !selectedSchoolId ? (
+                  <SingleEvent key={event.id} event={event} />
+                ) : (
+                  selectedSchoolId &&
+                  selectedSchoolId === event.school_id && (
                     <SingleEvent key={event.id} event={event} />
-                  ) : (
-                    selectedSchoolId &&
-                    selectedSchoolId === event.school_id && (
-                      <SingleEvent key={event.id} event={event} />
-                    )
                   )
-
-                // selectedSchoolId && selectedSchoolId === event.school_id ? (
-                //   <SingleEvent key={event.id} event={event} />
-                // ) : (
-                //   <SingleEvent key={event.id} event={event} />
+                )
               )}
               {/* {console.log(selectedSchoolId)} */}
               <div className="pagination-buttons">
                 <button
                   onClick={handlePreviousPage}
-                  disabled={page === 1}
+                  disabled={page === 0}
                   className="pagination-button"
                 >
-                   Previous
+                  <IoIosArrowBack className="fs-4 text-center" />
+                  Prev
                 </button>
                 <span className="pcount">
-                  {page} / {pages_count}
+                  {page + 1} / {pages_count}
                 </span>
                 <button
                   onClick={handleNextPage}
                   disabled={page === pages_count}
                   className="pagination-button"
                 >
-                  Next 
+                  Next
+                  <IoIosArrowForward className="fs-4 text-center mr-3" />
                 </button>
               </div>
             </>
