@@ -118,38 +118,6 @@ function StickyMenu() {
                               </Link>
                             </li>
                           ))}
-                          {/* <li className="nav-item">
-                       <Link
-                         className="nav-link"
-                         to={process.env.PUBLIC_URL + "/schooldetail"}
-                       >
-                         School 01
-                       </Link>
-                     </li>
-                     <li className="nav-item">
-                       <Link
-                         className="nav-link"
-                         to={process.env.PUBLIC_URL + "/schooldetail"}
-                       >
-                         School 02
-                       </Link>
-                     </li>
-                     <li className="nav-item">
-                       <Link
-                         className="nav-link"
-                         to={process.env.PUBLIC_URL + "/schooldetail"}
-                       >
-                         School 03
-                       </Link>
-                     </li>
-                     <li className="nav-item">
-                       <Link
-                         className="nav-link"
-                         to={process.env.PUBLIC_URL + "/schooldetail"}
-                       >
-                         School 04
-                       </Link>
-                     </li> */}
                         </ul>
                       </li>
                       <li className="nav-item dropdown">
