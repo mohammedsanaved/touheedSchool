@@ -37,11 +37,8 @@ const Event = ({ item }) => {
 
     return formattedTime;
   };
-
-  // Usage example
-  // const apiTime = '14:47:11';
   const formattedTime = formatTimeTo12Hour(item.time);
-  console.log(formattedTime); // Output: "2:47:11 PM" (for example)
+  console.log(formattedTime);
 
   return (
     <Styles>

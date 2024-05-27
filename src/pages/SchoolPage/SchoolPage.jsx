@@ -66,20 +66,6 @@ const SchoolPage = () => {
                 />
               </video>
             )}
-            {/* <video
-              className="w-100 video-element"
-              // style={{  }}
-              autoPlay
-              muted
-              loop
-            >
-             
-              <source
-                src={`${process.env.REACT_APP_API_URL}/${school.video}`}
-                type="video/mp4"
-              />
-            </video> */}
-
             <div className="video-banner-text mx-auto position-absolute">
               <div className="text-center school-title">{school.name}</div>
               <div className="school-description">{school.description}</div>

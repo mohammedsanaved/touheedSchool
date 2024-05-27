@@ -47,22 +47,6 @@ const Header = () => {
                     </a>
                   </marquee>
                 </div>
-
-                {/* <ul className="list-unstyled list-inline bar-social">
-                                    <li className="list-inline-item">
-                                        xxx
-                                    </li>
-                                </ul> */}
-
-                {/* <ul className="list-unstyled list-inline bar-social">
-                                        <li className="list-inline-item"><a href={process.env.PUBLIC_URL + "/"}><i className="fab fa-facebook-f"></i></a></li>
-
-                                    </ul>
-                                    
-                                    <ul className="list-unstyled list-inline bar-login">
-                                        <li className="list-inline-item"><Link to={process.env.PUBLIC_URL + "/login"}><i className="las la-user"></i>Log In</Link></li>
-                                        <li className="list-inline-item"><Link to={process.env.PUBLIC_URL + "/registration"}><i className="las la-user-edit"></i>Register</Link></li>
-                                    </ul> */}
               </div>
             </Col>
           </Row>
@@ -126,13 +110,6 @@ const Header = () => {
               <div className="main-menu-box">
                 <div className="menu-box d-flex justify-content-between">
                   <ul className="nav menu-nav">
-                    {/* <li className="nav-item dropdown active">
-                                                <Link className="nav-link dropdown-toggle" to={process.env.PUBLIC_URL + "/"} data-toggle="dropdown">Home <i className="las la-angle-down"></i></Link>
-                                                <ul className="dropdown list-unstyled">
-                                                    <li className="nav-item active"><Link className="nav-link" to={process.env.PUBLIC_URL + "/"}>Home Style 1</Link></li>
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/home-two"}>Home Style 2</Link></li>
-                                                </ul>
-                                            </li> */}
                     <li className="nav-item">
                       <Link
                         className="nav-link dropdown-toggle"
@@ -242,29 +219,6 @@ const Header = () => {
                         Contact Us<i className="las"></i>
                       </Link>
                     </li>
-                    {/* <li className="nav-item dropdown">
-                                                <Link className="nav-link dropdown-toggle" to={process.env.PUBLIC_URL + "/"} data-toggle="dropdown">Event <i className="las la-angle-down"></i></Link>
-                                                <ul className="dropdown list-unstyled">
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/events"}>Events</Link></li>
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/event-details"}>Event Details</Link></li>
-                                                </ul>
-                                            </li> */}
-                    {/* <li className="nav-item dropdown">
-                                                <Link className="nav-link dropdown-toggle" to={process.env.PUBLIC_URL + "/"} data-toggle="dropdown">Blog <i className="las la-angle-down"></i></Link>
-                                                <ul className="dropdown list-unstyled">
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/blog-classic"}>Blog Classic</Link></li>
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/blog-grid"}>Blog Grid</Link></li>
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/blog-details"}>Blog Details</Link></li>
-                                                </ul>
-                                            </li> */}
-                    {/* <li className="nav-item dropdown">
-                                                <Link className="nav-link dropdown-toggle" to={process.env.PUBLIC_URL + "/"} data-toggle="dropdown">Shop <i className="las la-angle-down"></i></Link>
-                                                <ul className="dropdown list-unstyled">
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/products"}>Products</Link></li>
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/product-details"}>Product Details</Link></li>
-                                                    <li className="nav-item"><Link className="nav-link" to={process.env.PUBLIC_URL + "/cart"}>Cart</Link></li>
-                                                </ul>
-                                            </li> */}
                   </ul>
                   <ul className="nav search-cart-bar">
                     <li className="nav-item search-box">
