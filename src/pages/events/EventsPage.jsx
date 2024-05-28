@@ -17,7 +17,7 @@ const Events = () => {
   const dispatch = useDispatch();
   const eventList = useSelector((state) => state.eventList);
   const { loading, events } = eventList;
-  const { pages_count, count, error, rows } = events;
+  const { pages_count, error, rows } = events;
   const { allschools } = useSelector((state) => state.allSchoolsList);
   const [selectedSchoolId, setSelectedSchoolId] = useState("");
   const [page, setPage] = useState(0);

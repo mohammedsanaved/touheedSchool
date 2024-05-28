@@ -1,4 +1,3 @@
-import { LANDING_PAGE_ALL_SCHOOL_REQUEST } from "../constants/LandingPageContants";
 import {
   SCHOOL_ABOUT_US_FAIL,
   SCHOOL_ABOUT_US_REQUEST,
@@ -29,22 +28,6 @@ export const schoolListReducer = (
       return state;
   }
 };
-// export const schoolDetailsReducer = (
-//   state = { schoolDetails: [], loading: false, error: null },
-//   action
-// ) => {
-//   switch (action.type) {
-//     case SCHOOL_DETAIL_REQUEST:
-//       return { ...state, loading: true, error: null };
-//     case SCHOOL_LIST_SUCCESS:
-//       return { ...state, loading: false, schoolDetails: action.payload };
-//     case SCHOOL_DETAIL_FAIL:
-//       return { ...state, loading: false, error: action.payload };
-
-//     default:
-//       return state;
-//   }
-// };
 
 export const schoolIndividualDetailReducer = (
   state = { school: {} },
@@ -79,25 +62,6 @@ export const schoolAboutUsReducer = (state = { school: {} }, action) => {
       return state;
   }
 };
-
-// export const schoolAdmissionReducer = (
-//   state = { admissionDetail: {} },
-//   action
-// ) => {
-//   switch (action.type) {
-//     case SCHOOL_ADMISSION_REQUEST:
-//       return { loading: true, ...state };
-
-//     case SCHOOL_ADMISSION_SUCCESS:
-//       return { loading: false, admissionDetail: action.payload };
-
-//     case SCHOOL_ADMISSION_FAIL:
-//       return { loading: false, error: action.payload, admissionDetail: [] };
-
-//     default:
-//       return state;
-//   }
-// };
 export const schoolAdmissionReducer = (
   state = { admissionDetail: {} },
   action

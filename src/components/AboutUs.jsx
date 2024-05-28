@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Container } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { aboutUsAction } from "../actions/LandingPageActions.js";
-import ModalVideo from "react-modal-video";
 import { Styles } from "./styles/aboutUs.js";
-import video from "../assets/schoolVideo.mp4";
 import GreenButton from "./GreenButton/GreenButton.jsx";
 
 const AboutUs = () => {

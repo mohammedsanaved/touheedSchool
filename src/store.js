@@ -7,7 +7,6 @@ import { staffListReducer } from "./reducers/staffReducers";
 import {
   schoolAboutUsReducer,
   schoolAdmissionReducer,
-  schoolDetailsReducer,
   schoolIndividualDetailReducer,
   schoolListReducer,
 } from "./reducers/schoolReducers";
@@ -19,7 +18,6 @@ import {
   latestEventReducer,
   testimonialsReducer,
 } from "./reducers/LandingPageReducers";
-import { schoolAboutUs } from "./actions/schoolActions";
 import { boardOfManagementReducer } from "./reducers/boardOfManagmentReducer";
 
 const reducer = combineReducers({

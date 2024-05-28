@@ -1,31 +1,16 @@
 import React, { useEffect } from "react";
-import Footer from "../../components/Footer";
-import BannerSection from "../../components/BannerSection/BannerSection";
+
 import { useDispatch, useSelector } from "react-redux";
-import AboutUs from "../../components/AboutUs";
-import LetsTakeAdmission from "../../components/LetsTakeAdmission/LetsTakeAdmission";
-import HomeBlog from "../../components/HomeBlog";
 import ContactInfoSection from "../../components/ContactInfoSection/ContactInfoSection";
-import ReadMoreSection from "../../components/ReadMoreSection";
-import HeaderTwo from "../../components/HeaderTwo";
-import EventCarousel from "../../components/EventCarousel";
-import EventDetailsData from "../../components/EventDetailsData";
 import WhyUs from "./components/WhyUs";
-// import LazyLoad from 'react-lazy-load';
-import { Container, Row, Col } from "react-bootstrap";
-import bg from "../../assets/SchoolBgImage.png";
-import schoolVideo from "../../assets/schoolVideo.mp4";
 import Infrastructure from "./components/Infrastructure";
 import Brouchers from "./components/Brouchers";
-import SingleEvent from "../../components/SingleEvent/SingleEvent";
 import Event from "./components/Event";
 import FAQs from "./components/FAQs";
 import NoticeBoard from "./components/NoticeBoard";
 
-// import "./SchoolPage.js";
 import GreenButton from "../../components/GreenButton/GreenButton";
-import FooterNew from "../../components/FooterNew/FooterNew";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { schoolDetails } from "../../actions/schoolActions";
 import { SchoolPageStyle } from "./SchoolPageStyle";
 import FooterSchool from "../../components/FooterSchool/FooterSchool";

@@ -1,58 +1,58 @@
-import React, { Component } from "react";
-import HeaderTwo from "./components/HeaderTwo";
-import HeroImage from "./components/HeroImage";
-import ServiceBox from "./components/ServiceBox";
-import AboutUsTwo from "./components/AboutUsTwo";
-// import CourseSlider from "./components/CourseSlider";
-import NumberCounter from "./components/NumberCounter";
-import FreeCourse from "./components/FreeCourse";
-import TeamSlider from "./components/TeamSlider";
-import TestimonialSlider from "./components/TestimonialSlider";
-import HomeBlog from "./components/HomeBlog";
-import ImageGallery from "./components/ImageGallery";
-import FooterTwo from "./components/FooterTwo";
+// import React, { Component } from "react";
+// import HeaderTwo from "./components/HeaderTwo";
+// import HeroImage from "./components/HeroImage";
+// import ServiceBox from "./components/ServiceBox";
+// import AboutUsTwo from "./components/AboutUsTwo";
+// // import CourseSlider from "./components/CourseSlider";
+// import NumberCounter from "./components/NumberCounter";
+// import FreeCourse from "./components/FreeCourse";
+// import TeamSlider from "./components/TeamSlider";
+// import TestimonialSlider from "./components/TestimonialSlider";
+// import HomeBlog from "./components/HomeBlog";
+// import ImageGallery from "./components/ImageGallery";
+// import FooterTwo from "./components/FooterTwo";
 
-const HomeTwo = () => {
-  return (
-    <div className="main-wrapper">
-      {/* Header 2 */}
-      <HeaderTwo />
-      
-      <p>LALALA</p>
+// const HomeTwo = () => {
+//   return (
+//     <div className="main-wrapper">
+//       {/* Header 2 */}
+//       <HeaderTwo />
 
-      {/* Hero Image */}
-      <HeroImage />
+//       <p>LALALA</p>
 
-      {/* Service Box */}
-      <ServiceBox />
+//       {/* Hero Image */}
+//       <HeroImage />
 
-      {/* About Us 2 */}
-      <AboutUsTwo />
+//       {/* Service Box */}
+//       <ServiceBox />
 
-      {/* Course Slider */}
-      {/* <CourseSlider /> */}
+//       {/* About Us 2 */}
+//       <AboutUsTwo />
 
-      {/* Counter Area */}
-      <NumberCounter />
+//       {/* Course Slider */}
+//       {/* <CourseSlider /> */}
 
-      {/* Free Course Area */}
-      <FreeCourse />
+//       {/* Counter Area */}
+//       <NumberCounter />
 
-      {/* Team Slider */}
-      <TeamSlider />
+//       {/* Free Course Area */}
+//       <FreeCourse />
 
-      {/* Testimonial Slider */}
-      <TestimonialSlider />
+//       {/* Team Slider */}
+//       <TeamSlider />
 
-      {/* Blog Area */}
-      <HomeBlog />
+//       {/* Testimonial Slider */}
+//       <TestimonialSlider />
 
-      {/* Image Gallery Area */}
-      <ImageGallery />
+//       {/* Blog Area */}
+//       <HomeBlog />
 
-      {/* Footer 2 */}
-      <FooterTwo />
-    </div>
-  );
-};
-export default HomeTwo;
+//       {/* Image Gallery Area */}
+//       <ImageGallery />
+
+//       {/* Footer 2 */}
+//       <FooterTwo />
+//     </div>
+//   );
+// };
+// export default HomeTwo;
