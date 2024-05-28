@@ -1,7 +1,7 @@
 import React from "react";
 import Datas from "../data/testimonial/testimonial-slider.json";
 import { Container, Row, Col } from "react-bootstrap";
-import Swiper from "react-id-swiper";
+import { Swiper } from "swiper/react";
 import { Styles } from "./styles/testimonialSlider.js";
 import { Navigation } from "swiper/modules";
 

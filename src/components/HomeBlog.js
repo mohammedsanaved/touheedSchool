@@ -6,7 +6,7 @@ import { Styles } from "./styles/homeBlog.js";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { listEvent } from "../actions/eventActions";
-import ReactHtmlParser from "react-html-parser";
+// import ReactHtmlParser from "react-html-parser";
 
 import Loader from "./Loader";
 import Message from "./Message";
@@ -83,7 +83,7 @@ function HomeBlog({ eventListData }) {
                                 </div>
                               </div>
                               <div className="blog-desk">
-                                <p>{ReactHtmlParser(data.short_description)}</p>
+                                {/* <p>{ReactHtmlParser(data.short_description)}</p> */}
                                 <ul className="list-unstyled list-inline">
                                   <li className="list-inline-item">
                                     <Link

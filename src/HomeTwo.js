@@ -3,7 +3,7 @@ import HeaderTwo from "./components/HeaderTwo";
 import HeroImage from "./components/HeroImage";
 import ServiceBox from "./components/ServiceBox";
 import AboutUsTwo from "./components/AboutUsTwo";
-import CourseSlider from "./components/CourseSlider";
+// import CourseSlider from "./components/CourseSlider";
 import NumberCounter from "./components/NumberCounter";
 import FreeCourse from "./components/FreeCourse";
 import TeamSlider from "./components/TeamSlider";
@@ -30,7 +30,7 @@ const HomeTwo = () => {
       <AboutUsTwo />
 
       {/* Course Slider */}
-      <CourseSlider />
+      {/* <CourseSlider /> */}
 
       {/* Counter Area */}
       <NumberCounter />
