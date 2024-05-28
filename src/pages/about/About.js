@@ -8,8 +8,6 @@ import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs.jsx";
 import AboutUs from "../../components/AboutUs.js";
 
 const About = () => {
-  // const value = "About US";
-
   const bg = "./assets/images/eventspageimage.png";
 
   return (
